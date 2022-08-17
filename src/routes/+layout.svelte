@@ -40,7 +40,6 @@
 
   import { onMount } from 'svelte';
   import { partytownSnippet } from '@builder.io/partytown/integration';
-
   let scriptEl: any;
   onMount(() => scriptEl && (scriptEl.textContent = partytownSnippet()));
 </script>

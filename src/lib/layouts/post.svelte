@@ -20,7 +20,7 @@
   import { fade, fly } from 'svelte/transition';
   import LL from '$i18n/i18n-svelte';
 
-  const thisPost = $postsAll.get($page.route.id?.substring(1) ?? '') as Post.Post;
+  const thisPost = $postsAll.get($page.route?.id?.substring(1) ?? '') as Post.Post;
   const prevPost = thisPost?.prev ? $postsAll.get(thisPost.prev) : undefined;
   const nextPost = thisPost?.next ? $postsAll.get(thisPost.next) : undefined;
   let observer: IntersectionObserver;
@@ -63,8 +63,20 @@
     }
   }
 
+  function scrollToHash(hash: string) {
+    const heading = document.getElementById(`${hash.substring(1)}`);
+    const header_nav = document.getElementById('header-nav');
+    if (heading && header_nav) {
+      const top = heading.offsetTop - header_nav.clientHeight;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }
+  }
+
   onMount(() => {
     loaded = true;
+    setTimeout(() => {
+      scrollToHash(window.location.hash);
+    }, 1000);
   });
 </script>
 
@@ -130,38 +142,36 @@
 
       {#if nextPost || prevPost}
         <nav class="flex flex-col h-[20rem] md:(flex-row h-[12rem]) my8">
-          {#if prevPost}
-            <div id="prev-post" class="relative flex-1 group overflow-hidden bg-white/[0.5] dark:bg-black/[0.5]">
-              <a
-                rel="prev"
-                href="/{prevPost.slug}"
-                alt="/{prevPost.slug}"
-                class="absolute text-2xl font-bold z-10 !decoration-none !underline-none title-link-orange-500-orange-500 top-[3rem] right-[1rem] ml8">
-                {prevPost.title}
-              </a>
-              <div
-                class="absolute z-10 i-mdi-chevron-left !w-[1.5rem] !h-[1.5rem] top-[1.25rem] left-[0.75rem] animate-bounce-left" />
-              {#if prevPost.cover}
-                <ImgBanner
-                  src={prevPost.cover}
-                  imgClass="absolute z-1 w-full h-full object-cover op70 group-hover:(scale-110) transition-transform duration-300 ease-in-out" />
-              {/if}
-            </div>
-          {/if}
           {#if nextPost}
             <div id="next-post" class="relative flex-1 group overflow-hidden bg-white/[0.5] dark:bg-black/[0.5]">
               <div
-                class="absolute z-10 i-mdi-chevron-right !w-[1.5rem] !h-[1.5rem] top-[6rem] right-[0.75rem] animate-bounce-right" />
+                class="absolute z-10 i-mdi-chevron-left !w-[1.5rem] !h-[1.5rem] top-[1.25rem] left-[0.75rem] animate-bounce-left" />
               <a
                 rel="next"
                 href="/{nextPost.slug}"
-                alt="/{nextPost.slug}"
                 class="absolute text-2xl font-bold z-10 !decoration-none !underline-none title-link-orange-500-orange-500 top-[3rem] left-[1rem] mr8">
                 {nextPost.title}
               </a>
               {#if nextPost.cover}
                 <ImgBanner
                   src={nextPost.cover}
+                  imgClass="absolute z-1 w-full h-full object-cover op70 group-hover:(scale-110) transition-transform duration-300 ease-in-out" />
+              {/if}
+            </div>
+          {/if}
+          {#if prevPost}
+            <div id="prev-post" class="relative flex-1 group overflow-hidden bg-white/[0.5] dark:bg-black/[0.5]">
+              <a
+                rel="prev"
+                href="/{prevPost.slug}"
+                class="absolute text-2xl font-bold z-10 !decoration-none !underline-none title-link-orange-500-orange-500 top-[3rem] right-[1rem] ml8">
+                {prevPost.title}
+              </a>
+              <div
+                class="absolute z-10 i-mdi-chevron-right !w-[1.5rem] !h-[1.5rem] top-[6rem] right-[0.75rem] animate-bounce-right" />
+              {#if prevPost.cover}
+                <ImgBanner
+                  src={prevPost.cover}
                   imgClass="absolute z-1 w-full h-full object-cover op70 group-hover:(scale-110) transition-transform duration-300 ease-in-out" />
               {/if}
             </div>

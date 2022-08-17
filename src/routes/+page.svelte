@@ -9,7 +9,6 @@
   import { page } from '$app/stores';
   import { onMount } from 'svelte';
   import { fly } from 'svelte/transition';
-  import { query } from '$lib/search/stores';
 
   onMount(() => {
     tagsCur.init();
@@ -24,8 +23,6 @@
         });
       }
     });
-
-    query.set($page.url.searchParams.get('query') ?? '');
   });
 </script>
 
@@ -81,7 +78,7 @@
   itemscope
   itemtype="https://schema.org/Blog"
   itemprop="blog"
-  class="flex-nowrap justify-center flex-col items-center hidden xl:(flex flex-row items-stretch) ">
+  class="flex-nowrap justify-center flex-col items-center hidden xl:(flex flex-row items-stretch)">
   <div
     in:fly={{ x: -100, y: -100, duration: 300, delay: 300 }}
     out:fly={{ x: -100, y: 100, duration: 300 }}

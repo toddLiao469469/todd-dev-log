@@ -1,5 +1,100 @@
 # @kwchang0831/svelte-qwer
 
+## 0.11.0
+
+### Minor Changes
+
+- c47759b: deps: upgrade (vite, svelte, kit, unocss, marked...)
+
+### Patch Changes
+
+- ff3f374: doc: update example post
+- a8c72c9: deps: upgrade (katex)
+- b1bab79: fix: sync url query parameter with search input
+- bdf216d: fix: aria accessibility issue
+- 51d4520: fix: dirty fix for partytown not copying lib
+
+  - check out https://github.com/BuilderIO/partytown/issues/367
+
+- 16d3580: deps: upgrade (kit)
+
+## 0.10.0
+
+### Minor Changes
+
+- c862ea7: !deps: upgrade, remove partytown
+
+  !upgrade: unocss
+  https://github.com/unocss/unocss/pull/2368
+  now in saperate package: @unocss/extractor-svelte
+
+### Patch Changes
+
+- 06f0f72: fix: local image path add leading slash & clean up
+- d735aad: dpes: add peerDep sharp@0.31.3
+- aa3e076: dpes: upgrade (vite related)
+- ca34620: deps: upgrade (sveltejs, unocss...)
+- bf88971: fix: url hash scroll after 1sec
+- 4710532: feat: add languageConfig in UserConifg and dynamic import prismjs components
+
+## 0.9.0
+
+### Minor Changes
+
+- 59878fb: deps: upgrade svelte related deps
+
+### Patch Changes
+
+- 63cbb54: deps: upgrade (non svelte related deps)
+- 4607137: config: remove pnpm version restriction
+
+## 0.8.0
+
+### Minor Changes
+
+- 202a6f4: deps: upgrade
+
+## 0.7.2
+
+### Patch Changes
+
+- 4ff2b0a: fix: giscus iframe css
+
+## 0.7.1
+
+### Patch Changes
+
+- 8cf97cd: fix: issue#50
+- 7141051: fix: giscus width issue, take out data-theme
+
+## 0.7.0
+
+### Minor Changes
+
+- dc4531d: deps upgrade
+
+### Patch Changes
+
+- 6ffe6ee: fix: check $page.route before accessing id
+
+## 0.6.0
+
+### Minor Changes
+
+- e98c731: deps: migrate to sveltekit 1.0, fix all lint errors
+
+### Patch Changes
+
+- 2d5d207: deps: upgrade non svelte related
+- fb8da06: dpes: upgrade svelte kit related to the latest before 1.0
+- 9942af9: deps: upgrade svelte
+
+## 0.5.2
+
+### Patch Changes
+
+- faec438: fix: vercel disable trailing slash
+
 ## 0.5.1
 
 ### Patch Changes
