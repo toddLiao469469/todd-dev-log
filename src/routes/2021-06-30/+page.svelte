@@ -17,10 +17,10 @@
       Fiber、Hook的實作。 然後像是一些 react 常用的 pattern：一直不太熟悉該如何去使用 render
       props。今年漸漸地讀懂這類的寫法及好用的地方：
     </p>
-    <div class="code-block  ">
+    <div class="code-block  showLineNumber">
       <CodeCopy>
         <pre><code
-            class="language-jsx">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">&lt;ComponentA&gt;</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">{ (val) =&gt; &lt;ComponentB someProp={val} /&gt; }</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">&lt;/ ComponentA&gt;</div></div>`}</code></pre>
+            class="language-jsx">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="line-number">1</span><span class="no-line-diff"></span></div><div class="code-content"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">ComponentA</span></span><span class="token punctuation">></span></span><span class="token plain-text"></div></div><div class="code-line"><div class="code-linenotation"><span class="line-number">2</span><span class="no-line-diff"></span></div><div class="code-content"></span><span class="token punctuation">{</span> <span class="token punctuation">(</span><span class="token parameter">val</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">ComponentB</span></span> <span class="token attr-name">someProp</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>val<span class="token punctuation">}</span></span> <span class="token punctuation">/></span></span> <span class="token punctuation">}</span><span class="token plain-text"></div></div><div class="code-line"><div class="code-linenotation"><span class="line-number">3</span><span class="no-line-diff"></span></div><div class="code-content">&lt;/ ComponentA></span></div></div>`}</code></pre>
       </CodeCopy>
     </div>
     <p>
@@ -68,11 +68,18 @@
       的概念。
     </p>
     <p>
-      特別說一下強型別，對於JS開發者來說我想 undefined 的 runtime
-      錯誤應該是永遠的痛吧。雖然團隊是有用TS作為開發所以對於型別是有一定的保障。
-      但還是有一些小不足，像是對於某些libary的型別推斷並不夠令人滿意（特別是我們很愛用的 ramda ）
+      特別說一下強型別，對於JS開發者來說我想 <code class="inline-code-block">undefined</code>
+      的 runtime 錯誤應該是永遠的痛吧。雖然團隊是有用TS作為開發所以對於型別是有一定的保障。 但還是有一些小不足，像是對於某些libary的型別推斷並不夠令人滿意（特別是我們很愛用的
+      ramda ）
     </p>
-    <p>至於 HOF、prmoise（future）及 async/await 等等JS擁有的東西就不多說了，總之開發起來還是相對有親切感的。</p>
+    <p>
+      至於 <code class="inline-code-block">HOF</code>
+      、
+      <code class="inline-code-block">prmoise（future）</code>
+      及
+      <code class="inline-code-block">async/await</code>
+      等等JS擁有的東西就不多說了，總之開發起來還是相對有親切感的。
+    </p>
     <p>
       但也因為flutter，讓我有動力補足以前在學校時沒好好學的 OOP。 我覺得對於前端工程師來說
       OOP真的是比較少接觸的概念。我自己認為原因會是 Declarative 的形式非常適合前端，特別是在撰寫 UI上，而且也因為
@@ -83,14 +90,18 @@
       我們只在意
       <strong>「Widget要變成某個樣子」</strong>
     </p>
-    <div class="code-block  ">
+    <div class="code-block  showLineNumber">
       <CodeCopy>
         <pre><code
-            class="language-dart">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">Widget.setColor(color);</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">Widget.setWidth(width);</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">Widget.setHeight(height);</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">Widget.setOnClick(handleClick);</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">Widget(</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"> color:color,</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"> width:width,</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"> height:height,</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"> onClick:handleClick</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">);</div></div>`}</code></pre>
+            class="language-dart">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="line-number">1</span><span class="no-line-diff"></span></div><div class="code-content"><span class="token class-name">Widget</span><span class="token punctuation">.</span><span class="token function">setColor</span><span class="token punctuation">(</span>color<span class="token punctuation">)</span><span class="token punctuation">;</span></div></div><div class="code-line"><div class="code-linenotation"><span class="line-number">2</span><span class="no-line-diff"></span></div><div class="code-content"><span class="token class-name">Widget</span><span class="token punctuation">.</span><span class="token function">setWidth</span><span class="token punctuation">(</span>width<span class="token punctuation">)</span><span class="token punctuation">;</span></div></div><div class="code-line"><div class="code-linenotation"><span class="line-number">3</span><span class="no-line-diff"></span></div><div class="code-content"><span class="token class-name">Widget</span><span class="token punctuation">.</span><span class="token function">setHeight</span><span class="token punctuation">(</span>height<span class="token punctuation">)</span><span class="token punctuation">;</span></div></div><div class="code-line"><div class="code-linenotation"><span class="line-number">4</span><span class="no-line-diff"></span></div><div class="code-content"><span class="token class-name">Widget</span><span class="token punctuation">.</span><span class="token function">setOnClick</span><span class="token punctuation">(</span>handleClick<span class="token punctuation">)</span><span class="token punctuation">;</span></div></div><div class="code-line"><div class="code-linenotation"><span class="line-number">5</span><span class="no-line-diff"></span></div><div class="code-content"><span class="token class-name">Widget</span><span class="token punctuation">(</span></div></div><div class="code-line"><div class="code-linenotation"><span class="line-number">6</span><span class="no-line-diff"></span></div><div class="code-content"> color<span class="token punctuation">:</span>color<span class="token punctuation">,</span></div></div><div class="code-line"><div class="code-linenotation"><span class="line-number">7</span><span class="no-line-diff"></span></div><div class="code-content"> width<span class="token punctuation">:</span>width<span class="token punctuation">,</span></div></div><div class="code-line"><div class="code-linenotation"><span class="line-number">8</span><span class="no-line-diff"></span></div><div class="code-content"> height<span class="token punctuation">:</span>height<span class="token punctuation">,</span></div></div><div class="code-line"><div class="code-linenotation"><span class="line-number">9</span><span class="no-line-diff"></span></div><div class="code-content"> onClick<span class="token punctuation">:</span>handleClick</div></div><div class="code-line"><div class="code-linenotation"><span class="line-number">10</span><span class="no-line-diff"></span></div><div class="code-content"><span class="token punctuation">)</span><span class="token punctuation">;</span></div></div>`}</code></pre>
       </CodeCopy>
     </div>
     <p>
-      兩者的差異大概是會像上面那樣，用這種形式我猜測最大的好處可能會是，如果我們用一堆setXXX後續補上關於這個Widget的敘述，但我們也許要將這些setXXX全部放在某個生命週期的callback，讓widget在mount或者update時可以再次將這個Widget描繪出來。
+      兩者的差異大概是會像上面那樣，用這種形式我猜測最大的好處可能會是，如果我們用一堆
+      <code class="inline-code-block">setXXX</code>
+      後續補上關於這個Widget的敘述，但我們也許要將這些
+      <code class="inline-code-block">setXXX</code>
+      全部放在某個生命週期的callback，讓widget在mount或者update時可以再次將這個Widget描繪出來。
     </p>
     <p>總而言之開發 Flutter 可以同時體會到兩種程式設計風格，這還不夠香嗎？</p>
     <h3 id="guan1-yu2-qu4-nian2-ding4-xia4-de-mu4-biao1">

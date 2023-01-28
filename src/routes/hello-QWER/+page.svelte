@@ -121,7 +121,7 @@
       <h2 class="code-title">example.py</h2>
       <CodeCopy>
         <pre><code
-            class="language-python">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="line-number">1</span><span class="no-line-diff"></span></div><div class="code-content"><span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">:</span></div></div><div class="code-line"><div class="code-linenotation"><span class="line-number">2</span><span class="no-line-diff"></span></div><div class="code-content">    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Hello, World #%s'</span> <span class="token operator">%</span> <span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span></div></div>`}</code></pre>
+            class="language-python">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="line-number">1</span><span class="no-line-diff"></span></div><div class="code-content">for i in range(10):</div></div><div class="code-line"><div class="code-linenotation"><span class="line-number">2</span><span class="no-line-diff"></span></div><div class="code-content">    print('Hello, World #%s' % (i))</div></div>`}</code></pre>
       </CodeCopy>
     </div>
     <h2 id="end"><a href="#end">👍 END</a></h2>

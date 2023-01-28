@@ -1,32 +1,27 @@
 import PrismJS from 'prismjs';
 import 'prismjs/components/prism-bash.min.js';
 import 'prismjs/components/prism-cmake.min.js';
-import 'prismjs/components/prism-c.min.js';
 import 'prismjs/components/prism-clike.min.js';
-import 'prismjs/components/prism-cpp.min.js';
 import 'prismjs/components/prism-css.min.js';
-import 'prismjs/components/prism-csharp.min.js';
 import 'prismjs/components/prism-elixir.min.js';
 import 'prismjs/components/prism-erlang.min.js';
 import 'prismjs/components/prism-go.min.js';
 import 'prismjs/components/prism-java.min.js';
 import 'prismjs/components/prism-javascript.min.js';
-import 'prismjs/components/prism-lua.min.js';
 import 'prismjs/components/prism-markdown.min.js';
 import 'prismjs/components/prism-makefile.min.js';
-import 'prismjs/components/prism-matlab.min.js';
 import 'prismjs/components/prism-powershell.min.js';
 import 'prismjs/components/prism-python.min.js';
-import 'prismjs/components/prism-ruby.min.js';
 import 'prismjs/components/prism-rust.min.js';
 import 'prismjs/components/prism-sql.min.js';
 import 'prismjs/components/prism-sass.min.js';
 import 'prismjs/components/prism-scss.min.js';
 import 'prismjs/components/prism-solidity.min.js';
-import 'prismjs/components/prism-swift.min.js';
 import 'prismjs/components/prism-typescript.min.js';
 import 'prismjs/components/prism-wasm.min.js';
 import 'prismjs/components/prism-yaml.min.js';
+import 'prismjs/components/prism-dart.min.js';
+import 'prismjs/components/prism-jsx.min.js';
 import 'prism-svelte';
 
 import slug from 'limax';
@@ -51,8 +46,6 @@ export const default_renderer = (basePath) => {
     cmake: 'cmake',
     css: 'css',
     csharp: 'csharp',
-    c: 'c',
-    cpp: 'cpp',
     clike: 'clike',
     env: 'bash',
     elixir: 'elixir',
@@ -61,15 +54,11 @@ export const default_renderer = (basePath) => {
     html: 'markup',
     js: 'javascript',
     java: 'java',
-    lua: 'lua',
     md: 'markdown',
     matlab: 'matlab',
     makefile: 'makefile',
     powershell: 'powershell',
-    py: 'python',
-    python: 'python',
     ts: 'typescript',
-    ruby: 'ruby',
     rust: 'rust',
     svelte: 'svelte',
     sh: 'bash',
@@ -78,9 +67,10 @@ export const default_renderer = (basePath) => {
     scss: 'scss',
     solidity: 'solidity',
     sql: 'sql',
-    swift: 'swift',
     wasm: 'wasm',
     yaml: 'yaml',
+    dart: 'dart',
+    jsx: 'jsx',
     '': '',
   };
 

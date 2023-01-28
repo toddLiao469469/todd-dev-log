@@ -17,6 +17,7 @@ tags:
 然後像是一些 react 常用的 pattern：一直不太熟悉該如何去使用 render props。今年漸漸地讀懂這類的寫法及好用的地方：
 
 ```jsx
+/// showLineNumber
 <ComponentA>
 { (val) => <ComponentB someProp={val} /> }
 </ ComponentA>
@@ -38,10 +39,10 @@ tags:
 
 就算如此我還是覺得 Dart 是一個相當不錯的語言，有一些我覺得很棒的特性：強型別、支援 `higher-order-function`、`future`、`async/await` 的概念。
 
-特別說一下強型別，對於JS開發者來說我想 undefined 的 runtime 錯誤應該是永遠的痛吧。雖然團隊是有用TS作為開發所以對於型別是有一定的保障。
+特別說一下強型別，對於JS開發者來說我想 `undefined` 的 runtime 錯誤應該是永遠的痛吧。雖然團隊是有用TS作為開發所以對於型別是有一定的保障。
 但還是有一些小不足，像是對於某些libary的型別推斷並不夠令人滿意（特別是我們很愛用的 ramda ）
 
-至於 HOF、prmoise（future）及 async/await 等等JS擁有的東西就不多說了，總之開發起來還是相對有親切感的。
+至於 `HOF`、`prmoise（future）`及 `async/await` 等等JS擁有的東西就不多說了，總之開發起來還是相對有親切感的。
 
 但也因為flutter，讓我有動力補足以前在學校時沒好好學的 OOP。
 我覺得對於前端工程師來說 OOP真的是比較少接觸的概念。我自己認為原因會是 Declarative 的形式非常適合前端，特別是在撰寫 UI上，而且也因為 prototype based 還是有那麼一點不直觀，進而導致 FP 變成前端近幾年的顯學。  
@@ -50,6 +51,7 @@ tags:
 我們只在意 **「Widget要變成某個樣子」**
 
 ```dart
+/// showLineNumber
 Widget.setColor(color);
 Widget.setWidth(width);
 Widget.setHeight(height);
@@ -62,7 +64,7 @@ Widget(
 );
 ```
 
-兩者的差異大概是會像上面那樣，用這種形式我猜測最大的好處可能會是，如果我們用一堆setXXX後續補上關於這個Widget的敘述，但我們也許要將這些setXXX全部放在某個生命週期的callback，讓widget在mount或者update時可以再次將這個Widget描繪出來。
+兩者的差異大概是會像上面那樣，用這種形式我猜測最大的好處可能會是，如果我們用一堆`setXXX`後續補上關於這個Widget的敘述，但我們也許要將這些`setXXX`全部放在某個生命週期的callback，讓widget在mount或者update時可以再次將這個Widget描繪出來。
 
 總而言之開發 Flutter 可以同時體會到兩種程式設計風格，這還不夠香嗎？
 
