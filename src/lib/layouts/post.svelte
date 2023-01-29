@@ -130,24 +130,6 @@
 
       {#if nextPost || prevPost}
         <nav class="flex flex-col h-[20rem] md:(flex-row h-[12rem]) my8">
-          {#if nextPost}
-            <div id="next-post" class="relative flex-1 group overflow-hidden bg-white/[0.5] dark:bg-black/[0.5]">
-              <div
-                class="absolute z-10 i-mdi-chevron-left !w-[1.5rem] !h-[1.5rem] top-[1.25rem] left-[0.75rem] animate-bounce-left" />
-              <a
-                rel="next"
-                href="/{nextPost.slug}"
-                alt="/{nextPost.slug}"
-                class="absolute text-2xl font-bold z-10 !decoration-none !underline-none title-link-orange-500-orange-500 top-[3rem] left-[1rem] mr8">
-                {nextPost.title}
-              </a>
-              {#if nextPost.cover}
-                <ImgBanner
-                  src={nextPost.cover}
-                  imgClass="absolute z-1 w-full h-full object-cover op70 group-hover:(scale-110) transition-transform duration-300 ease-in-out" />
-              {/if}
-            </div>
-          {/if}
           {#if prevPost}
             <div id="prev-post" class="relative flex-1 group overflow-hidden bg-white/[0.5] dark:bg-black/[0.5]">
               <a
@@ -158,10 +140,28 @@
                 {prevPost.title}
               </a>
               <div
-                class="absolute z-10 i-mdi-chevron-right !w-[1.5rem] !h-[1.5rem] top-[6rem] right-[0.75rem] animate-bounce-right" />
+                class="absolute z-10 i-mdi-chevron-left !w-[1.5rem] !h-[1.5rem] top-[1.25rem] left-[0.75rem] animate-bounce-left" />
               {#if prevPost.cover}
                 <ImgBanner
                   src={prevPost.cover}
+                  imgClass="absolute z-1 w-full h-full object-cover op70 group-hover:(scale-110) transition-transform duration-300 ease-in-out" />
+              {/if}
+            </div>
+          {/if}
+          {#if nextPost}
+            <div id="next-post" class="relative flex-1 group overflow-hidden bg-white/[0.5] dark:bg-black/[0.5]">
+              <div
+                class="absolute z-10 i-mdi-chevron-right !w-[1.5rem] !h-[1.5rem] top-[6rem] right-[0.75rem] animate-bounce-right" />
+              <a
+                rel="next"
+                href="/{nextPost.slug}"
+                alt="/{nextPost.slug}"
+                class="absolute text-2xl font-bold z-10 !decoration-none !underline-none title-link-orange-500-orange-500 top-[3rem] left-[1rem] mr8">
+                {nextPost.title}
+              </a>
+              {#if nextPost.cover}
+                <ImgBanner
+                  src={nextPost.cover}
                   imgClass="absolute z-1 w-full h-full object-cover op70 group-hover:(scale-110) transition-transform duration-300 ease-in-out" />
               {/if}
             </div>
