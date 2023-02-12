@@ -18,7 +18,7 @@ export const siteConfig: Site.Config = {
   description: '🚀 QWER - Awesome Blog Starter, Built using Svelte with ❤',
   lang: 'en',
   timeZone: 'Asia/Taipei',
-  since: 2022,
+  since: 2020,
   cover: SiteCover,
   author: {
     name: 'Todd Liao',
