@@ -6,8 +6,8 @@
   let className: string | undefined = undefined;
   export { className as class };
 
-  export let width: string = '128px';
-  export let height: string = '128px';
+  export let width = '128px';
+  export let height = '128px';
 
   let loaded = false;
   onMount(() => {
@@ -32,7 +32,7 @@
         {width}
         {height}
         class={className ??
-          'rounded-full shadow-xl !w-32 !h-32 aspect-auto object-cover hover:rotate-[360deg] transition-transform duration-1000 ease-in-out'} />
+          'rounded-full shadow-xl !w-32 !h-32 aspect-auto object-cover  transition-transform duration-1000 ease-in-out'} />
     </picture>
   {:else}
     <div class="i-line-md-github-loop {className ?? '!h-32 !w-32'}" />

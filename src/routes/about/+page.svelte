@@ -11,6 +11,33 @@
 
 <Post>
   <article slot="post_content">
-    <h2 id="qwer"><a href="#qwer">🎉 QWER</a></h2>
+    <p>hi ， 我是 Todd 目前在 Ionex 擔任 software engineer。</p>
+    <p>
+      從出社會以來大多數都是在
+      <strong>前端</strong>
+      領域，最近開始轉往fullstack前進。
+    </p>
+    <h3 id="fe"><a href="#fe">FE</a></h3>
+    <ul>
+      <li><p>喜歡typescript</p></li>
+      <li>
+        <p>大部分都是使用React</p>
+        <ul>
+          <li><p>工作上常用 next.js + mui + react-query/apollo-client</p></li>
+          <li><p>喜歡redux，但最近開始使用jotai</p></li>
+        </ul>
+      </li>
+      <li><p>最近對svelte蠻有興趣的</p></li>
+    </ul>
+    <h3 id="be"><a href="#be">BE</a></h3>
+    <ul>
+      <li><p>會一點點 node.js 加上一點點的mongoDB</p></li>
+      <li><p>最近在學習graphQL server side的開發</p></li>
+    </ul>
+    <h3 id="qi2-ta1"><a href="#qi2-ta1">其他</a></h3>
+    <ul>
+      <li>會一些AWS加上jenkins</li>
+      <li>偶而寫些小 script 處理開發上的雜事</li>
+    </ul>
   </article>
 </Post>

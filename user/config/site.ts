@@ -2,18 +2,18 @@ import type { Site } from '$lib/types/site';
 import type { Giscus } from '$lib/types/giscus';
 import type { DD } from '$lib/types/dd';
 
-import Avatar from '$assets/avatar.png';
-import Avatar_128 from '$assets/avatar.png?w=128&h=128&format=avif;webp&imagetools';
-import Avatar_48_PNG from '$assets/avatar.png?w=48&h=48&imagetools';
-import Avatar_96_PNG from '$assets/avatar.png?w=96&h=96&imagetools';
-import Avatar_192_PNG from '$assets/avatar.png?w=192&h=192&imagetools';
-import Avatar_512_PNG from '$assets/avatar.png?w=512&h=512&imagetools';
+import Avatar from '$assets/avatar.jpeg';
+import Avatar_128 from '$assets/avatar.jpeg?w=128&h=128&format=avif;webp&imagetools';
+import Avatar_48_PNG from '$assets/avatar.jpeg?w=48&h=48&imagetools';
+import Avatar_96_PNG from '$assets/avatar.jpeg?w=96&h=96&imagetools';
+import Avatar_192_PNG from '$assets/avatar.jpeg?w=192&h=192&imagetools';
+import Avatar_512_PNG from '$assets/avatar.jpeg?w=512&h=512&imagetools';
 
 import SiteCover from '$assets/qwer.webp';
 
 export const siteConfig: Site.Config = {
   url: 'https://svelte-qwer.vercel.app',
-  title: 'Todd Dev Log',
+  title: 'Todd Dev Blog',
   subtitle: '🚀 QWER - Built using Svelte with ❤',
   description: '🚀 QWER - Awesome Blog Starter, Built using Svelte with ❤',
   lang: 'en',
@@ -34,7 +34,8 @@ export const siteConfig: Site.Config = {
     website: 'https://github.com/toddLiao469469/svelte-QWER',
     github: 'https://github.com/toddLiao469469',
     email: 'toddliao.dev@gmail.com',
-    bio: `目前在 Ionex 擔任前端工程師 <br/> 最近在研究 Rust`,
+    twitter: 'https://twitter.com/toddLiao469469',
+    bio: `目前在 Ionex 擔任前端工程師 <br/> 最近在研究 Rust 以及 Svelte`,
   },
 };
 
