@@ -12,7 +12,7 @@ import Avatar_512_PNG from '$assets/avatar.jpeg?w=512&h=512&imagetools';
 import SiteCover from '$assets/qwer.webp';
 
 export const siteConfig: Site.Config = {
-  url: 'https://svelte-qwer.vercel.app',
+  url: 'https://todd-dev-blog.vercel.app/',
   title: 'Todd Dev Blog',
   subtitle: '🚀 QWER - Built using Svelte with ❤',
   description: '🚀 QWER - Awesome Blog Starter, Built using Svelte with ❤',
