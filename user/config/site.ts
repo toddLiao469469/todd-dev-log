@@ -13,9 +13,9 @@ import SiteCover from '$assets/qwer.webp';
 
 export const siteConfig: Site.Config = {
   url: 'https://www.toddliao.dev/',
-  title: 'Todd Dev Blog',
-  subtitle: '🚀 QWER - Built using Svelte with ❤',
-  description: '🚀 QWER - Awesome Blog Starter, Built using Svelte with ❤',
+  title: 'Todd\'s Dev Logs',
+  subtitle: '一個前端工程師的學習筆記',
+  description: '一個前端工程師的學習筆記',
   lang: 'en',
   timeZone: 'Asia/Taipei',
   since: 2020,
@@ -92,7 +92,7 @@ export const dateConfig: Site.DateConfig = {
 // Replace with your own Giscus setting
 // See https://giscus.app/
 export const giscusConfig: Giscus.Config = {
-  enable: true,
+  enable: false,
   id: 'giscus-comment',
   repo: import.meta.env.QWER_GISCUS_REPO,
   repoId: import.meta.env.QWER_GISCUS_REPO_ID,
@@ -109,7 +109,7 @@ export const giscusConfig: Giscus.Config = {
 
 export const navConfig: (DD.Nav | DD.Link)[] = [
   {
-    name: 'About',
+    name: '關於我',
     url: '/about',
   },
 ];
@@ -118,7 +118,7 @@ export const mobilenavConfig: DD.Nav = {
   orientation: 2,
   links: [
     {
-      name: 'About',
+      name: '關於我',
       url: '/about',
     },
   ],
