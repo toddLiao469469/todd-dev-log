@@ -104,7 +104,9 @@
         gatsby
       </code>
       ，但後來偶然發現
-      <code class="inline-code-block">QWER</code>
+      <a href="https://github.com/kwchang0831/svelte-QWER" rel="external">
+        <code class="inline-code-block">QWER</code>
+      </a>
       一個參考
       <code class="inline-code-block">urara</code>
       的主題，基本上也是作者使用了
@@ -122,7 +124,16 @@
       <ImgZoom src="/2023-04-07/QWER-1.png" alt="檔案路由" class="h-full object-cover" />
     </p>
     <p>
-      整題而言 <code class="inline-code-block">QWER</code>
+      然後在 <code class="inline-code-block">markdown</code>
+      的 meta 中有一些好用的參數，像是常用的cover圖、tags之類的。
+      <ImgZoom src="/2023-04-07/QWER-3.png" alt="檔案路由" class="h-full object-cover" />
+    </p>
+    <p>
+      也內建自動生成文章目錄，這點我真的超推。
+      <ImgZoom src="/2023-04-07/QWER-4.png" alt="檔案路由" class="h-full object-cover" />
+    </p>
+    <p>
+      總而言之 <code class="inline-code-block">QWER</code>
        已經滿足我 90% 的需求了，但還是在搬遷時遇到了一些小小問題。
     </p>
     <h2 id="ban1-qian1-guo4-cheng2"><a href="#ban1-qian1-guo4-cheng2">搬遷過程</a></h2>
@@ -171,6 +182,10 @@
     <p>
       當然架站也不是只有優點，最大缺點應該會是放棄原本擁有的流量但反正我原本的 medium 也沒什麼人看 <em>(QQ)</em>
        所以這些就當作沒有吧。而且還少了原本部落格平台的 promote ，像是 medium 就會時不時寄信或者 follower 的功能。
+    </p>
+    <p>
+      參考資料:
+      <a href="https://github.com/kwchang0831/svelte-QWER" rel="external">https://github.com/kwchang0831/svelte-QWER</a>
     </p>
   </article>
 </Post>
