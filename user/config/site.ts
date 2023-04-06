@@ -12,7 +12,7 @@ import Avatar_512_PNG from '$assets/avatar.jpeg?w=512&h=512&imagetools';
 import SiteCover from '$assets/qwer.webp';
 
 export const siteConfig: Site.Config = {
-  url: 'https://www.toddliao.dev/',
+  url: 'https://toddliao.dev/',
   title: 'Todd\'s Dev Logs',
   subtitle: '一個前端工程師的學習筆記',
   description: '一個前端工程師的學習筆記',
@@ -31,7 +31,7 @@ export const siteConfig: Site.Config = {
     avatar_96_png: Avatar_96_PNG,
     avatar_192_png: Avatar_192_PNG,
     avatar_512_png: Avatar_512_PNG,
-    website: 'https://www.toddliao.dev/',
+    website: 'https://toddliao.dev/',
     github: 'https://github.com/toddLiao469469',
     email: 'toddliao.dev@gmail.com',
     twitter: 'https://twitter.com/toddLiao469469',
