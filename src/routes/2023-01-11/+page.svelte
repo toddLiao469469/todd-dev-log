@@ -61,7 +61,8 @@
       <br />
       (雖然我自己是蠻喜歡redux的設計以及它的生態系)
       <br />
-      我們團隊這一兩年主要的開發專案都從react-redux轉而使用context加useReducer來實作global state，雖然當初設計時我還沒加入，但我推測是以當時的時空背景的確是沒什麼太複雜global
+      我們團隊這一兩年主要的開發專案都從react-redux轉而使用context加useReducer來實作global
+      state，雖然當初設計時我還沒加入，但我推測是以當時的時空背景的確是沒什麼太複雜global
       state需要管理，所以的確context就足夠我們使用。
     </p>
     <p>

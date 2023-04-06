@@ -49,7 +49,7 @@
     <p>
       當然如果跟TypeScrpit相比一樣也能達成上面的需求且對於開發體驗的提升也很大，但使用TS有時會遇到第三方package的generic
       type很難標，甚至最後標成 <code class="inline-code-block">any</code>
-      。但因為Dart本身就有型別系統所以基本上第三方的pub還是有型別保障的。
+       。但因為Dart本身就有型別系統所以基本上第三方的pub還是有型別保障的。
     </p>
     <p>
       那 null safety指的是什麼？最大的好處就是我們可以在開發時很有把握的知道這個變數是不是
@@ -96,14 +96,14 @@
       <code class="inline-code-block">final</code>
       這兩個宣告方式就跟js 的
       <code class="inline-code-block">const</code>
-      一樣是用於宣告一個「不可變的常數」。
+       一樣是用於宣告一個「不可變的常數」。
     </p>
     <p>
       亦即這之後不能將這些變數重新賦值。那為什麼還有分 <code class="inline-code-block">const</code>
       及
       <code class="inline-code-block">final</code>
       <code class="inline-code-block">呢？最主要的差異是const</code>
-      更為嚴格，它代表的是「編譯時的常數」，什麼意思？
+       更為嚴格，它代表的是「編譯時的常數」，什麼意思？
     </p>
     <div class="code-block  ">
       <CodeCopy>
@@ -117,7 +117,7 @@
       <code class="inline-code-block">const</code>
       宣告b 將a的值給b ，但這無法通過 Dart的編譯器。因為
       <code class="inline-code-block">const</code>
-      的是要在編譯期間就已經是有數值的常數。所以const a = b ; 這種直到runtime才完成初始化的事情是不被允許的。
+       的是要在編譯期間就已經是有數值的常數。所以const a = b ; 這種直到runtime才完成初始化的事情是不被允許的。
     </p>
     <p>
       所以const 較常用地方是一些「永遠不變的數值」像是
@@ -129,7 +129,7 @@
       而 <code class="inline-code-block">final</code>
       就會比較接近於 js裡
       <code class="inline-code-block">const</code>
-      的用法，就是在接下來的runtime這個數值都會是不可變更的。
+       的用法，就是在接下來的runtime這個數值都會是不可變更的。
     </p>
     <p>
       var 就可以想成是js的 <code class="inline-code-block">let</code>
@@ -140,11 +140,11 @@
       了（可以想像成ts一樣），因為在初始化後將會進行型別推斷（Type inference）將 b 的type定為
       <code class="inline-code-block">int</code>
       <code class="inline-code-block">了所以不能將string</code>
-      給b了
+       給b了
     </p>
     <p>
       而直接用型別宣告的方式就跟 <code class="inline-code-block">var</code>
-      差不多一樣了就不詳細介紹了，就差別是一個是交由dart 推斷型別一個是我們自己宣告型別。
+       差不多一樣了就不詳細介紹了，就差別是一個是交由dart 推斷型別一個是我們自己宣告型別。
     </p>
     <p>但其實在變數宣告以及初始化還有一些細節，這部分就留到之後提到「null safety」時再來說明。</p>
     <h2 id="chang2-yong4-xing2-bie2"><a href="#chang2-yong4-xing2-bie2">常用型別</a></h2>
@@ -160,7 +160,7 @@
       <code class="inline-code-block">.filled</code>
       及
       <code class="inline-code-block">.generate</code>
-      都是可以用來動態產生list的建構子：
+       都是可以用來動態產生list的建構子：
     </p>
     <div class="code-block  ">
       <CodeCopy>
@@ -183,7 +183,7 @@
     <p>定義為「沒有索引值且不可重複的集合」</p>
     <p>
       我們可以用 <code class="inline-code-block">&lcub&rcub</code>
-      來做初始化並用逗號分隔每一個元素：
+       來做初始化並用逗號分隔每一個元素：
     </p>
     <div class="code-block  ">
       <CodeCopy>
@@ -193,7 +193,7 @@
     </div>
     <p>
       也可以利用 <code class="inline-code-block">Set.from</code>
-      放入一個可迭代的值來產生 Set
+       放入一個可迭代的值來產生 Set
     </p>
     <div class="code-block  ">
       <CodeCopy>
@@ -235,7 +235,7 @@
       通常都是使用 <code class="inline-code-block">&lt;&gt;</code>
       來實作，像是List的實作是
       <code class="inline-code-block">List&lt;E&gt;</code>
-      而這個E就是我們可以傳入的型別：
+       而這個E就是我們可以傳入的型別：
     </p>
     <div class="code-block  ">
       <CodeCopy>
@@ -245,7 +245,7 @@
     </div>
     <p>
       而當我們使用了不一樣的型別時就會跳出 Error，像是我在 <code class="inline-code-block">List&lt;String&gt;</code>
-      裡放入一個 int 就會跳出以下錯誤：
+       裡放入一個 int 就會跳出以下錯誤：
     </p>
     <p>當然我們也可以運用到其他地方像是 Class 或者 Function上</p>
     <div class="code-block  ">
@@ -256,7 +256,7 @@
     </div>
     <p>
       而關於型別有一些進階應用像是利用 <code class="inline-code-block">typedef</code>
-      對Function的型別做更進一步的抽象
+       對Function的型別做更進一步的抽象
     </p>
     <p>
       <code class="inline-code-block">typedef Identity&lt;E&gt; = E Function&lparE e&rpar;</code>
@@ -271,7 +271,7 @@
     </div>
     <p>
       我們可以從vs code中看到因為我們傳入了 int 所以 <code class="inline-code-block">utils.ientity</code>
-      也變成有一個 int 參數且會回傳 int 的 Function
+       也變成有一個 int 參數且會回傳 int 的 Function
     </p>
     <h3 id="class"><a href="#class">Class</a></h3>
     <p>
