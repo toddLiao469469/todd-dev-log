@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.toddliao.dev/sitemap.xml
+Sitemap: https://toddliao.dev/sitemap.xml
