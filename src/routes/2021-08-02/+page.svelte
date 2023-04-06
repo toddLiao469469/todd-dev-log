@@ -30,7 +30,7 @@
     <p>
       所謂「狀態管理」通常都會討論到「跨組件狀態共享」這個重要的議題。我們先來看看如果在最原生的狀況進行跨組件的狀態共享該如何做，通常都會將一個
       <code class="inline-code-block">setState</code>
-      包裝在 handler 裡後將 state 及handler 向下傳遞
+       包裝在 handler 裡後將 state 及handler 向下傳遞
     </p>
     <div class="code-block  ">
       <CodeCopy>
@@ -46,8 +46,8 @@
       <code class="inline-code-block">_active</code>
       這個狀態，但相信大家在實際專案中並不會單純使用
       <code class="inline-code-block">setState</code>
-      在管理狀態，畢竟當狀態及Widget 一多會變得十分麻煩，而且如果某個狀態不只需要傳一層 Widget 時你必須在期間每層的 Widget
-      的參數都放入這個狀態，這將會讓我們更難管理狀態。
+      在管理狀態，畢竟當狀態及Widget 一多會變得十分麻煩，而且如果某個狀態不只需要傳一層 Widget 時你必須在期間每層的
+      Widget 的參數都放入這個狀態，這將會讓我們更難管理狀態。
     </p>
     <h3 id="yi1-lai4-zhu4-ru4"><a href="#yi1-lai4-zhu4-ru4">依賴注入</a></h3>
     <p>
@@ -76,7 +76,7 @@
       <code class="inline-code-block">BuildContext</code>
       有什麼差，就要牽扯到
       <code class="inline-code-block">BuildContext</code>
-      這個坑了以後有機會再來填。
+       這個坑了以後有機會再來填。
     </p>
     <h3 id="jie2-lun4"><a href="#jie2-lun4">結論</a></h3>
     <p>

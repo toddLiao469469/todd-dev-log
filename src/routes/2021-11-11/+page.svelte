@@ -43,7 +43,7 @@
     </div>
     <p>
       而 <code class="inline-code-block">control</code>
-      就較為麻煩
+       就較為麻煩
     </p>
     <div class="code-block  ">
       <CodeCopy>
@@ -55,7 +55,7 @@
       基本上就是利用 render props 讓這個元件可以被 <code class="inline-code-block">Form</code>
       操控。在RHF的文件裡有說到有些第三方的 controlled component需要使用
       <code class="inline-code-block">Controller</code>
-      來進行包裝才能被使用。
+       來進行包裝才能被使用。
     </p>
     <h3 id="hui2-dao4-zhe4-ci4-de-wen4-ti2"><a href="#hui2-dao4-zhe4-ci4-de-wen4-ti2">回到這次的問題</a></h3>
     <p>我們使用了 chakra-ui 來當作我們的元件庫，一直以來使用都沒什麼問題 直到我們做了以下事情：</p>
@@ -136,7 +136,7 @@
       那我們就來看看為什麼使用了 <code class="inline-code-block">forwardRef</code>
       的
       <code class="inline-code-block">CustomInput</code>
-      可以達成我們的需求。
+       可以達成我們的需求。
     </p>
     <p>官方文件：傳送 Ref — React</p>
     <p>
@@ -147,18 +147,18 @@
       <code class="inline-code-block">&lcub...props&rcub</code>
       中 並無法取出
       <code class="inline-code-block">ref</code>
-      的。
+       的。
     </p>
     <p>
       其實有透過其他命名，像是將這個prop命名改為
       <code class="inline-code-block">customRef</code>
       之類的，然後藉此規避掉關鍵字問題，但這種方式跟
       <code class="inline-code-block">forwardRef</code>
-      的比較並不在本篇文的討論範圍。
+       的比較並不在本篇文的討論範圍。
     </p>
     <p>
       那我們就來看一下 <code class="inline-code-block">forwardRef</code>
-      如何使用。
+       如何使用。
     </p>
     <div class="code-block  ">
       <CodeCopy>
@@ -170,7 +170,7 @@
       在創建component時，我們透過wrap一層 <code class="inline-code-block">forwardRef</code>
       讓
       <code class="inline-code-block">ref</code>
-      可以被取出並傳遞到下層。
+       可以被取出並傳遞到下層。
     </p>
     <p>從我們能看到的簡單流程就是這樣：</p>
     <p>
@@ -205,12 +205,12 @@
       <code class="inline-code-block">useController</code>
       內部有自己的context，所以就算
       <code class="inline-code-block">ref</code>
-      沒有被傳遞到最下面的component也是能夠更改及讀取到狀態，那這樣的行為到底這算不算Bug我就沒深入研究了。
+       沒有被傳遞到最下面的component也是能夠更改及讀取到狀態，那這樣的行為到底這算不算Bug我就沒深入研究了。
     </p>
     <h3 id="jie2-yu3"><a href="#jie2-yu3">結語</a></h3>
     <p>
       但也因為這個坑我發現另外一件事，還記得我最一開始說這是因爲 <code class="inline-code-block">reset</code>
-      而發現的嗎？
+       而發現的嗎？
     </p>
     <p>
       我在codesandbox實作這個demo時發現，為什麼一般onChange也會失效了？後來才知道這是RHF的版本問題，codesandbox裡使用是最新版(寫文當下是：7.19.2)，而公司內的專案使用的是7.12.2，而7.12.2裡就算我不用forwardRef
@@ -226,7 +226,7 @@
       <code class="inline-code-block">ref</code>
       之後才再去看
       <code class="inline-code-block">register</code>
-      的實作來找到這個問題。
+       的實作來找到這個問題。
     </p>
     <p>
       其中一個原因也是我很少在操作 <code class="inline-code-block">ref</code>
@@ -240,7 +240,7 @@
       <code class="inline-code-block">register</code>
       自動傳入
       <code class="inline-code-block">ref</code>
-      才讓我發現這件事情。
+       才讓我發現這件事情。
     </p>
     <h3 id="lan3-ren2-bao1"><a href="#lan3-ren2-bao1">懶人包</a></h3>
     <ol>
@@ -250,7 +250,7 @@
       <li>
         在包裝第三方套件時請注意到
         <code class="inline-code-block">ref</code>
-        的傳遞情況
+         的傳遞情況
       </li>
       <li>
         <code class="inline-code-block">ref</code>
