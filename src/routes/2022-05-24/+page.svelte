@@ -13,7 +13,7 @@
   <article slot="post_content">
     <p>
       有一次剛好跟同事聊到 <strong>「我們認為的」</strong>
-       ant design form的缺點，像是是串接非antd或者較為複雜的component時可能要使用render props導致JSX會比想像中的難閱讀又或者是對於form
+      ant design form的缺點，像是是串接非antd或者較為複雜的component時可能要使用render props導致JSX會比想像中的難閱讀又或者是對於form
       value型別保障以及讓我們最痛苦的Form.Item的內建樣式。
     </p>
     <p>讓我們開始思考有沒有更簡單優雅的方法讓我去使用做表單元件。</p>
@@ -54,7 +54,7 @@
       props去實現。
     </p>
     <p>我們來看看ant design 的Form是如何綁定component的：</p>
-    <div class="code-block  ">
+    <div class="code-block">
       <CodeCopy>
         <pre><code
             class="language-jsx">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token keyword">const</span> <span class="token punctuation">[</span>form<span class="token punctuation">]</span> <span class="token operator">=</span> Form<span class="token punctuation">.</span><span class="token function">useForm</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Form</span></span> <span class="token attr-name">form</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>form<span class="token punctuation">}</span></span> <span class="token punctuation">></span></span><span class="token plain-text"></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">  </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Form.Item</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">'</span>name<span class="token punctuation">'</span></span><span class="token punctuation">></span></span><span class="token plain-text"></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Input</span></span><span class="token punctuation">/></span></span><span class="token plain-text"></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">  </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Form.Item</span></span><span class="token punctuation">></span></span><span class="token plain-text"></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Form</span></span><span class="token punctuation">></span></span></div></div>`}</code></pre>
@@ -63,7 +63,7 @@
     <p>稍微解釋一下是利用antd Form所提供的custom hook來產生 form instance，然後將這個form instance放入到Form元件裡。</p>
     <p>
       <code class="inline-code-block">Form.Item</code>
-       可以傳入name來註冊form的field，然後會將它所wrap的元件進行綁定，大致上就是有自動的傳入onChange及value這兩個props。
+      可以傳入name來註冊form的field，然後會將它所wrap的元件進行綁定，大致上就是有自動的傳入onChange及value這兩個props。
     </p>
     <h2 id="na4-wei4-shen2-me-hui4-xuan3-ze2-react-hook-form">
       <a href="#na4-wei4-shen2-me-hui4-xuan3-ze2-react-hook-form">那為什麼會選擇 React Hook Form</a>
@@ -73,7 +73,7 @@
       form遇到的痛點，然後也因爲那時接手的專案算是可以放手使用各種新奇技術的專案，就開始在小部分沒什麼影響的地方開始試用看看。
     </p>
     <h3 id="bang3-ding4-fang1-shi4"><a href="#bang3-ding4-fang1-shi4">綁定方式</a></h3>
-    <div class="code-block  ">
+    <div class="code-block">
       <CodeCopy>
         <pre><code
             class="language-jsx">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token keyword">const</span> <span class="token punctuation">{</span> register<span class="token punctuation">,</span> control<span class="token punctuation">,</span> handleSubmit<span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">useForm</span><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">onSubmit</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token function">handleSubmit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token punctuation">></span></span><span class="token plain-text"></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token spread"><span class="token punctuation">{</span><span class="token operator">...</span><span class="token function">register</span><span class="token punctuation">(</span><span class="token string">'name'</span><span class="token punctuation">)</span><span class="token punctuation">}</span></span> <span class="token punctuation">/></span></span><span class="token plain-text"></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Controller</span></span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"> <span class="token attr-name">render</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> field <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token spread"><span class="token punctuation">{</span><span class="token operator">...</span>field<span class="token punctuation">}</span></span> <span class="token punctuation">/></span></span><span class="token punctuation">}</span></span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>name<span class="token punctuation">"</span></span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"> <span class="token attr-name">control</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>control<span class="token punctuation">}</span></span> </div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"> <span class="token attr-name">defaultValue</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span>  <span class="token punctuation">/></span></span><span class="token plain-text"></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">></span></span></div></div>`}</code></pre>
@@ -89,7 +89,7 @@
       <code class="inline-code-block">register&lpar&rpar</code>
       傳入我們要綁定的field name，而
       <code class="inline-code-block">control</code>
-       的彈性就比較大了，它則是利用render props 來將state與update state的function傳進component裡。
+      的彈性就比較大了，它則是利用render props 來將state與update state的function傳進component裡。
     </p>
     <p>
       在 <code class="inline-code-block">control</code>
@@ -107,7 +107,7 @@
       <code class="inline-code-block">onChange</code>
       以及
       <code class="inline-code-block">value</code>
-       也就是我們一般在實作controlled component 會用到的東西。
+      也就是我們一般在實作controlled component 會用到的東西。
     </p>
     <p>
       從這邊也看的出來我component與表單的綁定並不是依賴於Form.item
@@ -115,7 +115,7 @@
       裡如果遇到有複數個component是放在同一row之類的排版需求，就會寫得有點醜大概就是： （而且還沒加上要清除 Form.item
       預設樣式的程式碼）
     </p>
-    <div class="code-block  ">
+    <div class="code-block">
       <CodeCopy>
         <pre><code
             class="language-jsx">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span><span class="token plain-text"></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"> </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Form.item</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">'</span>name1<span class="token punctuation">'</span></span><span class="token punctuation">></span></span><span class="token plain-text"></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">  </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span><span class="token punctuation">/></span></span><span class="token plain-text"></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"> </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Form.item</span><span class="token punctuation">></span></span><span class="token plain-text"></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"> </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Form.item</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">'</span>name2<span class="token punctuation">'</span></span><span class="token punctuation">></span></span><span class="token plain-text"></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">   </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span><span class="token punctuation">/></span></span><span class="token plain-text"></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"> </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Form.item</span><span class="token punctuation">></span></span><span class="token plain-text"></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">但換成 React Hook Form</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span><span class="token plain-text"></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">  </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token spread"><span class="token punctuation">{</span><span class="token operator">...</span><span class="token function">register</span><span class="token punctuation">(</span><span class="token string">'name1'</span><span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token punctuation">/></span></span><span class="token plain-text"></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">  </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token spread"><span class="token punctuation">{</span><span class="token operator">...</span><span class="token function">register</span><span class="token punctuation">(</span><span class="token string">'name2'</span><span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token punctuation">/></span></span><span class="token plain-text"></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></div></div>`}</code></pre>
@@ -123,14 +123,14 @@
     </div>
     <p>
       總之因為antd form的綁定機制我必須一直讓 <code class="inline-code-block">Form.item</code>
-       影響到我JSX中component的層級關係，這點降低了不少開發者體驗。
+      影響到我JSX中component的層級關係，這點降低了不少開發者體驗。
     </p>
     <h3 id="xing2-bie2-xi4-tong3"><a href="#xing2-bie2-xi4-tong3">型別系統</a></h3>
     <p>
       而真正讓我們愛上 React Hook Form 最主要的原因應該是「型別」，在React Hook Form的 <code class="inline-code-block">
         useForm
       </code>
-       可以傳入generic type來限制這個form能有哪些field以及這些field value的型別是什麼。
+      可以傳入generic type來限制這個form能有哪些field以及這些field value的型別是什麼。
     </p>
     <p>
       所有相關的API都擁有type保障，確保我們的 <code class="inline-code-block">fieldName</code>
@@ -138,7 +138,7 @@
       <code class="inline-code-block">register</code>
       為例，接下來註冊元件時就只能使用我們傳入
       <code class="inline-code-block">useForm</code>
-       的interface的key
+      的interface的key
     </p>
     <ImgZoom src="/2022-05-24/type_image_1.webp" alt="/2022-05-24/type_image_1.webp" class="h-full object-cover" />
 
@@ -158,14 +158,14 @@
       <code class="inline-code-block">fieldName</code>
       來推導出這個
       <code class="inline-code-block">fieldValue</code>
-       的型別
+      的型別
     </p>
     <h3 id="fu4-xie3-yang4-shi4"><a href="#fu4-xie3-yang4-shi4">覆寫樣式</a></h3>
     <p>
       在antd裡 <code class="inline-code-block">Form</code>
       及
       <code class="inline-code-block">Form.item</code>
-       同時處理了樣式與表單狀態， 也就是他們都是有預設樣式的，好處是你不用額外寫什麼樣式這個表單看起來可以整整齊齊。但如果想要有額外的設計時就會必須要一直override掉，在後台網站裡並不會有那麼多設計需求，但在給一般的使用者時，當然還是會想辦法讓自己的網站變得比較好看。
+      同時處理了樣式與表單狀態， 也就是他們都是有預設樣式的，好處是你不用額外寫什麼樣式這個表單看起來可以整整齊齊。但如果想要有額外的設計時就會必須要一直override掉，在後台網站裡並不會有那麼多設計需求，但在給一般的使用者時，當然還是會想辦法讓自己的網站變得比較好看。
     </p>
     <p>
       但也會導致我們要花很多工在override掉 Form 及 Form.item

@@ -7,7 +7,10 @@ coverStyle: 'TOP'
 coverCaption: Photo by Raitis Raitums on <a href="https://www.pexels.com/zh-tw/photo/10009499/">Pexels</a>
 tags:
   - ['Rust']
-
+series_tag: 
+  - 'Rust-Learning-Notes'
+series_title:
+  - 'Rust 學習筆記 🦀🦀🦀'
 ---
 
 在[上一篇](../2022-10-27/index.md)裡的最後一個程式碼有提到因為所有權，導致我們在實作function及使用上都造成一定程度的不方便。

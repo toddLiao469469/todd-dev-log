@@ -17,7 +17,7 @@
       Fiber、Hook的實作。 然後像是一些 react 常用的 pattern：一直不太熟悉該如何去使用 render
       props。今年漸漸地讀懂這類的寫法及好用的地方：
     </p>
-    <div class="code-block  showLineNumber">
+    <div class="code-block showLineNumber">
       <CodeCopy>
         <pre><code
             class="language-jsx">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="line-number">1</span><span class="no-line-diff"></span></div><div class="code-content"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">ComponentA</span></span><span class="token punctuation">></span></span><span class="token plain-text"></div></div><div class="code-line"><div class="code-linenotation"><span class="line-number">2</span><span class="no-line-diff"></span></div><div class="code-content"></span><span class="token punctuation">{</span> <span class="token punctuation">(</span><span class="token parameter">val</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">ComponentB</span></span> <span class="token attr-name">someProp</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>val<span class="token punctuation">}</span></span> <span class="token punctuation">/></span></span> <span class="token punctuation">}</span><span class="token plain-text"></div></div><div class="code-line"><div class="code-linenotation"><span class="line-number">3</span><span class="no-line-diff"></span></div><div class="code-content">&lt;/ ComponentA></span></div></div>`}</code></pre>
@@ -30,9 +30,8 @@
     <p>
       因為團隊的專案中使用了
       <strong>Apollo（GraphQL framework）</strong>
-      所以較少使用到狀態管理套件。這也導致在平常較少查閱這類的文章，但還是稍微關注了一下新興的狀態管理的套件，特別是
-      recoil 及 Jōtai 這類 atomic 形式的狀態管理插件。當然在實作上兩者還是些許差異：如何判斷 atom 更新、如何更新 atom
-      之類的。
+      所以較少使用到狀態管理套件。這也導致在平常較少查閱這類的文章，但還是稍微關注了一下新興的狀態管理的套件，特別是 recoil
+      及 Jōtai 這類 atomic 形式的狀態管理插件。當然在實作上兩者還是些許差異：如何判斷 atom 更新、如何更新 atom 之類的。
     </p>
     <p>
       也開始閱讀一些開源項目的程式碼，上半年主要都是看專案常用的ant-design，其中的 form
@@ -66,11 +65,11 @@
       <code class="inline-code-block">future</code>
       、
       <code class="inline-code-block">async/await</code>
-       的概念。
+      的概念。
     </p>
     <p>
       特別說一下強型別，對於JS開發者來說我想 <code class="inline-code-block">undefined</code>
-       的 runtime 錯誤應該是永遠的痛吧。雖然團隊是有用TS作為開發所以對於型別是有一定的保障。 但還是有一些小不足，像是對於某些libary的型別推斷並不夠令人滿意（特別是我們很愛用的
+      的 runtime 錯誤應該是永遠的痛吧。雖然團隊是有用TS作為開發所以對於型別是有一定的保障。 但還是有一些小不足，像是對於某些libary的型別推斷並不夠令人滿意（特別是我們很愛用的
       ramda ）
     </p>
     <p>
@@ -79,20 +78,19 @@
       <code class="inline-code-block">prmoise（future）</code>
       及
       <code class="inline-code-block">async/await</code>
-       等等JS擁有的東西就不多說了，總之開發起來還是相對有親切感的。
+      等等JS擁有的東西就不多說了，總之開發起來還是相對有親切感的。
     </p>
     <p>
       但也因為flutter，讓我有動力補足以前在學校時沒好好學的 OOP。 我覺得對於前端工程師來說
       OOP真的是比較少接觸的概念。我自己認為原因會是 Declarative 的形式非常適合前端，特別是在撰寫 UI上，而且也因為
       prototype based 還是有那麼一點不直觀，進而導致 FP 變成前端近幾年的顯學。
       <br />
-      但 Declarative UI 這點也可以從 flutter 的設計理念看到，至於這種風格之所以特別適合 UI 使用，我覺得原因是：
-      其實我們根本不關心
+      但 Declarative UI 這點也可以從 flutter 的設計理念看到，至於這種風格之所以特別適合 UI 使用，我覺得原因是： 其實我們根本不關心
       <strong>「某個 Widget要如何變成某個樣子 」</strong>
       我們只在意
       <strong>「Widget要變成某個樣子」</strong>
     </p>
-    <div class="code-block  showLineNumber">
+    <div class="code-block showLineNumber">
       <CodeCopy>
         <pre><code
             class="language-dart">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="line-number">1</span><span class="no-line-diff"></span></div><div class="code-content"><span class="token class-name">Widget</span><span class="token punctuation">.</span><span class="token function">setColor</span><span class="token punctuation">(</span>color<span class="token punctuation">)</span><span class="token punctuation">;</span></div></div><div class="code-line"><div class="code-linenotation"><span class="line-number">2</span><span class="no-line-diff"></span></div><div class="code-content"><span class="token class-name">Widget</span><span class="token punctuation">.</span><span class="token function">setWidth</span><span class="token punctuation">(</span>width<span class="token punctuation">)</span><span class="token punctuation">;</span></div></div><div class="code-line"><div class="code-linenotation"><span class="line-number">3</span><span class="no-line-diff"></span></div><div class="code-content"><span class="token class-name">Widget</span><span class="token punctuation">.</span><span class="token function">setHeight</span><span class="token punctuation">(</span>height<span class="token punctuation">)</span><span class="token punctuation">;</span></div></div><div class="code-line"><div class="code-linenotation"><span class="line-number">4</span><span class="no-line-diff"></span></div><div class="code-content"><span class="token class-name">Widget</span><span class="token punctuation">.</span><span class="token function">setOnClick</span><span class="token punctuation">(</span>handleClick<span class="token punctuation">)</span><span class="token punctuation">;</span></div></div><div class="code-line"><div class="code-linenotation"><span class="line-number">5</span><span class="no-line-diff"></span></div><div class="code-content"><span class="token class-name">Widget</span><span class="token punctuation">(</span></div></div><div class="code-line"><div class="code-linenotation"><span class="line-number">6</span><span class="no-line-diff"></span></div><div class="code-content"> color<span class="token punctuation">:</span>color<span class="token punctuation">,</span></div></div><div class="code-line"><div class="code-linenotation"><span class="line-number">7</span><span class="no-line-diff"></span></div><div class="code-content"> width<span class="token punctuation">:</span>width<span class="token punctuation">,</span></div></div><div class="code-line"><div class="code-linenotation"><span class="line-number">8</span><span class="no-line-diff"></span></div><div class="code-content"> height<span class="token punctuation">:</span>height<span class="token punctuation">,</span></div></div><div class="code-line"><div class="code-linenotation"><span class="line-number">9</span><span class="no-line-diff"></span></div><div class="code-content"> onClick<span class="token punctuation">:</span>handleClick</div></div><div class="code-line"><div class="code-linenotation"><span class="line-number">10</span><span class="no-line-diff"></span></div><div class="code-content"><span class="token punctuation">)</span><span class="token punctuation">;</span></div></div>`}</code></pre>
