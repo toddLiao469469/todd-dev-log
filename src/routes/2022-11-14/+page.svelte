@@ -23,7 +23,9 @@
       </CodeCopy>
     </div>
     <p>
-      那我們該如何改善這段程式碼呢？ 首先我們希望把 <code class="inline-code-block">-&gt; &lparString, usize&rpar</code>
+      那我們該如何改善這段程式碼呢？ 首先我們希望把 <code class="inline-code-block">
+        -&gt; &lpar;String, usize&rpar;
+      </code>
       變成
       <code class="inline-code-block">-&gt; usize</code>
       就好，畢竟我們只是要計算字數而已。 再來就不用
@@ -63,7 +65,7 @@
       本身，只需要將 word的type改為
       <code class="inline-code-block">&amp;String</code>
       來表示我們要接收的一是個string reference。 而在rust中我們在操作 reference type大多數時刻，都跟我們在操作一般的型別一樣。我們可以直接
-      <code class="inline-code-block">word.len&lpar&rpar</code>
+      <code class="inline-code-block">word.len&lpar;&rpar;</code>
       但在某些情況下我們可會需要使用到
       <code class="inline-code-block">*</code>
       這個運算子來 dereference （解參考）

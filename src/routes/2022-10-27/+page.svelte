@@ -71,11 +71,11 @@
       </CodeCopy>
     </div>
     <p>
-      乍看之下沒什麼問題但其實這段code無法通過編譯，因為當 <code class="inline-code-block">foo&lpar&rpar</code>
+      乍看之下沒什麼問題但其實這段code無法通過編譯，因為當 <code class="inline-code-block">foo&lpar;&rpar;</code>
       執行完畢後，
       <code class="inline-code-block">s1</code>
       的記憶體就會被釋放了，所以
-      <code class="inline-code-block">println!&lpar“&lcub&rcub, world!”, s1&rpar;</code>
+      <code class="inline-code-block">println!&lpar;“&lcub;&rcub;, world!”, s1&rpar;;</code>
       並無法正確執行。
     </p>
     <p>而rust的編譯器也告訴我們原因了</p>

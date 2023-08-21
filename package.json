@@ -115,5 +115,8 @@
     "unocss-preset-scrollbar": "^0.2.1",
     "vite": "^4.3.5",
     "vite-imagetools": "^5.0.3"
+  },
+  "dependencies": {
+    "sharp": "^0.32.5"
   }
 }
