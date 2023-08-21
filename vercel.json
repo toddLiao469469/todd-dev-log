@@ -21,7 +21,7 @@
         },
         {
           "key": "Content-Security-Policy",
-          "value": "style-src 'self' 'unsafe-inline' https://giscus.app; script-src 'self' 'unsafe-inline' https://svelte-qwer.vercel.app  https://toddliao.dev https://giscus.app https://www.youtube.com https://www.googletagmanager.com"
+          "value": "style-src 'self' 'unsafe-inline' https://giscus.app; script-src 'self' 'unsafe-inline' https://*.cloudflareinsights.com  https://svelte-qwer.vercel.app  https://toddliao.dev https://giscus.app https://www.youtube.com https://www.googletagmanager.com"
         },
         {
           "key": "Referrer-Policy",
