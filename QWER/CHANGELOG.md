@@ -1,5 +1,55 @@
 # @kwchang0831/qwer
 
+## 0.6.0
+
+### Minor Changes
+
+- 175323d: fix: slug will only use backslashes
+- c47759b: deps: upgrade (vite, svelte, kit, unocss, marked...)
+
+### Patch Changes
+
+- a8c72c9: deps: upgrade (katex)
+
+## 0.5.3
+
+### Patch Changes
+
+- 06f0f72: fix: local image path add leading slash & clean up
+- 4710532: feat: add languageConfig in UserConifg and dynamic import prismjs components
+
+## 0.5.2
+
+### Patch Changes
+
+- 7532a12: fix: try fix issue#58
+- 63cbb54: deps: upgrade (non svelte related deps)
+- 4607137: config: remove pnpm version restriction
+
+## 0.5.1
+
+### Patch Changes
+
+- ecac1a1: fix: cannot add tags when tags is not provided
+
+## 0.5.0
+
+### Minor Changes
+
+- 19bde79: fix: incorrect character codes for HTML when parsing
+
+## 0.4.0
+
+### Minor Changes
+
+- dc4531d: deps upgrade
+
+## 0.3.1
+
+### Patch Changes
+
+- 2d5d207: deps: upgrade non svelte related
+
 ## 0.3.0
 
 ### Minor Changes

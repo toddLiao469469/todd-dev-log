@@ -36,4 +36,3 @@ hi ， 我是 Todd 目前在 Ionex 擔任 software engineer。
 
 - 會一些AWS加上jenkins
 - 偶而寫些小 script 處理開發上的雜事
-

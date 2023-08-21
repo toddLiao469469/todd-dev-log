@@ -23,7 +23,9 @@
       </CodeCopy>
     </div>
     <p>
-      那我們該如何改善這段程式碼呢？ 首先我們希望把 <code class="inline-code-block">-&gt; &lparString, usize&rpar</code>
+      那我們該如何改善這段程式碼呢？ 首先我們希望把 <code class="inline-code-block">
+        -&gt; &lpar;String, usize&rpar;
+      </code>
       變成
       <code class="inline-code-block">-&gt; usize</code>
       就好，畢竟我們只是要計算字數而已。 再來就不用
@@ -48,7 +50,7 @@
       <code class="inline-code-block">&amp;s2</code>
       就是去取得
       <code class="inline-code-block">s2</code>
-      的reference。 而所謂rust中的reference，我覺得比較像c++中的pointer（指標），感覺像是指向變數記憶體位置的一個代稱。
+       的reference。 而所謂rust中的reference，我覺得比較像c++中的pointer（指標），感覺像是指向變數記憶體位置的一個代稱。
     </p>
     <p>
       而當我們將 <code class="inline-code-block">&amp;s2</code>
@@ -56,17 +58,18 @@
       <code class="inline-code-block">get_len</code>
       時，因為我們是將
       <code class="inline-code-block">s2</code>
-      的reference傳入而不是將他的變數傳進去，所以並不會發生move，而這個行為就被稱為borrowing（借用）。
+       的reference傳入而不是將他的變數傳進去，所以並不會發生move，而這個行為就被稱為borrowing（借用）。
     </p>
     <p>
       可以發現我們不用再多 <code class="inline-code-block">return s2</code>
       本身，只需要將 word的type改為
       <code class="inline-code-block">&amp;String</code>
-      來表示我們要接收的一是個string reference。 而在rust中我們在操作 reference type大多數時刻，都跟我們在操作一般的型別一樣。我們可以直接
-      <code class="inline-code-block">word.len&lpar&rpar</code>
+      來表示我們要接收的一是個string reference。 而在rust中我們在操作 reference
+      type大多數時刻，都跟我們在操作一般的型別一樣。我們可以直接
+      <code class="inline-code-block">word.len&lpar;&rpar;</code>
       但在某些情況下我們可會需要使用到
       <code class="inline-code-block">*</code>
-      這個運算子來 dereference （解參考）
+       這個運算子來 dereference （解參考）
     </p>
     <h3 id="mutable-reference"><a href="#mutable-reference">Mutable reference</a></h3>
     <p>
@@ -132,7 +135,7 @@
       在第一次 <code class="inline-code-block">println!</code>
       後再也沒用到
       <code class="inline-code-block">immut_a</code>
-      所以之後再宣告一個 mutable reference 是可以的。
+       所以之後再宣告一個 mutable reference 是可以的。
     </p>
     <p>參考資料:</p>
     <ol>
