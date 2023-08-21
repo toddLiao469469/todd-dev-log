@@ -50,7 +50,7 @@
     <p>
       當執行完第二行後 String::from(“hello”)的所有權已經轉移給s2了， 所以在第三行，我們再一次使用
       <code class="inline-code-block">s1</code>
-      就會發生錯誤。
+       就會發生錯誤。
     </p>
     <p>
       要解釋這件事情首先我們要先知道 String是會被存放在heap
@@ -76,7 +76,7 @@
       <code class="inline-code-block">s1</code>
       的記憶體就會被釋放了，所以
       <code class="inline-code-block">println!&lpar;“&lcub;&rcub;, world!”, s1&rpar;;</code>
-      並無法正確執行。
+       並無法正確執行。
     </p>
     <p>而rust的編譯器也告訴我們原因了</p>
     <div class="code-block">
