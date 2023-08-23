@@ -50,16 +50,14 @@ struct User {
 fn build_user(email: String, userName: String) -> User {
     User {
 			userName,
-	    email,
+			email,
 			active: false,
-	    }
+		}
 }
 
 ```
 
-## struct update syntax
-
-有一個重點是**所有欄位都要被初始化**，也就是不能這樣使用：
+我們在初始化 `struct` 時有一個重點是**所有欄位都要被初始化**，也就是不能這樣使用：
 
 ```rust
 // ❌ 這段 code 有錯
@@ -70,13 +68,15 @@ let user2 = User {
 
 ```
 
+## struct update syntax
+
 如果要復用一個舊的 `struct` 就只需要在新的 `struct` 的初始化時使用 `..`  （**特別注意這裡是兩個.**）這個被稱為 struct update syntax 的功能。即可。
 
 ```rust
  let user1 = User {
-		active: true,
-        email: String::from("foo@bar.com"),
-        userName: String::from("foo"),
+			active: true,
+      email: String::from("foo@bar.com"),
+      userName: String::from("foo"),
     };
 
  let user2 = User {
@@ -326,7 +326,7 @@ let localhost_v6 = IpAddr::V6(Ipv6Addr::new(0, 0, 0, 0, 0, 0, 0, 1));
 
 那在 `std::net::Ipv4Addr` 及 `std::net::Ipv6Addr` 有 `impl` `new`  這個 `method` 我們就可以直接建立好這個 `struct` 並放入 `enum` 裡。
 
-## 簡單的 pattern matching
+### 簡單的 pattern matching
 
 其實 pattern matching 並不是只有用在 `enum`  但大部分時候我們使用 `enum` 時會一起使用 pattern matching ，畢竟 `enum` 就是代表 **「某個值只能取特定值之一的情況」**所以我們常常需要判斷這値處於哪一種特定值。
 
