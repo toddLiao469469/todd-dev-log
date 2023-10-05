@@ -26,7 +26,7 @@
       <code class="inline-code-block">struct</code>
       來宣告，然後加上名稱以及每個欄位的名稱以及型別，乍看之下跟 ts 的
       <code class="inline-code-block">interface</code>
-      一模一樣。
+       一模一樣。
     </p>
     <div class="code-block">
       <CodeCopy>
@@ -36,7 +36,7 @@
     </div>
     <p>
       那我們宣告一個 <code class="inline-code-block">struct</code>
-      後，接著就是創造它的 instance ：
+       後，接著就是創造它的 instance ：
     </p>
     <div class="code-block">
       <CodeCopy>
@@ -70,7 +70,7 @@
       <code class="inline-code-block">struct</code>
       的初始化時使用
       <code class="inline-code-block">..</code>
-      （**特別注意這裡是兩個.**）這個被稱為 struct update syntax 的功能。即可。
+       （**特別注意這裡是兩個.**）這個被稱為 struct update syntax 的功能。即可。
     </p>
     <div class="code-block">
       <CodeCopy>
@@ -119,7 +119,7 @@
       <code class="inline-code-block">String</code>
       是沒有實作
       <code class="inline-code-block">Copy</code>
-      trait ，導致在做variable assignment 時，會是 move 而不是 copy。
+       trait ，導致在做variable assignment 時，會是 move 而不是 copy。
     </p>
     <p>
       但如果我們要改用 <code class="inline-code-block">&amp;str</code>
@@ -152,7 +152,7 @@
       <code class="inline-code-block">struct</code>
       可以使用
       <code class="inline-code-block">method</code>
-      ）去說明只有它可以使用這些 function。
+       ）去說明只有它可以使用這些 function。
     </p>
     <p>
       首先我們使用 <code class="inline-code-block">impl</code>
@@ -161,7 +161,7 @@
     </p>
     <p>
       接下來就是實作 function 本身，就跟我們平常使用 <code class="inline-code-block">fn</code>
-      一樣
+       一樣
     </p>
     <div class="code-block">
       <CodeCopy>
@@ -179,7 +179,7 @@
       <code class="inline-code-block">$self</code>
       其實是
       <code class="inline-code-block">self:&amp;Self</code>
-      (大小寫注意)的縮寫。
+       (大小寫注意)的縮寫。
     </p>
     <p>
       也因為這是 function 所以這裡也是有 ownership 概念的，我們先把 <code class="inline-code-block">&amp;self</code>
@@ -189,7 +189,7 @@
       <code class="inline-code-block">self</code>
       move 到
       <code class="inline-code-block">fn</code>
-      裡。
+       裡。
     </p>
     <div class="code-block">
       <CodeCopy>
@@ -205,7 +205,7 @@
       <code class="inline-code-block">perimeter&lpar;&rpar;</code>
       就無法使用
       <code class="inline-code-block">rect1</code>
-      了。
+       了。
     </p>
     <h1 id="enum"><a href="#enum">enum</a></h1>
     <h2 id="ji1-ben3-shi3-yong4"><a href="#ji1-ben3-shi3-yong4">基本使用</a></h2>
@@ -217,14 +217,14 @@
     </p>
     <p>
       我認為 rust <code class="inline-code-block">enum</code>
-      比起 ts 好用許多，當然一部份是因為 rust 本身提供其他語法讓 enum 具有那麼強的能力，像是 pattern matching ，但光是 rust
-      本身給
+      比起 ts 好用許多，當然一部份是因為 rust 本身提供其他語法讓 enum 具有那麼強的能力，像是 pattern matching ，但光是
+      rust 本身給
       <code class="inline-code-block">enum</code>
-      就有許多好用的特性了
+       就有許多好用的特性了
     </p>
     <p>
       首先我們定義一個 enum 只需要 使用 <code class="inline-code-block">enum</code>
-      去宣告
+       去宣告
     </p>
     <div class="code-block">
       <CodeCopy>
@@ -247,7 +247,7 @@
       <code class="inline-code-block">enum</code>
       加上
       <code class="inline-code-block">struct</code>
-      來輔助我們
+       來輔助我們
     </p>
     <div class="code-block">
       <CodeCopy>
@@ -271,7 +271,7 @@
       <code class="inline-code-block">IpAddrKind::V6</code>
       又會有問題 ，總不能直接拆成兩個
       <code class="inline-code-block">struct</code>
-      吧？那有沒什麼辦法更加的優雅描述這種情況呢？
+       吧？那有沒什麼辦法更加的優雅描述這種情況呢？
     </p>
     <p>
       這時 rust 的 <code class="inline-code-block">enum</code>
@@ -285,7 +285,7 @@
     </p>
     <p>
       所以可以將 <code class="inline-code-block">IpAddr</code>
-      改為：
+       改為：
     </p>
     <div class="code-block">
       <CodeCopy>
@@ -295,7 +295,7 @@
     </div>
     <p>
       但其實在 <code class="inline-code-block">std::net::IpAddr</code>
-      這個標準函式庫裡就有幫我們示範了這個例子大神們會怎麼實現
+       這個標準函式庫裡就有幫我們示範了這個例子大神們會怎麼實現
     </p>
     <p>
       首先他把 <code class="inline-code-block">IpAddr</code>
@@ -329,7 +329,7 @@
       <code class="inline-code-block">struct</code>
       並放入
       <code class="inline-code-block">enum</code>
-      裡。
+       裡。
     </p>
     <h3 id="jian3-dan1-de-pattern-matching"><a href="#jian3-dan1-de-pattern-matching">簡單的 pattern matching</a></h3>
     <p>
@@ -359,7 +359,7 @@
       </strong>
       給打開並取出裡面的值
       <code class="inline-code-block">127.0.0.1</code>
-      。
+       。
     </p>
     <p>當然 pattern matching 在 rust 遠遠不止如此，未來有機會再詳細說明xD 。</p>
     <h1 id="can1-kao3-zi1-liao4"><a href="#can1-kao3-zi1-liao4">參考資料：</a></h1>
