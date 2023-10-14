@@ -6,3 +6,13 @@
   --qwer-bg-color: #e1e3dd;
   --qwer-text-color: black;
 }
+
+
+.prose {
+  li>p{
+    margin: 0;
+  }
+  li>ul {
+    margin: 0;
+  }
+}

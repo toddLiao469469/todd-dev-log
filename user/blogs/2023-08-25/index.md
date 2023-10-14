@@ -3,7 +3,7 @@ title: Rust 筆記 - 3 | struct & enum
 summary: ''
 published: '2023-08-25T12:00:00.000+08:00'
 updated: '2023-08-25T12:00:00.000+08:00'
-cover: https://toddliao.dev/2023-08-25-cover.webp
+cover: https://r2.toddliao.dev/2023-08-25-cover.webp
 coverStyle: 'TOP'
 tags:
 - ['Rust']

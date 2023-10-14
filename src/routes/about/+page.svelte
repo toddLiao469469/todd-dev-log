@@ -11,33 +11,89 @@
 
 <Post>
   <article slot="post_content">
-    <p>hi ， 我是 Todd 目前在 Ionex 擔任 software engineer。</p>
     <p>
-      從出社會以來大多數都是在
-      <strong>前端</strong>
-      領域，最近開始轉往fullstack前進。
+      hi ， 我是 Todd 目前在 Ionex 擔任 software engineer ，工作上主要使用 react + TypeScript 進行網頁前端開發以及
+      express 開發網頁後端，平常喜歡研究一些新技術及工具。
     </p>
-    <h3 id="fe"><a href="#fe">FE</a></h3>
+    <h2 id="mu4-qian2-zhu3-yao4-shi3-yong4-de-ji4-shu4">
+      <a href="#mu4-qian2-zhu3-yao4-shi3-yong4-de-ji4-shu4">目前主要使用的技術</a>
+    </h2>
+    <p>以下是我平常目前工作會遇到或者自己寫一些小專案時會用到的技術</p>
+    <h3 id="qian2-duan1-xiang1-guan1"><a href="#qian2-duan1-xiang1-guan1">前端相關</a></h3>
     <ul>
-      <li><p>喜歡typescript</p></li>
+      <li>TypeScript</li>
       <li>
-        <p>大部分都是使用React</p>
+        react
         <ul>
-          <li><p>工作上常用 next.js + mui + react-query/apollo-client</p></li>
-          <li><p>喜歡redux，但最近開始使用jotai</p></li>
+          <li>next.js</li>
+          <li>react-query, apollo-client</li>
+          <li>jotai</li>
+          <li>react-router</li>
+          <li>react-hook-form</li>
+          <li>
+            redux
+            <ul>
+              <li>redux-toolkit, redux-thunk, redux-saga</li>
+            </ul>
+          </li>
         </ul>
       </li>
-      <li><p>最近對svelte蠻有興趣的</p></li>
+      <li>mui, taillwind</li>
+      <li>vite, webpack</li>
+      <li>storybook</li>
+      <li>jest, react-testing-library, playwright</li>
     </ul>
-    <h3 id="be"><a href="#be">BE</a></h3>
+    <h3 id="hou4-duan1-huo4-wei2-yun4-xiang1-guan1">
+      <a href="#hou4-duan1-huo4-wei2-yun4-xiang1-guan1">後端或維運相關</a>
+    </h3>
     <ul>
-      <li><p>會一點點 node.js 加上一點點的mongoDB</p></li>
-      <li><p>最近在學習graphQL server side的開發</p></li>
+      <li>Node.js, express</li>
+      <li>MongoDB</li>
+      <li>apollo-server</li>
+      <li>
+        AWS
+        <ul>
+          <li>主要使用 S3 及 cloudfront</li>
+        </ul>
+      </li>
+      <li>Jenkins</li>
+      <li>Docker</li>
+      <li>github actions</li>
+      <li>vercel</li>
+      <li>cloudflare</li>
     </ul>
-    <h3 id="qi2-ta1"><a href="#qi2-ta1">其他</a></h3>
+    <h2 id="zui4-jin4-zai4-yan2-jiu1-de-dong1-xi1">
+      <a href="#zui4-jin4-zai4-yan2-jiu1-de-dong1-xi1">最近在研究的東西</a>
+    </h2>
     <ul>
-      <li>會一些AWS加上jenkins</li>
-      <li>偶而寫些小 script 處理開發上的雜事</li>
+      <li>svelte</li>
+      <li>rust</li>
+      <li>
+        haskell
+        <ul>
+          <li>
+            最近剛完成鐵人賽，
+            <a href="https://ithelp.ithome.com.tw/users/20159893/ironman/6439" rel="external">系列文</a>
+            主題是關於 haskell 入門，有興趣的話可以參閱看看。
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <h2 id="qi2-ta1-yi3-qian2-yong4-guo4-dan4-xian4-zai4-gong1-zuo4-shang4-hen3-shao3-yong4-dao4-de-ji4-shu4">
+      <a href="#qi2-ta1-yi3-qian2-yong4-guo4-dan4-xian4-zai4-gong1-zuo4-shang4-hen3-shao3-yong4-dao4-de-ji4-shu4">
+        其他以前用過但現在工作上很少用到的技術
+      </a>
+    </h2>
+    <ul>
+      <li>styled-components</li>
+      <li>gatsby</li>
+      <li>ant-design</li>
+      <li>chakra-ui</li>
+      <li>flutter</li>
+      <li>jQuery</li>
+      <li>bootstrap</li>
+      <li>scss/sass</li>
+      <li>pug</li>
     </ul>
   </article>
 </Post>
