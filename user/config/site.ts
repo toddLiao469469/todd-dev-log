@@ -89,18 +89,18 @@ export const dateConfig: Site.DateConfig = {
 // Replace with your own Giscus setting
 // See https://giscus.app/
 export const giscusConfig: Giscus.Config = {
-  enable: false,
+  enable: true,
   id: 'giscus-comment',
-  repo: import.meta.env.QWER_GISCUS_REPO,
-  repoId: import.meta.env.QWER_GISCUS_REPO_ID,
-  category: import.meta.env.QWER_GISCUS_CATEGORY,
-  categoryId: import.meta.env.QWER_GISCUS_CATEGORY_ID,
-  mapping: 'pathname',
+  repo: "toddliao469469/todd-dev-log-giscus",
+  repoId: "R_kgDOKgKgHw",
+  category: "General",
+  categoryId: "DIC_kwDOKgKgH84CaH6T",
+  mapping: 'title',
   reactionsEnabled: '1',
   emitMetadata: '0',
   inputPosition: 'top',
   loading: 'lazy',
-  lang: 'en',
+  lang: 'zh-TW',
   'data-strict': '0',
 };
 
