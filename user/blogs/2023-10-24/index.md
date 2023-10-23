@@ -2,8 +2,9 @@
 title: 從 notion 到 obsidian 再回到 notion 最後再加上 heptabase
 summary: 'heptabase 讚讚讚'
 published: '2023-10-24T12:00:00.000+08:00'
-cover: ./cover.jpg
+cover: https://r2.toddliao.dev/2023-10-24-cover.webp
 coverStyle: 'TOP'
+coverCaption: <a href="https://www.pexels.com/photo/close-up-of-architectural-detail-1544943">Photo by Scott Webb</a>
 tags:
   - ['雜談','筆記軟體','notion','heptabase','生產力']
 ---
