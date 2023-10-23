@@ -58,7 +58,7 @@
       notion 。
     </p>
     <blockquote>
-      <p>說來有點好笑，雖然我一直在使用 notion 只是我當時不知道那時 notion 已經有 black link 這個功能。</p>
+      <p>說來有點好笑，雖然我一直在使用 notion 只是我當時不知道那時 notion 已經有 backlink 這個功能。</p>
     </blockquote>
     <p>大概爬了一些文後就選擇了用 obsidian ，有幾個優點我現在依然覺得蠻棒的</p>
     <ol>
@@ -101,7 +101,7 @@
     </p>
     <p>
       以我之前做 rust 筆記為例好了，首先我先寫了一個「Rust 所有權」的筆記，後來有一天我在寫 「struct method
-      」的筆記時某些部分跟所有權有關只是我可以簡單地使用 back link 連結回「Rust 所有權」這份 筆記
+      」的筆記時某些部分跟所有權有關只是我可以簡單地使用 backlink 連結回「Rust 所有權」這份 筆記
     </p>
     <p><ImgZoom src="/2023-10-24/ob2.png" alt="obsidian" /></p>
     <p>
@@ -200,7 +200,7 @@
     <h2 id="gai3-shan4-bi3-ji4-de-zhuan4-xie3-liu2-cheng2">
       <a href="#gai3-shan4-bi3-ji4-de-zhuan4-xie3-liu2-cheng2">改善筆記的撰寫流程</a>
     </h2>
-    <p>因為後來得知了 notion 也有 back link 所以後來我都是在日記上去連結到特定的筆記或文章</p>
+    <p>因為後來得知了 notion 也有 backlink 所以後來我都是在日記上去連結到特定的筆記或文章</p>
     <p><ImgZoom src="/2023-10-24/notion4.png" alt="notion" /></p>
     <p><ImgZoom src="/2023-10-24/notion5.png" alt="notion" /></p>
     <p>這邊就有點像我原本在 obsidian 的使用方式了，只是 obsidian 使用起來比較舒服就是了。</p>
