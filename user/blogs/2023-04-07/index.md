@@ -3,7 +3,7 @@ title: medium -> 自架blog的小小心得
 summary: ''
 published: '2023-04-07T10:00:00.000+08:00'
 updated: '2023-04-07T10:00:00.000+08:00'
-cover: https://r2.toddliao.dev/2023-04-07-cover.jpg
+cover: ./cover.jpeg
 coverStyle: 'TOP'
 coverCaption: Photo by Ave Calvar Martinez on <a href="https://www.pexels.com/zh-tw/photo/3139473/">Pexels</a>
 tags:
