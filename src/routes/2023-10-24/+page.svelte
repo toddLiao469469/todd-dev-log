@@ -41,7 +41,7 @@
       database，那這樣子的好處是部分滿足我的強迫症，但這也帶來最困擾我的兩個痛點「有時候我根本不知道該把這個筆記放到哪裡」以及「下次我該怎麼利用這份筆記」
     </p>
     <p>
-      雖然結構清晰是好事，但因為 notion 的特性我蠻難一次抓取相關筆記所以我大概只能從各個可能有關 databasa
+      雖然結構清晰是好事，但因為 notion 的特性我蠻難一次抓取相關筆記所以我大概只能從各個可能有關 database
       找找看或者全域搜尋，只是沒有一個在 page 這個概念之上的欄位讓我去 filter 。
     </p>
     <p>
@@ -95,7 +95,8 @@
       </code>
        ，那我就可以直接在搜尋欄找出來，不用管它是屬於哪個 database
     </p>
-    <p><ImgZoom src="/2023-10-24/ob1.png" alt="obsidian" /></p>
+    <ImgZoom src="/2023-10-24/ob1.png" alt="obsidian" class="h-full object-cover" />
+
     <p>
       那什麼是雙向連結呢？一般來說寫筆記很常會是根據某個文獻或者另外一份筆記來寫，但有時侯我也想看這份筆記被怎樣使用。這可以讓我閱讀一份筆記時馬上可以找到跟它相關的知識。
     </p>
@@ -103,11 +104,13 @@
       以我之前做 rust 筆記為例好了，首先我先寫了一個「Rust 所有權」的筆記，後來有一天我在寫 「struct method
       」的筆記時某些部分跟所有權有關只是我可以簡單地使用 backlink 連結回「Rust 所有權」這份 筆記
     </p>
-    <p><ImgZoom src="/2023-10-24/ob2.png" alt="obsidian" /></p>
+    <ImgZoom src="/2023-10-24/ob2.png" alt="obsidian" class="h-full object-cover" />
+
     <p>
       那在「Rust 所有權」裡我也能看到有哪些地方用到了它，所以當我在複習所有權時我就可以順便把相關的知識點都複習了一遍。
     </p>
-    <p><ImgZoom src="/2023-10-24/ob3.png" alt="obsidian" /></p>
+    <ImgZoom src="/2023-10-24/ob3.png" alt="obsidian" class="h-full object-cover" />
+
     <p>
       那客製化的部分我覺得比較有感的點是視窗的擺放基本上就是完全可以按自己喜好設定至於插件基本上最常用的就是 git
       插件以及主題還有一些小功能像是日曆，最近使用檔案紀錄之類的。
@@ -161,7 +164,8 @@
     <p>
       第一步我先建立一個整個筆記系統的入口方便我在各種主題間快速跳轉，這邊我的做法是切分出三個區塊基本上是由使用頻率以及記事的複雜度由簡單到複雜排列。
     </p>
-    <p><ImgZoom src="/2023-10-24/notion1.png" alt="notion1" /></p>
+    <ImgZoom src="/2023-10-24/notion1.png" alt="notion" class="h-full object-cover" />
+
     <h3 id="ri4-ji4-yu3-todo-list"><a href="#ri4-ji4-yu3-todo-list">日記與 todo list</a></h3>
     <p>
       這邊就是切出兩個 column 然後一部分是放常用的連結讓我導過去其他的 page 或者 database ，然後就是放入兩個 database
@@ -184,7 +188,8 @@
       我將所有從網路上收集的文章都存到同一個 database ，然後用各種 tags 來分類，如果我想要快速瀏覽某種文章就可以用 view
       來幫我 filter。
     </p>
-    <p><ImgZoom src="/2023-10-24/notion2.png" alt="notion" /></p>
+    <ImgZoom src="/2023-10-24/notion2.png" alt="notion" class="h-full object-cover" />
+
     <p>
       這部分我是使用 <a href="https://www.savetonotion.so/" rel="external">save to notion</a>
        這個瀏覽器插件來簡化這個過程，我覺得他比官方的插件好用不少，因為它可以在存文章時就可以選擇 tags 或其他 properties，但官方插件我還需要去
@@ -196,17 +201,21 @@
       ，但其實這邊還有一個值得改善的點是其實我感覺工作的筆記也可以放進這個 database。但因為後來 heptabase
       的導入這部分我就先放置了。
     </p>
-    <p><ImgZoom src="/2023-10-24/notion3.png" alt="notion" /></p>
+    <ImgZoom src="/2023-10-24/notion3.png" alt="notion" class="h-full object-cover" />
+
     <h2 id="gai3-shan4-bi3-ji4-de-zhuan4-xie3-liu2-cheng2">
       <a href="#gai3-shan4-bi3-ji4-de-zhuan4-xie3-liu2-cheng2">改善筆記的撰寫流程</a>
     </h2>
     <p>因為後來得知了 notion 也有 backlink 所以後來我都是在日記上去連結到特定的筆記或文章</p>
-    <p><ImgZoom src="/2023-10-24/notion4.png" alt="notion" /></p>
-    <p><ImgZoom src="/2023-10-24/notion5.png" alt="notion" /></p>
+    <ImgZoom src="/2023-10-24/notion4.png" alt="notion" class="object-cover" />
+
+    <ImgZoom src="/2023-10-24/notion5.png" alt="notion" class="object-cover" />
+
     <p>這邊就有點像我原本在 obsidian 的使用方式了，只是 obsidian 使用起來比較舒服就是了。</p>
     <h2 id="ti2-xing3-ji1-qi4-ren2"><a href="#ti2-xing3-ji1-qi4-ren2">提醒機器人</a></h2>
     <p>為了解決我時常把文章存起來之後就再也不看的壞習慣，我決定寫一個小程式每天提醒我該看一下我目前存的文章。</p>
-    <p><ImgZoom src="/2023-10-24/dc1.png" alt="dc" /></p>
+    <ImgZoom src="/2023-10-24/dc1.png" alt="dc" class="h-full object-cover" />
+
     <p>
       這部分就是用 cloudflare worker以及 discord 的 webhook 就可以簡單達成了，詳細的實作之後有機會再寫成文章跟大家介紹xD
     </p>
@@ -240,9 +249,11 @@
       我現在都會習慣先全部都寫在 Journal 然後累積到一定程度再去把這些文字轉換成卡片，那這件事情在 heptabase
       非常容易做到，我只要打完字然後拖曳過去白板就會是一張卡片了。
     </p>
-    <p><ImgZoom src="/2023-10-24/heptabase1.png" alt="heptabase" /></p>
+    <ImgZoom src="/2023-10-24/heptabase1.png" alt="heptabase" class="h-full object-cover" />
+
     <p>在 heptabase 中「白板」我們在閱讀筆記以及整理知識最主要的地方</p>
-    <p><ImgZoom src="/2023-10-24/heptabase2.png" alt="heptabase" /></p>
+    <ImgZoom src="/2023-10-24/heptabase2.png" alt="heptabase" class="h-full object-cover" />
+
     <p>我覺得這裡最有感的地方是它讓我們可以一次瀏覽所有有關的知識，而且我們也可用顏色或者箭頭來表達這些卡片的關聯。</p>
     <p>當然 heptabase 其實不只卡片這個 item ，未來有機會再另外寫一篇文章介紹我用到 heptabase 的哪些功能xD。</p>
     <h1 id="xian4-kuang4"><a href="#xian4-kuang4">現況</a></h1>
