@@ -22,7 +22,7 @@
     <h1 id="wo3-yong4-bi3-ji4-ruan3-ti3-de-mu4-de">
       <a href="#wo3-yong4-bi3-ji4-ruan3-ti3-de-mu4-de">我用筆記軟體的目的</a>
     </h1>
-    <p>如同前面所說就是為了「知識管理」以及「記事」大概分一下細項的話，我一天中會接觸到筆記軟體的事情會有：</p>
+    <p>如同前面所說就是為了「知識管理」以及「記事」，大概分一下細項的話我一天中會接觸到筆記軟體的事情會有：</p>
     <ol>
       <li>日記</li>
       <li>工作上的筆記</li>
@@ -42,7 +42,7 @@
     </p>
     <p>
       雖然結構清晰是好事，但因為 notion 的特性我蠻難一次抓取相關筆記所以我大概只能從各個可能有關 databasa
-      找找看或者全域搜尋，只是沒有一個在 page 這個概念之上的欄位讓我去 filter ，有點類似 metadata 的概念。
+      找找看或者全域搜尋，只是沒有一個在 page 這個概念之上的欄位讓我去 filter 。
     </p>
     <p>
       總而言之 notion 讓我可以整理出一個井然有序的筆記庫，但我好像很難再次利用它，所以後來就一直想找方法可以改善的點。
@@ -70,7 +70,7 @@
     <p>
       關於流暢度，我相信只要是用過 notion 的人應該相當有感，雖然在公司筆電 m1 macbook pro 上， notion desktop
       版依然還算快，但只要一換回我自己的 2017 年的 i5 macbook pro 就會感到相當吃力。後來有聽說 web
-      版的體驗比較好後就都轉用 web 版了。那 obsidian ****基本上在我兩台筆電上運作的都算順暢。
+      版的體驗比較好後就都轉用 web 版了。那 obsidian 基本上在我兩台筆電上運作的都算順暢。
     </p>
     <p>
       至於阻力的話，可能是基於個性問題我認為用 notion 寫一份筆記是相當吃力的事情，因為我必須先想一下這份筆記應該放在哪個
@@ -93,7 +93,7 @@
         class="inline-code-block">
         #rust
       </code>
-      ，那我就可以直接在搜尋欄找出來，不用管它是屬於哪個 database
+       ，那我就可以直接在搜尋欄找出來，不用管它是屬於哪個 database
     </p>
     <p><ImgZoom src="/2023-10-24/ob1.png" alt="obsidian" /></p>
     <p>
@@ -187,7 +187,7 @@
     <p><ImgZoom src="/2023-10-24/notion2.png" alt="notion" /></p>
     <p>
       這部分我是使用 <a href="https://www.savetonotion.so/" rel="external">save to notion</a>
-      這個瀏覽器插件來簡化這個過程，我覺得他比官方的插件好用不少，因為它可以在存文章時就可以選擇 tags 或其他 properties，但官方插件我還需要去
+       這個瀏覽器插件來簡化這個過程，我覺得他比官方的插件好用不少，因為它可以在存文章時就可以選擇 tags 或其他 properties，但官方插件我還需要去
       database 裡一個一個加上 tag
     </p>
     <h3 id="bi3-ji4-zheng3-li3"><a href="#bi3-ji4-zheng3-li3">筆記整理</a></h3>
