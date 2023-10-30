@@ -149,7 +149,11 @@
     </p>
     <p>但如果沒有頻繁在不同裝置上交叉使用的話，其實我覺得 obsidian 真的是一個很棒的軟體。</p>
     <blockquote>
-      <p>obsidian 其實有官方同步方案，但就是貴。</p>
+      <p>
+        obsidian 其實有官方同步方案，但就是貴。
+        <br />
+        2023/10/31 更新：根據網友的補充其實「如果使用裝置都是蘋果生態系的話，是可以用 iCloud 來同步的」
+      </p>
     </blockquote>
     <h1 id="zhu2-jian4-qing1-xi1-de-bi3-ji4-liu2-cheng2">
       <a href="#zhu2-jian4-qing1-xi1-de-bi3-ji4-liu2-cheng2">逐漸清晰的筆記流程</a>
