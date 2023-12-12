@@ -9,7 +9,7 @@
   import { siteConfig } from '$config/site';
 
   export let post: Post.Post;
-  let post_cover: Asset.Image | undefined = $assets.get(post.cover ?? '');
+  let post_cover: Asset.Image | string | undefined = $assets.get(post.cover ?? '') ?? post.cover;
 </script>
 
 <svelte:head>
@@ -37,9 +37,12 @@
 
   <meta name="twitter:card" content="summary_large_image" />
 
-  {#if post_cover && post_cover.original}
+  {#if post_cover && typeof post_cover !== 'string' && post_cover.original}
     <meta property="og:image" content={new URL(post_cover.original, siteConfig.url).href} />
     <meta name="twitter:image" content={new URL(post_cover.original, siteConfig.url).href} />
+  {:else if typeof post_cover === 'string'}
+    <meta property="og:image:alt" content={post_cover} />
+    <meta name="twitter:image:alt" content={post_cover} />
   {:else}
     <meta property="og:image" content={new URL(siteConfig.cover, siteConfig.url).href} />
     <meta name="twitter:image" content={new URL(siteConfig.cover, siteConfig.url).href} />
