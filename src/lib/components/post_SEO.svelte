@@ -41,8 +41,8 @@
     <meta property="og:image" content={new URL(post_cover.original, siteConfig.url).href} />
     <meta name="twitter:image" content={new URL(post_cover.original, siteConfig.url).href} />
   {:else if typeof post_cover === 'string'}
-    <meta property="og:image:alt" content={post_cover} />
-    <meta name="twitter:image:alt" content={post_cover} />
+    <meta property="og:image" content={post_cover} />
+    <meta name="twitter:image" content={post_cover} />
   {:else}
     <meta property="og:image" content={new URL(siteConfig.cover, siteConfig.url).href} />
     <meta name="twitter:image" content={new URL(siteConfig.cover, siteConfig.url).href} />
