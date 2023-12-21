@@ -93,7 +93,7 @@
         class="inline-code-block">
         #rust
       </code>
-      ，那我就可以直接在搜尋欄找出來，不用管它是屬於哪個 database
+       ，那我就可以直接在搜尋欄找出來，不用管它是屬於哪個 database
     </p>
     <ImgZoom src="/2023-10-24/ob1.png" alt="obsidian" class="h-full object-cover" />
 
@@ -195,7 +195,7 @@
 
     <p>
       這部分我是使用 <a href="https://www.savetonotion.so/" rel="external">save to notion</a>
-      這個瀏覽器插件來簡化這個過程，我覺得他比官方的插件好用不少，因為它可以在存文章時就可以選擇 tags 或其他 properties，但官方插件我還需要去
+       這個瀏覽器插件來簡化這個過程，我覺得他比官方的插件好用不少，因為它可以在存文章時就可以選擇 tags 或其他 properties，但官方插件我還需要去
       database 裡一個一個加上 tag
     </p>
     <h3 id="bi3-ji4-zheng3-li3"><a href="#bi3-ji4-zheng3-li3">筆記整理</a></h3>
