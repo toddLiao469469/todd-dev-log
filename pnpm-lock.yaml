@@ -1,9 +1,16 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 importers:
 
   .:
     dependencies:
+      '@vercel/speed-insights':
+        specifier: ^1.0.2
+        version: 1.0.2
       sharp:
         specifier: ^0.32.5
         version: 0.32.5
@@ -1029,6 +1036,7 @@ packages:
 
   /@napi-rs/triples@1.1.0:
     resolution: {integrity: sha512-XQr74QaLeMiqhStEhLn1im9EOMnkypp7MZOwQhGzqp2Weu5eQJbpPxWxixxlYRKWPOmJjsk6qYfYH9kq43yc2w==}
+    requiresBuild: true
     dev: true
     optional: true
 
@@ -1708,6 +1716,11 @@ packages:
       - encoding
       - supports-color
     dev: true
+
+  /@vercel/speed-insights@1.0.2:
+    resolution: {integrity: sha512-y5HWeB6RmlyVYxJAMrjiDEz8qAIy2cit0fhBq+MD78WaUwQvuBnQlX4+5MuwVTWi46bV3klaRMq83u9zUy1KOg==}
+    requiresBuild: true
+    dev: false
 
   /abbrev@1.1.1:
     resolution: {integrity: sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==}
