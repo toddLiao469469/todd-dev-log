@@ -12,8 +12,8 @@
 <Post>
   <article slot="post_content">
     <p>大概從去年年底我就開始進行從 medium 轉移到這裡的工作，但一路拖到連假才完成這次的搬遷。</p>
-    <h2 id="wei4-shen2-me-yao4-li2-kai1-medium">
-      <a href="#wei4-shen2-me-yao4-li2-kai1-medium">為什麼要離開 medium ？</a>
+    <h2 id="wei2-shen2-mo2-yao4-li2-kai1-medium">
+      <a href="#wei2-shen2-mo2-yao4-li2-kai1-medium">為什麼要離開 medium ？</a>
     </h2>
     <blockquote>
       <p>

@@ -39,7 +39,13 @@
 </script>
 
 {#if nav}
-  <div on:message on:mouseenter={show} on:mouseleave={hide} class="relative cursor-pointer {className ?? ''}">
+  <div
+    role="button"
+    tabindex="0"
+    on:message
+    on:mouseenter={show}
+    on:mouseleave={hide}
+    class="relative cursor-pointer {className ?? ''}">
     <slot>
       {#if nav.url}
         <a href={nav.url} target={nav.target} rel={nav.rel} class="flex items-center cursor-pointer gap-2">
@@ -70,7 +76,7 @@
 
     {#if active && 'links' in nav && nav.links}
       <div
-        transition:slide={{ duration: 300, easing: quartIn }}
+        transition:slide|global={{ duration: 300, easing: quartIn }}
         class:pos-up={nav.orientation === 0}
         class:pos-right={nav.orientation === 1}
         class:pos-down={nav.orientation === 2}
@@ -129,6 +135,8 @@
                   </a>
                 {:else}
                   <span
+                    role="button"
+                    tabindex="0"
                     on:click={() => {
                       if (link.url) hide();
                     }}

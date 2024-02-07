@@ -35,6 +35,8 @@
 
 <li id={content.slug}>
   <div
+    role="button"
+    tabindex="0"
     on:click={handleClick}
     on:touchstart={touchStartHandler}
     on:touchend={touchEndHandler}
@@ -52,6 +54,8 @@
     class:pl18={depth === 5}>
     {#if content.child && content.child.length > 0}
       <span
+        role="button"
+        tabindex="0"
         on:click|stopPropagation={() => {
           expanded = !expanded;
         }}
@@ -75,7 +79,7 @@
   </div>
   {#if content.child && content.child.length > 0}
     {#if expanded}
-      <ul transition:slide={{ duration: 300 }} class="flex flex-col">
+      <ul transition:slide|global={{ duration: 300 }} class="flex flex-col">
         {#each content.child as c}
           <svelte:self content={c} depth={depth + 1} expanded />
         {/each}

@@ -16,7 +16,7 @@
       邦幫忙鐵人賽的文章，畢竟當初為了趕每日發文的挑戰所以其實有些文章的內容有點水（也可能是我本身就寫得很水xD），如果有興趣的讀者可以參閱一下原本的
       <a href="https://ithelp.ithome.com.tw/users/20159893/ironman/6439" rel="external">系列文</a>
     </p>
-    <h2 id="haskell-shi4-shen2-me"><a href="#haskell-shi4-shen2-me">Haskell 是什麼？</a></h2>
+    <h2 id="haskell-shi4-shen2-mo2"><a href="#haskell-shi4-shen2-mo2">Haskell 是什麼？</a></h2>
     <p>
       Haskell 是一個非常純粹的函數式程式語言(functional programming
       language)，它所擁有的一些特性讓我們可以寫出更優雅及抽象的程式，例如：first-class function、immutable、lazy
@@ -26,8 +26,8 @@
       但也因為 Haskell
       的特性相較於我們開發上常用的語言來說，它更加的學術且學習曲線更為陡峭，但當我們熟悉這些概念後會發現這些特性會讓我們的開發體驗提升許多。
     </p>
-    <h2 id="wei4-shen2-me-xiang3-xue2-haskell">
-      <a href="#wei4-shen2-me-xiang3-xue2-haskell">為什麼想學 Haskell ？</a>
+    <h2 id="wei2-shen2-mo2-xiang3-xue2-haskell">
+      <a href="#wei2-shen2-mo2-xiang3-xue2-haskell">為什麼想學 Haskell ？</a>
     </h2>
     <p>
       如果有關注這幾年的前端社群風向會發現「FP」這個詞愈來愈常被提到，而且通常會跟「好維護」、「可讀性高」、「難學」等等標籤扯上關係。
@@ -39,10 +39,8 @@
       </p>
     </blockquote>
     <p>
-      但如果要我給一個形容詞來說明 FP 我可能會選擇「優雅」吧，
-      <strong>「我自己感覺」</strong>
-      是在閱讀使用 FP 風格的程式碼較於 OOP 更好閱讀，雖然我可能看不太懂每個 function 的實作但我大概能從 pipe
-      的順序去推敲出大概是要做什麼事情。
+      但如果要我給一個形容詞來說明 FP 我可能會選擇「優雅」吧，**「我自己感覺」**是在閱讀使用 FP 風格的程式碼較於 OOP
+      更好閱讀，雖然我可能看不太懂每個 function 的實作但我大概能從 pipe 的順序去推敲出大概是要做什麼事情。
     </p>
     <blockquote>
       <p>

@@ -15,8 +15,8 @@
       大概從2021年底左右就打算要學習Rust，主要是覺得這個語言的特性真的太酷了以及它在前端的影嚮力日益劇增讓我開始對它產生了興趣，斷斷續續自學了這麼久，總覺得還是需要寫些筆記讓自己印象更深刻一點。
     </p>
     <hr />
-    <h3 id="wei4-shen2-me-hui4-xu1-yao4-ownership">
-      <a href="#wei4-shen2-me-hui4-xu1-yao4-ownership">為什麼會需要ownership？</a>
+    <h3 id="wei2-shen2-mo2-hui4-xu1-yao4-ownership">
+      <a href="#wei2-shen2-mo2-hui4-xu1-yao4-ownership">為什麼會需要ownership？</a>
     </h3>
     <p>
       最主要的原因應該是「在不使用GC的情況下，確保記憶體的安全性」，確實GC對於開發者來說是一個相當方便的功能，但這也是必須犧牲部分效能且會有一個較為肥大的runtime所換來的。
@@ -24,8 +24,8 @@
     <p>
       所以Rust使用了ownership來當作控制記憶體的手段，讓我們可以在靜態編譯期間能夠得知哪些記憶體操作會有風險而不是runtime時才去做檢查，這在某種程度上讓魚與熊掌都能兼得，但大前提是要能通過Rust的編譯器XD。
     </p>
-    <h3 id="suo3-yi3-dao4-di3-shen2-me-shi4-ownership">
-      <a href="#suo3-yi3-dao4-di3-shen2-me-shi4-ownership">所以到底什麼是ownership？</a>
+    <h3 id="suo3-yi3-dao4-di3-shen2-mo2-shi4-ownership">
+      <a href="#suo3-yi3-dao4-di3-shen2-mo2-shi4-ownership">所以到底什麼是ownership？</a>
     </h3>
     <p>在開始說明前，ownership有三個主要的規則</p>
     <p>每一個值都有一個owner 每個值同時只能擁有一個owner 如果owner離開這個scope則這個值將會被丟棄(drop)</p>

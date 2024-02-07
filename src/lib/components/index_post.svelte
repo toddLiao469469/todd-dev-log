@@ -48,12 +48,14 @@
     itemscope
     itemtype="https://schema.org/BlogPosting"
     itemprop="blogPost"
-    in:fly={{ x: index % 2 ? 100 : -100, duration: 300, delay: 300 }}
-    out:fly={{ x: index % 2 ? -100 : 100, duration: 300 }}
+    in:fly|global={{ x: index % 2 ? 100 : -100, duration: 300, delay: 300 }}
+    out:fly|global={{ x: index % 2 ? -100 : 100, duration: 300 }}
     class="index-post flex flex-col relative w-full overflow-hidden group shadow-xl hover:(shadow-2xl) transform transition duration-300 md:(w-3xl rounded-lg hover:(scale-105))">
     {#if data.series_tag && data.series_title}
       <div class="series flex items-stretch gap-0 z10">
         <div
+          role="button"
+          tabindex="0"
           class="series-tag py2 cursor-pointer"
           on:click={() => handleClick({ name: data.series_tag ?? '', category: UserConfig.SeriesTagName })}
           on:keydown={(e) => {

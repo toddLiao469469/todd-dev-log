@@ -19,8 +19,8 @@
     <blockquote>
       <p>這篇文章主要是折騰自己後的心得文，所以關於各軟體的詳細用法並不會解釋太多。</p>
     </blockquote>
-    <h1 id="wo3-yong4-bi3-ji4-ruan3-ti3-de-mu4-de">
-      <a href="#wo3-yong4-bi3-ji4-ruan3-ti3-de-mu4-de">我用筆記軟體的目的</a>
+    <h1 id="wo3-yong4-bi3-ji4-ruan3-ti3-de-mu4-di4">
+      <a href="#wo3-yong4-bi3-ji4-ruan3-ti3-de-mu4-di4">我用筆記軟體的目的</a>
     </h1>
     <p>如同前面所說就是為了「知識管理」以及「記事」，大概分一下細項的話我一天中會接觸到筆記軟體的事情會有：</p>
     <ol>
@@ -51,8 +51,8 @@
     <blockquote>
       <p>雖然後來發現是我自己用 notion 的方法是錯的。</p>
     </blockquote>
-    <h1 id="wei4-shen2-me-yao4-li2-kai1-notion">
-      <a href="#wei4-shen2-me-yao4-li2-kai1-notion">為什麼要離開 notion？</a>
+    <h1 id="wei2-shen2-mo2-yao4-li2-kai1-notion">
+      <a href="#wei2-shen2-mo2-yao4-li2-kai1-notion">為什麼要離開 notion？</a>
     </h1>
     <p>
       一切的起點是我看了一本叫做「卡片盒筆記術」的書，原本我就對於生產力感到焦慮所以那時就覺得這個筆記方法也許對我會有幫助吧。之後下定決心要開始實踐時就陷入一個寫筆記前的萬年難題「到底該選哪種筆記軟體？」，當時我認為「卡片盒筆記」最為重要的特點應該是「連結」這件事情，所以那時就先放棄了
@@ -116,7 +116,7 @@
       插件以及主題還有一些小功能像是日曆，最近使用檔案紀錄之類的。
     </p>
     <p>到此為止 obsidian 對我來說是一個相當不錯的筆記軟體，但還是有些點讓我無法忍受以致於我放棄了。</p>
-    <h1 id="wei4-shen2-me-huan4-hui2-notion"><a href="#wei4-shen2-me-huan4-hui2-notion">為什麼換回 notion</a></h1>
+    <h1 id="wei2-shen2-mo2-huan4-hui2-notion"><a href="#wei2-shen2-mo2-huan4-hui2-notion">為什麼換回 notion</a></h1>
     <p>
       約莫用了半年之後體驗還是相當不錯，這段時間我算是使用 notion + obsidian 的形式在使用， notion
       就當作收藏文章使用，畢竟它的 chrome 插件相當好用。然後 obsidian 就做扣除收集文章以外的事情。
@@ -126,9 +126,8 @@
       xD，因為我們公司開始要大家回辦公室了，所以以前其實就算下班在家如果要寫筆記或文章也會使用公司的電腦，但變成大部分時間在辦公室後我算是蠻懶得背電腦回家的人所以如果下班在家要寫筆記就變成必須使用我的舊電腦。
     </p>
     <p>
-      而這點就跟 obsidian 的 git 插件有關了，因為 obsidian 預設是只有
-      <strong>「本地儲存」</strong>
-      的也就是說如果我沒有特別同步的話我在公司電腦寫的筆記就無法在我自己的電腦上繼續撰寫，反之依然。
+      而這點就跟 obsidian 的 git 插件有關了，因為 obsidian
+      預設是只有**「本地儲存」**的也就是說如果我沒有特別同步的話我在公司電腦寫的筆記就無法在我自己的電腦上繼續撰寫，反之依然。
     </p>
     <p>
       那社群主流解法就是利用 git 來當做同步的工具，當然身為一個前端工程師使用 git
