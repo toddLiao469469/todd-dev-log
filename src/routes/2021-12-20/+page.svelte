@@ -37,7 +37,7 @@
       但不得不說 Redux
       Toolkit真的是一個很香的工具，大幅簡化寫reducer、action的煩躁感，而且也內建了thunk並在slice的寫法中也高度的整合在一起了。
     </p>
-    <h3 id="bu4-zhi3-xin1-ji4-shu4-de-nu3-li4"><a href="#bu4-zhi3-xin1-ji4-shu4-de-nu3-li4">不只新技術的努力</a></h3>
+    <h3 id="bu4-zhi1-xin1-ji4-shu4-de-nu3-li4"><a href="#bu4-zhi1-xin1-ji4-shu4-de-nu3-li4">不只新技術的努力</a></h3>
     <p>
       開發幾個程式後總會想要如何將程式寫得更好、更簡潔、更有架構。今年就開始在看了幾本有關軟體工程或者程式設計理論的書
     </p>

@@ -18,7 +18,7 @@
     </p>
     <p>這篇文主要是彙整我在這次鐵人賽的中有關Dart基本介紹的部分，大部分內容就是直接搬運過來然後扣掉一些廢話xD</p>
     <p>系列文連結：Flutter web 的奇妙冒險 :: 2021 iThome 鐵人賽</p>
-    <h2 id="dart-shi4-shen2-me"><a href="#dart-shi4-shen2-me">Dart是什麼？</a></h2>
+    <h2 id="dart-shi4-shen2-mo2"><a href="#dart-shi4-shen2-mo2">Dart是什麼？</a></h2>
     <p>Dart 是一個靜態強型別的語言，同時支援物件導向程式設計（OOP） 及函數式程式設計（FP）的特性，</p>
     <p>
       而Dart 正是「Flutter」所使用的語言，原本是 google 為取代 JavaScript 而設計的語言，所以在語法上借鑑許多 JS
@@ -38,9 +38,8 @@
       <li>執行環境</li>
     </ol>
     <p>
-      根據以上幾點我認為
-      <strong>「Dart 是具有Type保障且是class-base的JS」</strong>
-      ，基本上只要是熟悉JS的開發者轉而學習Dart的學習曲線是相當友善的。在網路上其他文章也有看過「Dart是融合JavaScript與Java優點的語言」，但因為我沒使用過Java所以對這個觀點就不多做評論了。如果有使用過Java的讀者可以在底下留言與大家分享一下你的觀點。
+      根據以上幾點我認為**「Dart
+      是具有Type保障且是class-base的JS」**，基本上只要是熟悉JS的開發者轉而學習Dart的學習曲線是相當友善的。在網路上其他文章也有看過「Dart是融合JavaScript與Java優點的語言」，但因為我沒使用過Java所以對這個觀點就不多做評論了。如果有使用過Java的讀者可以在底下留言與大家分享一下你的觀點。
     </p>
     <p>
       特別說明一下差異裡的後三點，型別這個問題，有寫過JS的讀者應該都有遇過「xxx is not defined」這種runtime

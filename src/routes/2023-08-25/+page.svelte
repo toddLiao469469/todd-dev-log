@@ -70,7 +70,9 @@
       <code class="inline-code-block">struct</code>
       的初始化時使用
       <code class="inline-code-block">..</code>
-       （**特別注意這裡是兩個.**）這個被稱為 struct update syntax 的功能。即可。
+      （
+      <strong>特別注意這裡是兩個.</strong>
+      ）這個被稱為 struct update syntax 的功能。即可。
     </p>
     <div class="code-block">
       <CodeCopy>
@@ -211,9 +213,7 @@
     <h2 id="ji1-ben3-shi3-yong4"><a href="#ji1-ben3-shi3-yong4">基本使用</a></h2>
     <p>
       <code class="inline-code-block">enum</code>
-      在字面上的意思就是枚舉的意思，我的個人理解是它在描述
-      <strong>「某個值只能取特定值之一的情況」</strong>
-      ，像是撲克牌只有四種花色、硬幣只有正反面。
+       在字面上的意思就是枚舉的意思，我的個人理解是它在描述**「某個值只能取特定值之一的情況」**，像是撲克牌只有四種花色、硬幣只有正反面。
     </p>
     <p>
       我認為 rust <code class="inline-code-block">enum</code>
@@ -279,9 +279,7 @@
       <code class="inline-code-block">enum</code>
       的 variants 是
       <strong>允許擁有數值</strong>
-      的我覺得可能比較相近的比喻是
-      <strong>「盒子裡面裝著一個數值」</strong>
-      。這可以讓我們更加簡單的描述這種類別的數值。
+      的我覺得可能比較相近的比喻是**「盒子裡面裝著一個數值」**。這可以讓我們更加簡單的描述這種類別的數值。
     </p>
     <p>
       所以可以將 <code class="inline-code-block">IpAddr</code>
@@ -338,9 +336,7 @@
       <code class="inline-code-block">enum</code>
       時會一起使用 pattern matching ，畢竟
       <code class="inline-code-block">enum</code>
-      就是代表
-      <strong>「某個值只能取特定值之一的情況」</strong>
-      所以我們常常需要判斷這値處於哪一種特定值。
+       就是代表 **「某個值只能取特定值之一的情況」**所以我們常常需要判斷這値處於哪一種特定值。
     </p>
     <div class="code-block">
       <CodeCopy>
@@ -352,12 +348,9 @@
       我們可以看到我們可以利用 <code class="inline-code-block">if let</code>
       (一種pattern matching 語法）將
       <code class="inline-code-block">enum</code>
-      這個
-      <strong>
-        「盒子」
-        <code class="inline-code-block">V4</code>
-      </strong>
-      給打開並取出裡面的值
+      這個**「盒子」
+      <code class="inline-code-block">V4</code>
+      ** 給打開並取出裡面的值
       <code class="inline-code-block">127.0.0.1</code>
        。
     </p>

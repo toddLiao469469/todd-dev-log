@@ -17,7 +17,7 @@
 
 <figure class="avatar select-none">
   {#if loaded && siteConfig.author.avatar && siteConfig.author.avatar_128}
-    <picture in:fade={{ duration: 300, delay: 300 }} out:fade={{ duration: 300 }} class="u-photo">
+    <picture in:fade|global={{ duration: 300, delay: 300 }} out:fade|global={{ duration: 300 }} class="u-photo">
       <!--
         /@imagetools/... get transformed to ./_app/immutable/assets/...
         while causes problem to page that is 2+ level of depth
@@ -32,7 +32,7 @@
         {width}
         {height}
         class={className ??
-          'rounded-full shadow-xl !w-32 !h-32 aspect-auto object-cover  transition-transform duration-1000 ease-in-out'} />
+          'rounded-full shadow-xl !w-32 !h-32 aspect-auto object-cover hover:rotate-[360deg] transition-transform duration-1000 ease-in-out'} />
     </picture>
   {:else}
     <div class="i-line-md-github-loop {className ?? '!h-32 !w-32'}" />

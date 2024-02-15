@@ -65,8 +65,8 @@
       <code class="inline-code-block">Form.Item</code>
        可以傳入name來註冊form的field，然後會將它所wrap的元件進行綁定，大致上就是有自動的傳入onChange及value這兩個props。
     </p>
-    <h2 id="na4-wei4-shen2-me-hui4-xuan3-ze2-react-hook-form">
-      <a href="#na4-wei4-shen2-me-hui4-xuan3-ze2-react-hook-form">那為什麼會選擇 React Hook Form</a>
+    <h2 id="na4-wei2-shen2-mo2-hui4-xuan3-ze2-react-hook-form">
+      <a href="#na4-wei2-shen2-mo2-hui4-xuan3-ze2-react-hook-form">那為什麼會選擇 React Hook Form</a>
     </h2>
     <p>
       最一開始只是剛好在逛github時瞄到而已，看一下文件後覺得好像蠻有料的感覺是可以解決我們之前在antd

@@ -22,7 +22,7 @@
     </p>
     <p>搬家完到現在的心得是：超值得！</p>
     <p>
-      除了體驗到前所未有的自由度以及不用忍受對於開發者說不上友善的編輯器以外， medium
+      除了體驗到前所未有的自由度以及不用忍受對於開發者不太友善的編輯器以外， medium
       最近突然加上一個蓋板廣告，讓我非常慶幸還好我先搬出來了。
     </p>
     <h2 id="suan4-shi4-you3-can1-yu3-yi1-ge4-kai1-yuan2-zhuan1-an4">
@@ -115,8 +115,8 @@
     </blockquote>
     <h2 id="di4-yi1-ci4-can1-jia1-conference"><a href="#di4-yi1-ci4-can1-jia1-conference">第一次參加 conference</a></h2>
     <p>
-      因為今年鐵人賽完賽可以獲得一張 MWC 的票，心裡想既然都不用錢了就去參加看看吧。這次主要是關注 Rust
-      、Golang、WASM及前端領域相關的議程。
+      因為今年鐵人賽完賽可以獲得一張 <a href="https://modernweb.tw/" rel="external">MWC</a>
+       的票，心裡想既然都不用錢了就去參加看看吧。這次主要是關注 Rust 、Golang、WASM及前端領域相關的議程。
     </p>
     <p>
       但比較有記憶點的議程還是有關 heptabase

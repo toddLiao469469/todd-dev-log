@@ -27,17 +27,22 @@ export const processRmDir = (dir) => {
   }
 };
 
+const isRemotePath = (path) => {
+  return path.startsWith('http://') || path.startsWith('https://');
+};
+
 export const processImagePath = (path, slug) => {
   if (!path || !slug) return;
-  if (path.startsWith('http://') || path.startsWith('https://')) {
-    return path;
-  }
+
+  if (isRemotePath(path)) return path;
+
   if (!isAbsolute(path)) {
     path = join(slug, path);
   }
 
   // Internally uses posix style backslashes
   path = path.split(sep).join(posix.sep);
+
   return path.startsWith('/') ? `${path}` : `/${path}`;
 };
 

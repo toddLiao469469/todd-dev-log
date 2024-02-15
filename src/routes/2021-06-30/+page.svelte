@@ -28,9 +28,8 @@
       fieldValue注入進去。
     </p>
     <p>
-      因為團隊的專案中使用了
-      <strong>Apollo（GraphQL framework）</strong>
-      所以較少使用到狀態管理套件。這也導致在平常較少查閱這類的文章，但還是稍微關注了一下新興的狀態管理的套件，特別是
+      因為團隊的專案中使用了**Apollo（GraphQL
+      framework）**所以較少使用到狀態管理套件。這也導致在平常較少查閱這類的文章，但還是稍微關注了一下新興的狀態管理的套件，特別是
       recoil 及 Jōtai 這類 atomic 形式的狀態管理插件。當然在實作上兩者還是些許差異：如何判斷 atom 更新、如何更新 atom
       之類的。
     </p>
@@ -106,8 +105,8 @@
       全部放在某個生命週期的callback，讓widget在mount或者update時可以再次將這個Widget描繪出來。
     </p>
     <p>總而言之開發 Flutter 可以同時體會到兩種程式設計風格，這還不夠香嗎？</p>
-    <h3 id="guan1-yu2-qu4-nian2-ding4-xia4-de-mu4-biao1">
-      <a href="#guan1-yu2-qu4-nian2-ding4-xia4-de-mu4-biao1">關於去年訂下的目標</a>
+    <h3 id="guan1-wu1-qu4-nian2-ding4-xia4-de-mu4-biao1">
+      <a href="#guan1-wu1-qu4-nian2-ding4-xia4-de-mu4-biao1">關於去年訂下的目標</a>
     </h3>
     <p>
       這半年對於 Rust 並沒有太多研究，一來是因為工作的關係有在開發 Flutter 也導致上半年的學習重心都放在
@@ -118,9 +117,7 @@
       observer pattern的概念讓我偶而看到一些 RxJS 的文章時有辦法理解。
     </p>
     <p>
-      雖然看似學的很雜但工作一年多發現
-      <strong>「所有的道路匯聚到同一個座標上」</strong>
-      ，各種程式語言中總是有辦法找到一樣的概念。
+      雖然看似學的很雜但工作一年多發現**「所有的道路匯聚到同一個座標上」**，各種程式語言中總是有辦法找到一樣的概念。
     </p>
     <hr />
     <p>
