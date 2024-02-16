@@ -7,10 +7,8 @@ cover: ./cover.webp
 coverStyle: 'TOP'
 tags:
 - ['Rust']
-series_tag: 
-  - 'Rust-Learning-Notes'
-series_title:
-  - 'Rust 學習筆記 🦀🦀🦀'
+series_tag: 'Rust-Learning-Notes'
+series_title: 'Rust 學習筆記 🦀🦀🦀'
 ---
 
 # 前言

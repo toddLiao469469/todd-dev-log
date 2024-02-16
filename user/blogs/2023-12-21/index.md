@@ -7,10 +7,8 @@ updated: '2023-12-21T10:00:00.000+08:00'
 cover: ./cover.jpg
 coverStyle: 'TOP'
 coverCaption: Photo by João Saplak on <a href="https://www.pexels.com/photo/close-up-of-a-facade-of-a-modern-building-19376412/">Pexels</a>
-series_tag: 
-  - 'Haskell 從入門到放棄'
-series_title:
-  - ''
+series_tag: 'Haskell 從入門到放棄'
+series_title: 'Haskell 從入門到放棄'
 tags:
 - ['Haskell', 'FP']
 
