@@ -52,14 +52,6 @@ export const headConfig: Site.Head = {
 
           // Replace the following with your own setting
 
-          // Google tag (gtag.js)
-          `<script type="text/partytown" src="https://www.googletagmanager.com/gtag/js?id=G-CWZ9SKGCQ6"></script>`,
-          `<script type="text/partytown">
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-CWZ9SKGCQ6');
-          </script>`,
         ],
 };
 
