@@ -6,8 +6,7 @@ options:
 ---
 
 
-hi ， 我是 Todd 目前在 Ionex 擔任 software engineer ，工作上主要使用 react + TypeScript 進行網頁前端開發以及 express 開發網頁後端，平常喜歡研究一些新技術及工具。
-
+hi  我是 Todd ， 一個四年多資歷的軟體工程師 ，工作上主要使用 react 、TypeScript 及 express 開發網頁前後端，平常喜歡研究一些新技術及工具。
 
 
 ## 目前主要使用的技術
@@ -19,16 +18,20 @@ hi ， 我是 Todd 目前在 Ionex 擔任 software engineer ，工作上主要�
 - TypeScript
 - react
   - next.js
-  - react-query, apollo-client
+  - TanStack Query, apollo-client
   - jotai
   - react-router  
   - react-hook-form
   - redux
     - redux-toolkit, redux-thunk, redux-saga
+- svelte
+  - svelte-kit
+  - shadcn-svelte
 - mui, taillwind
 - vite, webpack
 - storybook
 - jest, react-testing-library, playwright
+  
 
 ### 後端或維運相關
 
@@ -37,15 +40,17 @@ hi ， 我是 Todd 目前在 Ionex 擔任 software engineer ，工作上主要�
 - apollo-server
 - AWS
   - 主要使用 S3 及 cloudfront
-- Jenkins
+  - 用過一點點 ECS 及 ECR
 - Docker
-- github actions
+- GitHub Actions
+  - 最近工作上的自動化相關操作都是用 actions 完成，超推！
+- Jenkins
 - vercel
 - cloudflare
+  - 佛心公司，這個網站很多的功能都是用他們家的免費產品，像是 analytics 、 CDN 以及 R2（存圖片），以及我自己寫的一些機器人也是用 cloudflare worker hosting，除了購買網域以外沒有花到半毛錢。
   
 ## 最近在研究的東西
 
-- svelte
 - rust
 - haskell
   - 最近剛完成鐵人賽，[系列文](https://ithelp.ithome.com.tw/users/20159893/ironman/6439)主題是關於 haskell 入門，有興趣的話可以參閱看看。
@@ -53,6 +58,7 @@ hi ， 我是 Todd 目前在 Ionex 擔任 software engineer ，工作上主要�
 ## 其他以前用過但現在工作上很少用到的技術
 
 - styled-components
+- emotion
 - gatsby
 - ant-design
 - chakra-ui
@@ -61,4 +67,4 @@ hi ， 我是 Todd 目前在 Ionex 擔任 software engineer ，工作上主要�
 - bootstrap
 - scss/sass
 - pug
-
+  
