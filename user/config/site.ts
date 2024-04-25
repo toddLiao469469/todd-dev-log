@@ -14,8 +14,8 @@ import SiteCover from '$assets/qwer.webp';
 export const siteConfig: Site.Config = {
   url: 'https://toddliao.dev/',
   title: "Todd's Dev Logs",
-  subtitle: '一個前端工程師的學習筆記',
-  description: '一個前端工程師的學習筆記',
+  subtitle: '一個軟體工程師的學習筆記',
+  description: '一個軟體工程師的學習筆記',
   lang: 'en',
   timeZone: 'Asia/Taipei',
   since: 2020,
@@ -35,7 +35,7 @@ export const siteConfig: Site.Config = {
     github: 'https://github.com/toddLiao469469',
     email: 'toddliao.dev@gmail.com',
     twitter: 'https://twitter.com/toddLiao469469',
-    bio: `目前在 Ionex 擔任前端工程師 <br/> 最近在研究 Rust 以及 Svelte`,
+    bio: `目前在 Ionex 擔任軟體工程師 <br/> 最近在研究 Haskell、Svelte 及 Rust`,
   },
 };
 

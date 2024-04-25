@@ -12,8 +12,8 @@
 <Post>
   <article slot="post_content">
     <p>
-      hi ， 我是 Todd 目前在 Ionex 擔任 software engineer ，工作上主要使用 react + TypeScript 進行網頁前端開發以及
-      express 開發網頁後端，平常喜歡研究一些新技術及工具。
+      hi 我是 Todd ， 一個四年多資歷的軟體工程師 ，工作上主要使用 react 、TypeScript 及 express
+      開發網頁前後端，平常喜歡研究一些新技術及工具。
     </p>
     <h2 id="mu4-qian2-zhu3-yao4-shi3-yong4-de-ji4-shu4">
       <a href="#mu4-qian2-zhu3-yao4-shi3-yong4-de-ji4-shu4">目前主要使用的技術</a>
@@ -26,7 +26,7 @@
         react
         <ul>
           <li>next.js</li>
-          <li>react-query, apollo-client</li>
+          <li>TanStack Query, apollo-client</li>
           <li>jotai</li>
           <li>react-router</li>
           <li>react-hook-form</li>
@@ -36,6 +36,13 @@
               <li>redux-toolkit, redux-thunk, redux-saga</li>
             </ul>
           </li>
+        </ul>
+      </li>
+      <li>
+        svelte
+        <ul>
+          <li>svelte-kit</li>
+          <li>shadcn-svelte</li>
         </ul>
       </li>
       <li>mui, taillwind</li>
@@ -54,19 +61,32 @@
         AWS
         <ul>
           <li>主要使用 S3 及 cloudfront</li>
+          <li>用過一點點 ECS 及 ECR</li>
+        </ul>
+      </li>
+      <li>Docker</li>
+      <li>
+        GitHub Actions
+        <ul>
+          <li>最近工作上的自動化相關操作都是用 actions 完成，超推！</li>
         </ul>
       </li>
       <li>Jenkins</li>
-      <li>Docker</li>
-      <li>github actions</li>
       <li>vercel</li>
-      <li>cloudflare</li>
+      <li>
+        cloudflare
+        <ul>
+          <li>
+            佛心公司，這個網站很多的功能都是用他們家的免費產品，像是 analytics 、 CDN 以及
+            R2（存圖片），以及我自己寫的一些機器人也是用 cloudflare worker hosting，除了購買網域以外沒有花到半毛錢。
+          </li>
+        </ul>
+      </li>
     </ul>
     <h2 id="zui4-jin4-zai4-yan2-jiu1-de-dong1-xi1">
       <a href="#zui4-jin4-zai4-yan2-jiu1-de-dong1-xi1">最近在研究的東西</a>
     </h2>
     <ul>
-      <li>svelte</li>
       <li>rust</li>
       <li>
         haskell
@@ -86,6 +106,7 @@
     </h2>
     <ul>
       <li>styled-components</li>
+      <li>emotion</li>
       <li>gatsby</li>
       <li>ant-design</li>
       <li>chakra-ui</li>
