@@ -1,6 +1,6 @@
 ---
 
-title: Haskell - Haskell 從入門到放棄 - 認識 Haskell
+title: Haskell 從入門到放棄 - 認識 Haskell
 summary: '一切都從 expression 說起'
 published: '2024-04-26T12:00:00.000+08:00'
 updated: '2024-04-26T12:00:00.000+08:00'
