@@ -217,6 +217,38 @@
       就會是
       <code class="inline-code-block">11</code>
     </p>
+    <h3 id="immutable"><a href="#immutable">Immutable</a></h3>
+    <p>
+      在 Haskell 中所有變數都是 Immutable 的也就代表這些變數被宣告後就不能被變更了，像是我先宣告了 <code
+        class="inline-code-block">
+        a = 1
+      </code>
+      之後緊接著
+      <code class="inline-code-block">a = 1000</code>
+    </p>
+    <div class="code-block">
+      <CodeCopy>
+        <pre><code
+            class="language-haskell">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">a :: Integer</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">a = 1</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">a = 1000</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">main :: IO ()</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">main = do</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">  print ("a = " ++ show a)</div></div>`}</code></pre>
+      </CodeCopy>
+    </div>
+    <div class="code-block">
+      <CodeCopy>
+        <pre><code
+            class="language-hs">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">    <span class="token constant">Multiple</span> <span class="token hvariable">declarations</span> <span class="token keyword">of</span> ‘<span class="token hvariable">a</span>’</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">    <span class="token constant">Declared</span> <span class="token hvariable">at</span><span class="token operator">:</span> <span class="token operator">/</span><span class="token constant">Users</span><span class="token operator">/</span><span class="token hvariable">todd</span><span class="token operator">/</span><span class="token constant">Desktop</span><span class="token operator">/</span><span class="token hvariable">foo</span><span class="token operator">/</span><span class="token hvariable">main</span><span class="token punctuation">.</span><span class="token hvariable">hs</span><span class="token operator">:</span><span class="token number">2</span><span class="token operator">:</span><span class="token number">1</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">                 <span class="token operator">/</span><span class="token constant">Users</span><span class="token operator">/</span><span class="token hvariable">todd</span><span class="token operator">/</span><span class="token constant">Desktop</span><span class="token operator">/</span><span class="token hvariable">foo</span><span class="token operator">/</span><span class="token hvariable">main</span><span class="token punctuation">.</span><span class="token hvariable">hs</span><span class="token operator">:</span><span class="token number">4</span><span class="token operator">:</span><span class="token number">1</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">  <span class="token operator">|</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token number">4</span> <span class="token operator">|</span> <span class="token hvariable">a</span> <span class="token operator">=</span> <span class="token number">10000</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">  <span class="token operator">|</span> <span class="token operator">^</span></div></div>`}</code></pre>
+      </CodeCopy>
+    </div>
+    <p>
+      會發現編譯器指出這個錯誤 <code class="inline-code-block">Multiple declarations of ‘a’</code>
+      ，雖然這個
+      <code class="inline-code-block">=</code>
+      很像是在其他語言中 用來賦值給某個變數的行為，但實際上在 Haskell 中
+      <code class="inline-code-block">=</code>
+       比較像是「定義」的意思，也就是說我不能同時定義「a 是 1 」和「a 是 1000」。
+    </p>
+    <blockquote>
+      <p>Haskell 是一個蠻貼近數學概念的語言，所以很多時候就想想數學上的定義及概念來理解或許會更好懂（或更不好懂XD）</p>
+    </blockquote>
     <h2 id="jian3-dan1-di4-ren4-shi2-function"><a href="#jian3-dan1-di4-ren4-shi2-function">簡單地認識 function</a></h2>
     <p>
       在 Haskell 中要宣告一個 function 也很簡單只要 <code class="inline-code-block">

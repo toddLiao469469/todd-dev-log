@@ -3,7 +3,7 @@
 title: Haskell 從入門到放棄 - 認識 Haskell
 summary: '一切都從 expression 說起'
 published: '2024-04-26T12:00:00.000+08:00'
-updated: '2024-04-26T12:00:00.000+08:00'
+updated: '2024-04-29T23:42:00.000+08:00'
 cover: ./cover.jpg
 coverStyle: 'TOP'
 coverCaption: <a href="https://www.pexels.com/photo/close-up-of-a-modern-building-facade-13078441/>Photo by Robert Kozakiewicz </a>
@@ -165,6 +165,35 @@ main = do
 第二個及第三個 `print` 因為我們 `let a = 2` 所以第二個 `print` 就會是 `2` ，然後因為還是在 `main` 裡面所以 `a+b` 就會是 `12`
 
 剩下的 `print` 因為我們離開 `let a = 2 in ...` 的範圍，所以 `a` 就會是最外面的 `1` 但還是在 `main` 裡面所以 `b` 依然是 `10` 那 `a + b` 就會是 `11`
+
+### Immutable
+
+在 Haskell 中所有變數都是 Immutable 的也就代表這些變數被宣告後就不能被變更了，像是我先宣告了 `a = 1`  之後緊接著 `a = 1000`
+
+```haskell
+a :: Integer
+a = 1
+a = 1000
+
+main :: IO ()
+main = do
+  print ("a = " ++ show a)
+```
+
+```hs
+    Multiple declarations of ‘a’
+    Declared at: /Users/todd/Desktop/foo/main.hs:2:1
+                 /Users/todd/Desktop/foo/main.hs:4:1
+  |
+4 | a = 10000
+  | ^
+```
+
+會發現編譯器指出這個錯誤 `Multiple declarations of ‘a’` ，雖然這個 `=` 很像是在其他語言中
+用來賦值給某個變數的行為，但實際上在 Haskell 中 `=` 比較像是「定義」的意思，也就是說我不能同時定義「a 是 1 」和「a 是 1000」。
+
+> Haskell 是一個蠻貼近數學概念的語言，所以很多時候就想想數學上的定義及概念來理解或許會更好懂（或更不好懂XD）
+>
 
 ## 簡單地認識 function
 
