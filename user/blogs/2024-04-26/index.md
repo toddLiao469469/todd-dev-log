@@ -10,7 +10,7 @@ coverCaption: <a href="https://www.pexels.com/photo/close-up-of-a-modern-buildin
 series_tag: 'Haskell 從入門到放棄'
 series_title: 'Haskell 從入門到放棄'
 tags:
-  - ['haskell',’fp’]
+  - ['haskell','fp']
 
 ---
 ## 一切都從 expression 說起
