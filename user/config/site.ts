@@ -49,9 +49,7 @@ export const headConfig: Site.Head = {
         ]
       : [
           // For Production Environment
-
           // Replace the following with your own setting
-
         ],
 };
 
@@ -83,10 +81,10 @@ export const dateConfig: Site.DateConfig = {
 export const giscusConfig: Giscus.Config = {
   enable: true,
   id: 'giscus-comment',
-  repo: "toddliao469469/todd-dev-log-giscus",
-  repoId: "R_kgDOKgKgHw",
-  category: "General",
-  categoryId: "DIC_kwDOKgKgH84CaH6T",
+  repo: 'toddliao469469/todd-dev-log',
+  repoId: 'R_kgDOIoFQbw',
+  category: 'General',
+  categoryId: 'DIC_kwDOIoFQb84CgzZr',
   mapping: 'title',
   reactionsEnabled: '1',
   emitMetadata: '0',
