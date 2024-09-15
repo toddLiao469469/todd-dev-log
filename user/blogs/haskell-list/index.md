@@ -2,11 +2,12 @@
 
 title: Haskell 從入門到放棄 - List
 summary: ''
-published: '202-08-01T10:00:00.000+08:00'
-updated: '2023-08-01T10:00:00.000+08:00'
+published: '2024-09-16T00:00:00.000+08:00'
+updated: '2024-09-16T00:00:00.000+08:00'
 cover: ./cover.jpg
 coverStyle: 'TOP'
 series_tag: 'Haskell 從入門到放棄'
+series_title: 'Haskell 從入門到放棄'
 tags:
   - ['haskell','fp']
 

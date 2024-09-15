@@ -32,13 +32,13 @@
         在 Haskell 中 <code class="inline-code-block">String</code>
         與
         <code class="inline-code-block">[Char]</code>
-        是相等的
+         是相等的
       </strong>
       ，也就是說
       <code class="inline-code-block">&quot;abc&quot;</code>
       以及
       <code class="inline-code-block">[&#39;a&#39;,&#39;b&#39;,&#39;c&#39;]</code>
-      是一樣的東西
+       是一樣的東西
     </p>
     <div class="code-block">
       <CodeCopy>
@@ -55,7 +55,7 @@
     </div>
     <p>
       在使用 <code class="inline-code-block">++</code>
-      要特別注意的是他是會將左邊運算元遍歷過一次，所以如果左邊是一個很長的 List 的話必須小心使用。
+       要特別注意的是他是會將左邊運算元遍歷過一次，所以如果左邊是一個很長的 List 的話必須小心使用。
     </p>
     <p>
       而在 List 前面塞入一個元素可以使用 <code class="inline-code-block">:</code>
@@ -80,7 +80,7 @@
     </p>
     <p>
       我們也可以一直使用 <code class="inline-code-block">:</code>
-      來組成一個 List
+       來組成一個 List
     </p>
     <div class="code-block">
       <CodeCopy>
@@ -94,7 +94,7 @@
       <code class="inline-code-block">[0,1,2]</code>
       實際上就是
       <code class="inline-code-block">0 : 1 : 2 : []</code>
-      的語法糖。
+       的語法糖。
     </p>
     <p>
       如果我們要存取特定的元素的話我們能用 <code class="inline-code-block">!!</code>
@@ -115,19 +115,19 @@
     </div>
     <p>
       <code class="inline-code-block">head</code>
-      會回傳 List 中第一個元素
+       會回傳 List 中第一個元素
     </p>
     <p>
       <code class="inline-code-block">tail</code>
-      會回傳扣除第一個元素後的List
+       會回傳扣除第一個元素後的List
     </p>
     <p>
       <code class="inline-code-block">last</code>
-      會回傳 List 的最後一個元素
+       會回傳 List 的最後一個元素
     </p>
     <p>
       <code class="inline-code-block">init</code>
-      會回傳扣除最後一個元素後的List
+       會回傳扣除最後一個元素後的List
     </p>
     <p>有這些我們就能夠來寫出一個簡單小 function 來操作 List</p>
     <div class="code-block">
@@ -148,7 +148,7 @@
       <code class="inline-code-block">x</code>
       的第一個元素與
       <code class="inline-code-block">listSum &lpar;tail x&rpar;</code>
-      相加。
+       相加。
     </p>
     <p>沒錯就是使用 recursive ，因為在 Haskell 中所有 variable 都是 immutable 的所以我們寫不出像 js 這樣的程式碼</p>
     <div class="code-block">
@@ -166,35 +166,35 @@
     </div>
     <p>
       <code class="inline-code-block">length</code>
-      會回傳 List 長度
+       會回傳 List 長度
     </p>
     <p>
       <code class="inline-code-block">take</code>
-      會根據根據傳入的長度及List 回傳一個新的 List
+       會根據根據傳入的長度及List 回傳一個新的 List
     </p>
     <p>
       <code class="inline-code-block">reverse</code>
-      會回傳一個反轉的 List
+       會回傳一個反轉的 List
     </p>
     <p>
       <code class="inline-code-block">maximum</code>
-      回傳 List 中最大的數
+       回傳 List 中最大的數
     </p>
     <p>
       <code class="inline-code-block">minimum</code>
-      回傳 List 中最小的數
+       回傳 List 中最小的數
     </p>
     <p>
       <code class="inline-code-block">sum</code>
-      List所有元素的加總
+       List所有元素的加總
     </p>
     <p>
       <code class="inline-code-block">product</code>
-      List所有元素的乘積
+       List所有元素的乘積
     </p>
     <p>
       <code class="inline-code-block">elem</code>
-      判斷該元素是否屬於該List
+       判斷該元素是否屬於該List
     </p>
     <h2 id="shao1-wei1-jin4-jie1-yi1-xia4"><a href="#shao1-wei1-jin4-jie1-yi1-xia4">稍微進階一下</a></h2>
     <p>當然我們要建立一個 List 不一定每次都要直接寫出所有的元素</p>
@@ -206,7 +206,7 @@
     </div>
     <p>
       我們可使用 <code class="inline-code-block">..</code>
-      來幫我快速建立一個 List
+       來幫我快速建立一個 List
     </p>
     <div class="code-block">
       <CodeCopy>
@@ -216,7 +216,7 @@
     </div>
     <p>
       這種方式稱為 <strong>range</strong>
-      ，而能夠使用 range 來建立 List 那個值本身必須是可以被枚舉的，像是A到Z，1到10。
+       ，而能夠使用 range 來建立 List 那個值本身必須是可以被枚舉的，像是A到Z，1到10。
     </p>
     <p>那我們也能限制 range 所產生的元素之間的距離，只要多放一個元素且標註上限就好</p>
     <div class="code-block">
@@ -240,7 +240,7 @@
       所以假設我們今天想產生前 10 個 3 的倍數，我們除了直接標註上限是 <code class="inline-code-block">3*10</code>
       以外，我們也可以利用
       <code class="inline-code-block">take</code>
-      加上無限 List 來幫助我們達成這個需求
+       加上無限 List 來幫助我們達成這個需求
     </p>
     <div class="code-block">
       <CodeCopy>
@@ -252,7 +252,7 @@
       除了使用 range 我們也可以用 <code class="inline-code-block">cycle</code>
       以及
       <code class="inline-code-block">repeat</code>
-      來產生無限 List
+       來產生無限 List
     </p>
     <div class="code-block">
       <CodeCopy>
@@ -305,7 +305,7 @@
       <code class="inline-code-block">x</code>
       mod
       <code class="inline-code-block">2 /= 0</code>
-      就好了
+       就好了
     </p>
     <blockquote>
       <p>
@@ -321,7 +321,7 @@
       那假設我想要把一個 List 大於 10 的數字 <code class="inline-code-block">+1</code>
       小於10的
       <code class="inline-code-block">*2</code>
-      且為 3 的倍數要丟掉呢？
+       且為 3 的倍數要丟掉呢？
     </p>
     <div class="code-block">
       <CodeCopy>
@@ -340,7 +340,7 @@
       <code class="inline-code-block">y</code>
       的範圍為6到10，且
       <code class="inline-code-block">x+y</code>
-      還不能是5的倍數
+       還不能是5的倍數
     </p>
     <div class="code-block">
       <CodeCopy>
@@ -370,7 +370,7 @@
       <code class="inline-code-block">.</code>
       都要存在於
       <code class="inline-code-block">email</code>
-      裡面。
+       裡面。
     </p>
     <blockquote>
       <p>就只是簡單的驗證，當然光是這些條件不足以說明屬於email的格式</p>
