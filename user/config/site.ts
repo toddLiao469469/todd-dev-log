@@ -9,14 +9,14 @@ import Avatar_96_PNG from '$assets/avatar.jpeg?w=96&h=96&imagetools';
 import Avatar_192_PNG from '$assets/avatar.jpeg?w=192&h=192&imagetools';
 import Avatar_512_PNG from '$assets/avatar.jpeg?w=512&h=512&imagetools';
 
-import SiteCover from '$assets/qwer.webp';
+import SiteCover from '$assets/cover.webp';
 
 export const siteConfig: Site.Config = {
   url: 'https://blog.toddliao.dev/',
   title: "Todd's Dev Logs",
   subtitle: '一個軟體工程師的學習筆記',
   description: '一個軟體工程師的學習筆記',
-  lang: 'en',
+  lang: 'zh-Hant',
   timeZone: 'Asia/Taipei',
   since: 2020,
   cover: SiteCover,
