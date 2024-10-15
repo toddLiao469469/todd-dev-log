@@ -5,66 +5,23 @@ options:
   - unlisted
 ---
 
+# HI 我是 Todd 
 
-hi  我是 Todd ， 一個四年多資歷的軟體工程師 ，工作上主要使用 react 、TypeScript 及 express 開發網頁前後端，平常喜歡研究一些新技術及工具。
+歡迎來到我的 blog ，其實我一直不太會自我介紹，所以就乾脆列了份清單讓你快速知道我是一個怎麼樣的人
 
+- 名字是來自於我很喜歡的影集馬男波傑克（Bojack Horseman）中的 Todd
+- INFP-T，雖然我認為將人劃分成 16 種人感覺太武斷了，但或許這是別人有辦法快速認識我的好方法
+- 喜歡攝影，目前主力機器是 Fujifilm 的 XT-30 II ，第一台數位相機是 D7000 ，第一台底片相機是 FM3A，擁有的機身中最喜歡 Bronica S2，預計未來會回到 N 家的懷抱
+- 聽的音樂相當雜食，前十喜歡的樂團、歌手、樂手或者音樂人大概是：Radiohead、魚韻、滅火器、ヨルシカ、wowaka、ZTMY、RADWIMPS、DECO*27、角野隼斗、Orangestar
+- 熱愛日本文化，目前正在自學日文中
+- 喜歡看棒球，但大多數時候是戰績寄生迷沒特別支持哪一隊
+- 喜歡吃甜點特別是抹茶相關的
+- 每天都喝咖啡，但最近很懶的手沖會乾脆喝超商咖啡或者泡咖樂迪濾袋冷萃咖啡，之前比較喜歡的豆子是淺中焙的日曬處理的帕拉伊內瑪，不喜歡酸味突出的咖啡。
+- 也喜歡喝茶，比較喜歡綠茶烏龍也還可以但紅茶不太行，最近為了好睡下午之後只會喝麥茶
+- 目前的職業是網頁全端工程師，雖說是目前但無意外的話以後也應該會繼續往全端發展
+- 喜歡 FP 遠大於 OOP 
+- 工作上最常使用 React 、 TypeScript 和 Node.js 
+- 小專案喜歡使用 Svelte
+- 最喜歡的程式語言是 Haskell
+- 最討厭的程式語言是 JavaScript，但它是世界上最好的語言
 
-## 目前主要使用的技術
-
-以下是我平常目前工作會遇到或者自己寫一些小專案時會用到的技術
-
-### 前端相關
-
-- TypeScript
-- react
-  - next.js
-  - TanStack Query, apollo-client
-  - jotai
-  - react-router  
-  - react-hook-form
-  - redux
-    - redux-toolkit, redux-thunk, redux-saga
-- svelte
-  - svelte-kit
-  - shadcn-svelte
-- mui, taillwind
-- vite, webpack
-- storybook
-- jest, react-testing-library, playwright
-  
-
-### 後端或維運相關
-
-- Node.js, express
-- MongoDB
-- apollo-server
-- AWS
-  - 主要使用 S3 及 cloudfront
-  - 用過一點點 ECS 及 ECR
-- Docker
-- GitHub Actions
-  - 最近工作上的自動化相關操作都是用 actions 完成，超推！
-- Jenkins
-- vercel
-- cloudflare
-  - 佛心公司，這個網站很多的功能都是用他們家的免費產品，像是 analytics 、 CDN 以及 R2（存圖片），以及我自己寫的一些機器人也是用 cloudflare worker hosting，除了購買網域以外沒有花到半毛錢。
-  
-## 最近在研究的東西
-
-- rust
-- haskell
-  - 最近剛完成鐵人賽，[系列文](https://ithelp.ithome.com.tw/users/20159893/ironman/6439)主題是關於 haskell 入門，有興趣的話可以參閱看看。
-
-## 其他以前用過但現在工作上很少用到的技術
-
-- styled-components
-- emotion
-- gatsby
-- ant-design
-- chakra-ui
-- flutter
-- jQuery
-- bootstrap
-- scss/sass
-- pug
-  

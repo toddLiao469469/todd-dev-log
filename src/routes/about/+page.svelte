@@ -11,110 +11,31 @@
 
 <Post>
   <article slot="post_content">
-    <p>
-      hi 我是 Todd ， 一個四年多資歷的軟體工程師 ，工作上主要使用 react 、TypeScript 及 express
-      開發網頁前後端，平常喜歡研究一些新技術及工具。
-    </p>
-    <h2 id="mu4-qian2-zhu3-yao4-shi3-yong4-de-ji4-shu4">
-      <a href="#mu4-qian2-zhu3-yao4-shi3-yong4-de-ji4-shu4">目前主要使用的技術</a>
-    </h2>
-    <p>以下是我平常目前工作會遇到或者自己寫一些小專案時會用到的技術</p>
-    <h3 id="qian2-duan1-xiang1-guan1"><a href="#qian2-duan1-xiang1-guan1">前端相關</a></h3>
+    <h1 id="hi-wo3-shi4-todd"><a href="#hi-wo3-shi4-todd">HI 我是 Todd</a></h1>
+    <p>歡迎來到我的 blog ，其實我一直不太會自我介紹，所以就乾脆列了份清單讓你快速知道我是一個怎麼樣的人</p>
     <ul>
-      <li>TypeScript</li>
+      <li>名字是來自於我很喜歡的影集馬男波傑克（Bojack Horseman）中的 Todd</li>
+      <li>INFP-T，雖然我認為將人劃分成 16 種人感覺太武斷了，但或許這是別人有辦法快速認識我的好方法</li>
       <li>
-        react
-        <ul>
-          <li>next.js</li>
-          <li>TanStack Query, apollo-client</li>
-          <li>jotai</li>
-          <li>react-router</li>
-          <li>react-hook-form</li>
-          <li>
-            redux
-            <ul>
-              <li>redux-toolkit, redux-thunk, redux-saga</li>
-            </ul>
-          </li>
-        </ul>
+        喜歡攝影，目前主力機器是 Fujifilm 的 XT-30 II ，第一台數位相機是 D7000 ，第一台底片相機是
+        FM3A，擁有的機身中最喜歡 Bronica S2，預計未來會回到 N 家的懷抱
       </li>
       <li>
-        svelte
-        <ul>
-          <li>svelte-kit</li>
-          <li>shadcn-svelte</li>
-        </ul>
+        聽的音樂相當雜食，前十喜歡的樂團、歌手、樂手或者音樂人大概是：Radiohead、魚韻、滅火器、ヨルシカ、wowaka、ZTMY、RADWIMPS、DECO*27、角野隼斗、Orangestar
       </li>
-      <li>mui, taillwind</li>
-      <li>vite, webpack</li>
-      <li>storybook</li>
-      <li>jest, react-testing-library, playwright</li>
-    </ul>
-    <h3 id="hou4-duan1-huo4-wei2-yun4-xiang1-guan1">
-      <a href="#hou4-duan1-huo4-wei2-yun4-xiang1-guan1">後端或維運相關</a>
-    </h3>
-    <ul>
-      <li>Node.js, express</li>
-      <li>MongoDB</li>
-      <li>apollo-server</li>
+      <li>熱愛日本文化，目前正在自學日文中</li>
+      <li>喜歡看棒球，但大多數時候是戰績寄生迷沒特別支持哪一隊</li>
+      <li>喜歡吃甜點特別是抹茶相關的</li>
       <li>
-        AWS
-        <ul>
-          <li>主要使用 S3 及 cloudfront</li>
-          <li>用過一點點 ECS 及 ECR</li>
-        </ul>
+        每天都喝咖啡，但最近很懶的手沖會乾脆喝超商咖啡或者泡咖樂迪濾袋冷萃咖啡，之前比較喜歡的豆子是淺中焙的日曬處理的帕拉伊內瑪，不喜歡酸味突出的咖啡。
       </li>
-      <li>Docker</li>
-      <li>
-        GitHub Actions
-        <ul>
-          <li>最近工作上的自動化相關操作都是用 actions 完成，超推！</li>
-        </ul>
-      </li>
-      <li>Jenkins</li>
-      <li>vercel</li>
-      <li>
-        cloudflare
-        <ul>
-          <li>
-            佛心公司，這個網站很多的功能都是用他們家的免費產品，像是 analytics 、 CDN 以及
-            R2（存圖片），以及我自己寫的一些機器人也是用 cloudflare worker hosting，除了購買網域以外沒有花到半毛錢。
-          </li>
-        </ul>
-      </li>
-    </ul>
-    <h2 id="zui4-jin4-zai4-yan2-jiu1-de-dong1-xi1">
-      <a href="#zui4-jin4-zai4-yan2-jiu1-de-dong1-xi1">最近在研究的東西</a>
-    </h2>
-    <ul>
-      <li>rust</li>
-      <li>
-        haskell
-        <ul>
-          <li>
-            最近剛完成鐵人賽，
-            <a href="https://ithelp.ithome.com.tw/users/20159893/ironman/6439" rel="external">系列文</a>
-            主題是關於 haskell 入門，有興趣的話可以參閱看看。
-          </li>
-        </ul>
-      </li>
-    </ul>
-    <h2 id="qi2-ta1-yi3-qian2-yong4-guo4-dan4-xian4-zai4-gong1-zuo4-shang4-hen3-shao3-yong4-dao4-de-ji4-shu4">
-      <a href="#qi2-ta1-yi3-qian2-yong4-guo4-dan4-xian4-zai4-gong1-zuo4-shang4-hen3-shao3-yong4-dao4-de-ji4-shu4">
-        其他以前用過但現在工作上很少用到的技術
-      </a>
-    </h2>
-    <ul>
-      <li>styled-components</li>
-      <li>emotion</li>
-      <li>gatsby</li>
-      <li>ant-design</li>
-      <li>chakra-ui</li>
-      <li>flutter</li>
-      <li>jQuery</li>
-      <li>bootstrap</li>
-      <li>scss/sass</li>
-      <li>pug</li>
+      <li>也喜歡喝茶，比較喜歡綠茶烏龍也還可以但紅茶不太行，最近為了好睡下午之後只會喝麥茶</li>
+      <li>目前的職業是網頁全端工程師，雖說是目前但無意外的話以後也應該會繼續往全端發展</li>
+      <li>喜歡 FP 遠大於 OOP</li>
+      <li>工作上最常使用 React 、 TypeScript 和 Node.js</li>
+      <li>小專案喜歡使用 Svelte</li>
+      <li>最喜歡的程式語言是 Haskell</li>
+      <li>最討厭的程式語言是 JavaScript，但它是世界上最好的語言</li>
     </ul>
   </article>
 </Post>

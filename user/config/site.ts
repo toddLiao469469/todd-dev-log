@@ -14,8 +14,8 @@ import SiteCover from '$assets/cover.webp';
 export const siteConfig: Site.Config = {
   url: 'https://blog.toddliao.dev/',
   title: "Todd's Dev Logs",
-  subtitle: '一個軟體工程師的學習筆記',
-  description: '一個軟體工程師的學習筆記',
+  subtitle: '一個軟體工程師的碎碎念',
+  description: '一個軟體工程師的碎碎念',
   lang: 'zh-Hant',
   timeZone: 'Asia/Taipei',
   since: 2020,
@@ -24,7 +24,7 @@ export const siteConfig: Site.Config = {
     name: 'Todd Liao',
     status: '👾',
     statusTip:
-      '<a href="https://github.com/kwchang0831/svelte-QWER" rel="external" style="color:#0F0" onMouseOver="this.style.color=\'#0FF\'" onMouseOut="this.style.color=\'#0F0\'" >QWER</a> is Awesome !',
+      '<a href="https://github.com/kwchang0831/svelte-QWER" rel="external" style="color:#0F0" onMouseOver="this.style.color=\'#0FF\'" onMouseOut="this.style.color=\'#0F0\'" >Haskell</a> is Awesome !',
     avatar: Avatar,
     avatar_128: Avatar_128,
     avatar_48_png: Avatar_48_PNG,
@@ -35,7 +35,7 @@ export const siteConfig: Site.Config = {
     github: 'https://github.com/toddLiao469469',
     email: 'toddliao.dev@gmail.com',
     twitter: 'https://twitter.com/toddLiao469469',
-    bio: `目前在 Ionex 擔任軟體工程師 <br/> 最近在研究 Haskell、Svelte 及 Rust`,
+    bio: `目前在 Ionex 擔任軟體工程師 <br/> 最近在研究 Haskell 和 Svelte`,
   },
 };
 
