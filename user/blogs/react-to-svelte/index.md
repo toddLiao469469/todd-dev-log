@@ -211,3 +211,9 @@ export const progressStore = createProgressStore();
 
 > 當然所謂的「簡單」就因人而異了
 >
+
+---
+如果看到這裡的讀者對於 Svelte 又了那麼一點點興趣的話，可以參考我今年在鐵人賽所寫的文章
+https://ithelp.ithome.com.tw/users/20159893/ironman/7477
+
+如果對於這篇文章有什麼想法或者任何回饋歡迎底下留言或者 twitter 私訊我。
