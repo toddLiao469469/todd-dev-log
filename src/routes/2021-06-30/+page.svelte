@@ -20,7 +20,7 @@
     <div class="code-block showLineNumber">
       <CodeCopy>
         <pre><code
-            class="language-jsx">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="line-number">1</span><span class="no-line-diff"></span></div><div class="code-content">&lt;ComponentA&gt;</div></div><div class="code-line"><div class="code-linenotation"><span class="line-number">2</span><span class="no-line-diff"></span></div><div class="code-content">{ (val) =&gt; &lt;ComponentB someProp={val} /&gt; }</div></div><div class="code-line"><div class="code-linenotation"><span class="line-number">3</span><span class="no-line-diff"></span></div><div class="code-content">&lt;/ ComponentA&gt;</div></div>`}</code></pre>
+            class="language-jsx">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="line-number">1</span><span class="no-line-diff"></span></div><div class="code-content"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">ComponentA</span></span><span class="token punctuation">></span></span><span class="token plain-text"></div></div><div class="code-line"><div class="code-linenotation"><span class="line-number">2</span><span class="no-line-diff"></span></div><div class="code-content"></span><span class="token punctuation">{</span> <span class="token punctuation">(</span><span class="token parameter">val</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">ComponentB</span></span> <span class="token attr-name">someProp</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>val<span class="token punctuation">}</span></span> <span class="token punctuation">/></span></span> <span class="token punctuation">}</span><span class="token plain-text"></div></div><div class="code-line"><div class="code-linenotation"><span class="line-number">3</span><span class="no-line-diff"></span></div><div class="code-content">&lt;/ ComponentA></span></div></div>`}</code></pre>
       </CodeCopy>
     </div>
     <p>
@@ -65,11 +65,11 @@
       <code class="inline-code-block">future</code>
       、
       <code class="inline-code-block">async/await</code>
-       的概念。
+      的概念。
     </p>
     <p>
       特別說一下強型別，對於JS開發者來說我想 <code class="inline-code-block">undefined</code>
-       的 runtime 錯誤應該是永遠的痛吧。雖然團隊是有用TS作為開發所以對於型別是有一定的保障。 但還是有一些小不足，像是對於某些libary的型別推斷並不夠令人滿意（特別是我們很愛用的
+      的 runtime 錯誤應該是永遠的痛吧。雖然團隊是有用TS作為開發所以對於型別是有一定的保障。 但還是有一些小不足，像是對於某些libary的型別推斷並不夠令人滿意（特別是我們很愛用的
       ramda ）
     </p>
     <p>
@@ -78,15 +78,14 @@
       <code class="inline-code-block">prmoise（future）</code>
       及
       <code class="inline-code-block">async/await</code>
-       等等JS擁有的東西就不多說了，總之開發起來還是相對有親切感的。
+      等等JS擁有的東西就不多說了，總之開發起來還是相對有親切感的。
     </p>
     <p>
       但也因為flutter，讓我有動力補足以前在學校時沒好好學的 OOP。 我覺得對於前端工程師來說
       OOP真的是比較少接觸的概念。我自己認為原因會是 Declarative 的形式非常適合前端，特別是在撰寫 UI上，而且也因為
       prototype based 還是有那麼一點不直觀，進而導致 FP 變成前端近幾年的顯學。
       <br />
-      但 Declarative UI 這點也可以從 flutter 的設計理念看到，至於這種風格之所以特別適合 UI 使用，我覺得原因是：
-      其實我們根本不關心
+      但 Declarative UI 這點也可以從 flutter 的設計理念看到，至於這種風格之所以特別適合 UI 使用，我覺得原因是： 其實我們根本不關心
       <strong>「某個 Widget要如何變成某個樣子 」</strong>
       我們只在意
       <strong>「Widget要變成某個樣子」</strong>

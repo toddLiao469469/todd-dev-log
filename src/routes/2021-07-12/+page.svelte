@@ -43,7 +43,7 @@
       <code class="inline-code-block">Todd</code>
       及
       <code class="inline-code-block">MRT</code>
-       來表示我及我使用的交通工具：
+      來表示我及我使用的交通工具：
     </p>
     <div class="code-block showLineNumber">
       <CodeCopy>
@@ -78,7 +78,7 @@
       </code>
       不再依賴
       <code class="inline-code-block">MRT</code>
-       而是同時依賴於一個抽象使這兩個類別解耦。
+      而是同時依賴於一個抽象使這兩個類別解耦。
     </p>
     <div class="code-block showLineNumber">
       <CodeCopy>
@@ -94,7 +94,7 @@
       <code class="inline-code-block">Todd</code>
       類別的人不用先知道
       <code class="inline-code-block">go&lpar;&rpar;</code>
-       內部的實作也能繼續開發他的程式。
+      內部的實作也能繼續開發他的程式。
     </p>
     <p>
       但即使這樣我還是得在 <code class="inline-code-block">Todd</code>
@@ -102,7 +102,7 @@
       <code class="inline-code-block">MRT</code>
       這個類別，我要更換交通工具時還是得更改 Todd 的實作並沒有辦法動態的控制，那到底要怎麼做才能
       <code class="inline-code-block">Todd</code>
-       自由選擇交通工具呢？
+      自由選擇交通工具呢？
     </p>
     <h3 id="yi1-lai4-zhu4-ru4-huo4-zhe3-ke3-yi3-xian1-shuo1-shuo1-kong4-zhi4-quan2-fan3-zhuan3">
       <a href="#yi1-lai4-zhu4-ru4-huo4-zhe3-ke3-yi3-xian1-shuo1-shuo1-kong4-zhi4-quan2-fan3-zhuan3">
@@ -116,7 +116,7 @@
     </blockquote>
     <p>
       回到我們已經使用抽象類的 <code class="inline-code-block">Todd</code>
-       類別
+      類別
     </p>
     <div class="code-block showLineNumber">
       <CodeCopy>
@@ -134,7 +134,7 @@
       <code class="inline-code-block">MRT.go&lpar;&rpar;</code>
       而現在我們是使用一個抽象類的
       <code class="inline-code-block">go&lpar;&rpar;</code>
-       。
+      。
     </p>
     <p>
       <code class="inline-code-block">Todd</code>
@@ -144,7 +144,7 @@
       <code class="inline-code-block">Todd</code>
       在運行時不再需要主動尋找
       <code class="inline-code-block">MRT</code>
-       這個類別而是被動的等待transportation，決定這個實作類別控制權已經從內部轉向外部了，這已經可以說是類似於控制權反轉概念了
+      這個類別而是被動的等待transportation，決定這個實作類別控制權已經從內部轉向外部了，這已經可以說是類似於控制權反轉概念了
     </p>
     <h3 id="yi1-lai4-zhu4-ru4"><a href="#yi1-lai4-zhu4-ru4">依賴注入</a></h3>
     <p>講了那麼多終於要到今天的主題依賴注入</p>
@@ -160,7 +160,7 @@
         class="inline-code-block">
         Todd
       </code>
-       裡並不需要實例化另外一個類別。同時這也代表：
+      裡並不需要實例化另外一個類別。同時這也代表：
     </p>
     <blockquote>
       <p>
@@ -197,7 +197,7 @@
     </p>
     <p>
       我們並無法一眼得知這個類別到底依賴什麼，就必須去查找這個類別所有setter。 也許 <strong>setter injection</strong>
-       有更多的彈性或者讓依賴多的時候讓constructor不用傳那麼多參數，但如果是這個原因導致我們用setter的話也可能代表這個類別做了太多事了吧？
+      有更多的彈性或者讓依賴多的時候讓constructor不用傳那麼多參數，但如果是這個原因導致我們用setter的話也可能代表這個類別做了太多事了吧？
     </p>
     <h3 id="wang3-ye4-qian2-duan1-zhong1-de-yi1-lai4-zhu4-ru4">
       <a href="#wang3-ye4-qian2-duan1-zhong1-de-yi1-lai4-zhu4-ru4">網頁前端中的依賴注入</a>
@@ -216,13 +216,13 @@
     <div class="code-block">
       <CodeCopy>
         <pre><code
-            class="language-jsx">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">const ModelFooterCloseButton = (props)=&gt;{</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">  const{ render, modalType } = props</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">  switch(modalType){</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">    case 'A':</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">      return render('關閉')</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">    case 'B':</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">      return render('我知道了')</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">    case 'C':</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">      return render('取消')</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">    default :</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">      return render('關閉')</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">  }</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">}</div></div>`}</code></pre>
+            class="language-jsx">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token keyword">const</span> <span class="token function-variable function">ModelFooterCloseButton</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">props</span><span class="token punctuation">)</span><span class="token operator">=></span><span class="token punctuation">{</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">  <span class="token keyword">const</span><span class="token punctuation">{</span> render<span class="token punctuation">,</span> modalType <span class="token punctuation">}</span> <span class="token operator">=</span> props</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">  <span class="token keyword">switch</span><span class="token punctuation">(</span>modalType<span class="token punctuation">)</span><span class="token punctuation">{</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">    <span class="token keyword">case</span> <span class="token string">'A'</span><span class="token operator">:</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">      <span class="token keyword">return</span> <span class="token function">render</span><span class="token punctuation">(</span><span class="token string">'關閉'</span><span class="token punctuation">)</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">    <span class="token keyword">case</span> <span class="token string">'B'</span><span class="token operator">:</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">      <span class="token keyword">return</span> <span class="token function">render</span><span class="token punctuation">(</span><span class="token string">'我知道了'</span><span class="token punctuation">)</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">    <span class="token keyword">case</span> <span class="token string">'C'</span><span class="token operator">:</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">      <span class="token keyword">return</span> <span class="token function">render</span><span class="token punctuation">(</span><span class="token string">'取消'</span><span class="token punctuation">)</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">    <span class="token keyword">default</span> <span class="token operator">:</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">      <span class="token keyword">return</span> <span class="token function">render</span><span class="token punctuation">(</span><span class="token string">'關閉'</span><span class="token punctuation">)</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">  <span class="token punctuation">}</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token punctuation">}</span></div></div>`}</code></pre>
       </CodeCopy>
     </div>
     <div class="code-block">
       <CodeCopy>
         <pre><code
-            class="language-jsx">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">&lt;ModelFooterCloseButton  </div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">  key='close' </div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">  modalType={modalType}</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">  render={text =&gt; (&lt;Button&gt;{text}&lt;/Button&gt;)}</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">  /&gt;</div></div>`}</code></pre>
+            class="language-jsx">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">ModelFooterCloseButton</span></span>  </div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">  <span class="token attr-name">key</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">'</span>close<span class="token punctuation">'</span></span> </div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">  <span class="token attr-name">modalType</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>modalType<span class="token punctuation">}</span></span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">  <span class="token attr-name">render</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token parameter">text</span> <span class="token operator">=></span> <span class="token punctuation">(</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Button</span></span><span class="token punctuation">></span></span><span class="token punctuation">{</span>text<span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Button</span></span><span class="token punctuation">></span></span><span class="token punctuation">)</span><span class="token punctuation">}</span></span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">  <span class="token punctuation">/></span></span></div></div>`}</code></pre>
       </CodeCopy>
     </div>
     <p>
