@@ -130,11 +130,11 @@
       在 state 的使用上我們只要使用 <code class="inline-code-block">$state</code>
       rune 來宣告 state 它就能擁有reactivity ，要更新只要直接去改變它的值就好不需要透過
       <code class="inline-code-block">setState</code>
-      之類的 function。
+       之類的 function。
     </p>
     <p>
       以及 Svelte 中最吸引我的 <code class="inline-code-block">bind:value</code>
-      directive，只要一行就能達成等同 React 的 controlled component 的效果，而不去額外去寫 onChange 之類的 function 然後再傳入
+       directive，只要一行就能達成等同 React 的 controlled component 的效果，而不去額外去寫 onChange 之類的 function 然後再傳入
       props 之類的事情。
     </p>
     <p>在 React 中要實現同等效果的程式碼大概會是這樣，可以看出簡潔不少</p>
@@ -152,7 +152,7 @@
       universal reactivity 簡單來說就是可以在 <code class="inline-code-block">.svelte</code>
       以外使用 rune ，進而可以實作全域狀態管理，只要將副檔名改為
       <code class="inline-code-block">.svelte.[jt]s</code>
-      就可以了。
+       就可以了。
     </p>
     <div class="code-block">
       <CodeCopy>
@@ -166,12 +166,12 @@
       </code>
       或者
       <code class="inline-code-block">progressStore.setLoading&lpar;false&rpar;</code>
-      去控制這個全域狀態，像是放在自己封裝的 fetch 、 axios 之類的地方。
+       去控制這個全域狀態，像是放在自己封裝的 fetch 、 axios 之類的地方。
     </p>
     <p>
       然後在控制 progress 的元件的地方使用
       <code class="inline-code-block">progressStore.loading</code>
-      就做出當整個網站有發出任何 request 就會在網頁上出現讀取條的功能。
+       就做出當整個網站有發出任何 request 就會在網頁上出現讀取條的功能。
     </p>
     <div class="code-block">
       <CodeCopy>
@@ -207,7 +207,7 @@
     </div>
     <p>
       以這個例子來說我只更新了 <code class="inline-code-block">state</code>
-      其中一個 property 畫面依然能夠重新渲染，這項特性雖然很方便但如果變得程式變複雜了、狀態多了，就會變的比較不好維護（相較於
+       其中一個 property 畫面依然能夠重新渲染，這項特性雖然很方便但如果變得程式變複雜了、狀態多了，就會變的比較不好維護（相較於
       React）。我的理由是「沒辦法快速找到哪裡去更新狀態」在 React 中基本上我只要去搜尋檔案中的 setState 之類 function 的通常都能夠找到哪裡去更新這個狀態。
     </p>
     <h2 id="suo3-yi3-react-zhen1-de-bu4-hao3-ma2">
@@ -237,7 +237,7 @@
       <code class="inline-code-block">&lt;slot/&gt;</code>
       還要彈性許多，可以在 SFC 裡面 reuse markup 以及取代掉
       <code class="inline-code-block">&lt;slot /&gt;</code>
-      ，但終究是不及 React component 的抽象化程度，因為說到底React component 就是一個 function ，要傳進 props 、放在 object
+       ，但終究是不及 React component 的抽象化程度，因為說到底React component 就是一個 function ，要傳進 props 、放在 object
       的 value 裡以及放在 array 裡都是可以被允許的。
     </p>
     <p>

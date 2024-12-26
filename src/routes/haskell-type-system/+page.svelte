@@ -20,7 +20,7 @@
       首先來看看 Haskell 裡的各種型別，可以在 <code class="inline-code-block">ghci</code>
       裡使用
       <code class="inline-code-block">:t</code>
-      來輸出 expression 的型別
+       來輸出 expression 的型別
     </p>
     <div class="code-block">
       <CodeCopy>
@@ -34,7 +34,7 @@
       <code class="inline-code-block">Bool</code>
       、
       <code class="inline-code-block">Char</code>
-      等等。
+       等等。
     </p>
     <p>順便說明一下 Haskell 中其他常見的型別</p>
     <ol>
@@ -46,7 +46,7 @@
         <strong><code class="inline-code-block">Integer</code></strong>
         : 代表任意大的整數，不受範圍限制，但效率比
         <code class="inline-code-block">Int</code>
-        慢。
+         慢。
       </li>
       <li>
         <strong><code class="inline-code-block">Float</code></strong>
@@ -79,7 +79,7 @@
       <code class="inline-code-block">[Char]</code>
       並最後回傳
       <code class="inline-code-block">[Char]</code>
-      型別。
+       型別。
     </p>
     <p>
       至於是要從哪裡看出來哪個是參數型別哪個是回傳型別呢？基本上在 Haskell 的型別簽名中，多個 <strong>
@@ -89,7 +89,7 @@
       <strong><code class="inline-code-block">-&gt;</code></strong>
       符號之後的型別是該函數的回傳型別。因此，最後一個
       <strong><code class="inline-code-block">-&gt;</code></strong>
-      符號右邊的型別表示函數的結果型別。
+       符號右邊的型別表示函數的結果型別。
     </p>
     <div class="code-block">
       <CodeCopy>
@@ -102,7 +102,7 @@
       <code class="inline-code-block">add’ :: Num a ⇒ a → a → a → a</code>
       ，會發現這裡一樣有四個
       <code class="inline-code-block">a</code>
-      ，也就代表這個 function 有三個參數。
+       ，也就代表這個 function 有三個參數。
     </p>
     <blockquote>
       <p>
@@ -122,13 +122,13 @@
       或許有人會感到好奇 <code class="inline-code-block">Num a ⇒ a → a → a → a</code>
       的
       <code class="inline-code-block">a</code>
-      是什麼意思，這個就是所謂的 type variables。
+       是什麼意思，這個就是所謂的 type variables。
     </p>
     <p>
       在沒有約束的情況下 <code class="inline-code-block">a</code>
       可以是任意型別，像是
       <code class="inline-code-block">head</code>
-      這個 function，它就只是拿出 List 中的第一個元素，理論上他不需要管這個 List 是什麼型別。
+       這個 function，它就只是拿出 List 中的第一個元素，理論上他不需要管這個 List 是什麼型別。
     </p>
     <div class="code-block">
       <CodeCopy>
@@ -145,11 +145,11 @@
       <code class="inline-code-block">add’ :: Num a ⇒ a → a → a → a</code>
       一樣是
       <code class="inline-code-block">a</code>
-      前面沒有任何看起來像是型別的東西。
+       前面沒有任何看起來像是型別的東西。
     </p>
     <p>
       這時候就是代表這個 <code class="inline-code-block">a</code>
-      可以任意的型別。
+       可以任意的型別。
     </p>
     <h1 id="yi1-dian3-dian3-typeclass"><a href="#yi1-dian3-dian3-typeclass">一點點 Typeclass</a></h1>
     <p>
@@ -168,7 +168,7 @@
       <code class="inline-code-block">Float</code>
       等等就是屬於
       <code class="inline-code-block">Num</code>
-      。
+       。
     </p>
     <p>
       那 typeclass 又是什麼呢？我自己認為它比較像是 type 的 interface，它提供了一個定義一群類別所需具備的行為跟特性。
@@ -188,7 +188,7 @@
           <code class="inline-code-block">Eq</code>
           主要就是提供了判斷是否相等的介面，所以如果一個型別可以被比較那它勢必屬於
           <code class="inline-code-block">Eq</code>
-          typeclass
+           typeclass
         </p>
         <div class="code-block">
           <CodeCopy>
@@ -201,7 +201,7 @@
             <code class="inline-code-block">&lpar;==&rpar;</code>
             是因為通常這種運算子都是 infix ，所以為了可以使用 :t 這邊需要使用
             <code class="inline-code-block">&lpar;&rpar;</code>
-            包住他
+             包住他
           </p>
         </blockquote>
         <p>
@@ -214,7 +214,7 @@
           <code class="inline-code-block">Eq</code>
           可以在 ghci 使用
           <code class="inline-code-block">:i Eq</code>
-          查詢
+           查詢
         </p>
         <div class="code-block">
           <CodeCopy>
@@ -226,7 +226,7 @@
       <li>
         <p>
           <code class="inline-code-block">Ord</code>
-          提供了比較大小的介面
+           提供了比較大小的介面
         </p>
         <div class="code-block">
           <CodeCopy>
@@ -247,7 +247,7 @@
       <li>
         <p>
           <code class="inline-code-block">Show</code>
-          就是可變為字串表示的 type class，基本上應該是除了函數以外都是屬於這個type class。
+           就是可變為字串表示的 type class，基本上應該是除了函數以外都是屬於這個type class。
         </p>
         <div class="code-block">
           <CodeCopy>
@@ -259,7 +259,7 @@
       <li>
         <p>
           <code class="inline-code-block">Num</code>
-          也就是數字的type class，
+           也就是數字的type class，
         </p>
         <div class="code-block">
           <CodeCopy>
@@ -273,13 +273,13 @@
           <code class="inline-code-block">a</code>
           的型別一定得是屬於
           <code class="inline-code-block">Num</code>
-          才行。
+           才行。
         </p>
       </li>
     </ol>
     <p>
       那如果今天我想要讓兩個同時屬於 <code class="inline-code-block">Num</code>
-      typeclass 但又不是同一個型別的參數相乘呢？
+       typeclass 但又不是同一個型別的參數相乘呢？
     </p>
     <div class="code-block">
       <CodeCopy>
@@ -299,7 +299,7 @@
       <code class="inline-code-block">Num</code>
       的
       <code class="inline-code-block">instance</code>
-      ，但實際上還是不同的型別所以這邊才無法進行運算。
+       ，但實際上還是不同的型別所以這邊才無法進行運算。
     </p>
     <p>
       可以想成這件事情相當等於從 <code class="inline-code-block">Int -&gt; Interger -&gt; ????</code>
@@ -313,7 +313,7 @@
       <code class="inline-code-block">Interger</code>
       都無法符合
       <code class="inline-code-block">a -&gt; a -&gt; a</code>
-      ，由此可見 Haskell 的型別系統到底有多嚴格了。
+       ，由此可見 Haskell 的型別系統到底有多嚴格了。
     </p>
   </article>
 </Post>
