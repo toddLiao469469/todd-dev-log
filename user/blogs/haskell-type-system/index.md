@@ -3,6 +3,7 @@
 title: Haskell 從入門到放棄 - 型別系統與一點點 Typeclass
 summary: ''
 published: '2024-11-04T00:34:00.000+08:00'
+updated: '2024-11-04T00:34:00.000+08:00'
 cover: ./cover.jpg
 coverStyle: 'TOP'
 coverCaption: <a href="https://www.pexels.com/photo/window-blind-2924107//>Photo by Athena Sandrini </a>

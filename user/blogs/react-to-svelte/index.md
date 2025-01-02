@@ -3,6 +3,7 @@
 title: 為什麼我們從 React 換到 Svelte
 summary: '或者可以說為什麼從 Next.js 離開'
 published: '2024-11-22T00:00:00.000+08:00'
+updated: '2024-11-22T00:00:00.000+08:00'
 cover: ./cover.jpeg
 coverStyle: 'TOP'
 tags:
