@@ -3,6 +3,7 @@
   title: 2023 回顧 
   summary: ''
   published: '2023-12-29T10:00:00.000+08:00'
+  updated: '2023-12-29T10:00:00.000+08:00'
   cover: ./cover.jpg
   coverStyle: 'TOP'
   tags:
