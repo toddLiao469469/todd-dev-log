@@ -20,7 +20,7 @@
       的學習相當有幫助的，不管你之前是用什麼語言開發都應該會聽過 <strong>expression</strong>
       以及
       <strong>statement</strong>
-       這兩個名詞。
+      這兩個名詞。
     </p>
     <p>
       以我最常用的 JS 來
@@ -37,7 +37,7 @@
     </div>
     <p>
       也就是說它可以被拿來放在 <code class="inline-code-block">=</code>
-       右邊都是 expression
+      右邊都是 expression
     </p>
     <blockquote>
       <p>雖然我覺得這麼說有點倒果爲因，但至少比較好理解這個概念。</p>
@@ -70,7 +70,7 @@
     </div>
     <p>
       即使是 <code class="inline-code-block">if-then-else</code>
-       最後還是回傳一個 expression 的，有了這個概念後對於看到各種語法或者函式的「組合」會比較習慣一點點，大致上可以想成 Haskell
+      最後還是回傳一個 expression 的，有了這個概念後對於看到各種語法或者函式的「組合」會比較習慣一點點，大致上可以想成 Haskell
       的每一個程式碼片段都是回傳一個值來讓方便你接續處理。
     </p>
     <blockquote>
@@ -114,7 +114,7 @@
         <code class="inline-code-block">0</code>
         作為
         <code class="inline-code-block">Bool</code>
-         來看待。
+        來看待。
       </p>
     </blockquote>
     <h3 id="xuan1-gao4-bian4-shu4"><a href="#xuan1-gao4-bian4-shu4">宣告變數</a></h3>
@@ -229,7 +229,7 @@
     <div class="code-block">
       <CodeCopy>
         <pre><code
-            class="language-haskell">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">a :: Integer</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">a = 1</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">a = 1000</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">main :: IO ()</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">main = do</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">  print ("a = " ++ show a)</div></div>`}</code></pre>
+            class="language-haskell">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token hvariable">a</span> <span class="token operator">::</span> <span class="token constant">Integer</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token hvariable">a</span> <span class="token operator">=</span> <span class="token number">1</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token hvariable">a</span> <span class="token operator">=</span> <span class="token number">1000</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token hvariable">main</span> <span class="token operator">::</span> <span class="token constant">IO</span> <span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token hvariable">main</span> <span class="token operator">=</span> <span class="token keyword">do</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">  <span class="token builtin">print</span> <span class="token punctuation">(</span><span class="token string">"a = "</span> <span class="token operator">++</span> <span class="token builtin">show</span> <span class="token hvariable">a</span><span class="token punctuation">)</span></div></div>`}</code></pre>
       </CodeCopy>
     </div>
     <div class="code-block">
@@ -244,7 +244,7 @@
       <code class="inline-code-block">=</code>
       很像是在其他語言中 用來賦值給某個變數的行為，但實際上在 Haskell 中
       <code class="inline-code-block">=</code>
-       比較像是「定義」的意思，也就是說我不能同時定義「a 是 1 」和「a 是 1000」。
+      比較像是「定義」的意思，也就是說我不能同時定義「a 是 1 」和「a 是 1000」。
     </p>
     <blockquote>
       <p>Haskell 是一個蠻貼近數學概念的語言，所以很多時候就想想數學上的定義及概念來理解或許會更好懂（或更不好懂XD）</p>
@@ -290,7 +290,7 @@
       </code>
       再
       <code class="inline-code-block">multiply2</code>
-       的話直覺來看可能會這樣寫
+      的話直覺來看可能會這樣寫
     </p>
     <div class="code-block">
       <CodeCopy>
@@ -307,7 +307,7 @@
     </p>
     <p>
       所以 Haskell 還是有提供 <code class="inline-code-block">&lpar;&rpar;</code>
-       來讓我們調整順序的，也就是把優先級調高讓它們先執行的意思
+      來讓我們調整順序的，也就是把優先級調高讓它們先執行的意思
     </p>
     <div class="code-block">
       <CodeCopy>
@@ -328,7 +328,7 @@
       <code class="inline-code-block">multiply2</code>
       的優先級變為最低所以
       <code class="inline-code-block">add2</code>
-       就會先執行。
+      就會先執行。
     </p>
     <p>參考資料</p>
     <ol>

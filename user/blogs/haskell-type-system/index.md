@@ -6,7 +6,7 @@ published: '2024-11-04T00:34:00.000+08:00'
 updated: '2024-11-04T00:34:00.000+08:00'
 cover: ./cover.jpg
 coverStyle: 'TOP'
-coverCaption: <a href="https://www.pexels.com/photo/window-blind-2924107//>Photo by Athena Sandrini </a>
+coverCaption: Photo by <a href="https://www.pexels.com/photo/window-blind-2924107/">Athena Sandrini</a>
 series_tag: 'Haskell 從入門到放棄'
 series_title: 'Haskell 從入門到放棄'
 tags:

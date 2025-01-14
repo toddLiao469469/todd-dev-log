@@ -16,14 +16,14 @@
     <div class="code-block">
       <CodeCopy>
         <pre><code
-            class="language-haskell">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">x = [1,2,3,4,5,6,7]</div></div>`}</code></pre>
+            class="language-haskell">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token hvariable">x</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">]</span></div></div>`}</code></pre>
       </CodeCopy>
     </div>
     <p>在 Haskell 中 List 中每個元素只能是同樣型別</p>
     <div class="code-block">
       <CodeCopy>
         <pre><code
-            class="language-haskell">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">-- ⭕️</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">[1,2,3,4,5,6]</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">['a','b','c']</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">-- ❌</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">[1,2,'c',4,'a',6]</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">[1,'b','c']</div></div>`}</code></pre>
+            class="language-haskell">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token comment">-- ⭕️</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">]</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token punctuation">[</span><span class="token char string">'a'</span><span class="token punctuation">,</span><span class="token char string">'b'</span><span class="token punctuation">,</span><span class="token char string">'c'</span><span class="token punctuation">]</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token comment">-- ❌</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token char string">'c'</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token char string">'a'</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">]</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token char string">'b'</span><span class="token punctuation">,</span><span class="token char string">'c'</span><span class="token punctuation">]</span></div></div>`}</code></pre>
       </CodeCopy>
     </div>
     <p>
@@ -32,30 +32,30 @@
         在 Haskell 中 <code class="inline-code-block">String</code>
         與
         <code class="inline-code-block">[Char]</code>
-         是相等的
+        是相等的
       </strong>
       ，也就是說
       <code class="inline-code-block">&quot;abc&quot;</code>
       以及
       <code class="inline-code-block">[&#39;a&#39;,&#39;b&#39;,&#39;c&#39;]</code>
-       是一樣的東西
+      是一樣的東西
     </p>
     <div class="code-block">
       <CodeCopy>
         <pre><code
-            class="language-haskell">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">['a','b','c'] == "abc" -- True</div></div>`}</code></pre>
+            class="language-haskell">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token punctuation">[</span><span class="token char string">'a'</span><span class="token punctuation">,</span><span class="token char string">'b'</span><span class="token punctuation">,</span><span class="token char string">'c'</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">"abc"</span> <span class="token comment">-- True</span></div></div>`}</code></pre>
       </CodeCopy>
     </div>
     <h3 id="chang2-yong4-yun4-suan4-zi3"><a href="#chang2-yong4-yun4-suan4-zi3">常用運算子</a></h3>
     <div class="code-block">
       <CodeCopy>
         <pre><code
-            class="language-haskell">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">[1,2,3,4] ++ [5,6] -- [1,2,3,4,5,6]</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">['a','b'] ++ ['c']  -- "abc"</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">"ab" ++ "c" -- "abc"</div></div>`}</code></pre>
+            class="language-haskell">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">]</span> <span class="token operator">++</span> <span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">]</span> <span class="token comment">-- [1,2,3,4,5,6]</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token punctuation">[</span><span class="token char string">'a'</span><span class="token punctuation">,</span><span class="token char string">'b'</span><span class="token punctuation">]</span> <span class="token operator">++</span> <span class="token punctuation">[</span><span class="token char string">'c'</span><span class="token punctuation">]</span>  <span class="token comment">-- "abc"</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token string">"ab"</span> <span class="token operator">++</span> <span class="token string">"c"</span> <span class="token comment">-- "abc"</span></div></div>`}</code></pre>
       </CodeCopy>
     </div>
     <p>
       在使用 <code class="inline-code-block">++</code>
-       要特別注意的是他是會將左邊運算元遍歷過一次，所以如果左邊是一個很長的 List 的話必須小心使用。
+      要特別注意的是他是會將左邊運算元遍歷過一次，所以如果左邊是一個很長的 List 的話必須小心使用。
     </p>
     <p>
       而在 List 前面塞入一個元素可以使用 <code class="inline-code-block">:</code>
@@ -63,7 +63,7 @@
     <div class="code-block">
       <CodeCopy>
         <pre><code
-            class="language-haskell">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">'a' : "bc" -- "abc"</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">1 : [2,3,4] -- [1,2,3,4]</div></div>`}</code></pre>
+            class="language-haskell">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token char string">'a'</span> <span class="token operator">:</span> <span class="token string">"bc"</span> <span class="token comment">-- "abc"</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token number">1</span> <span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">]</span> <span class="token comment">-- [1,2,3,4]</span></div></div>`}</code></pre>
       </CodeCopy>
     </div>
     <p>
@@ -80,12 +80,12 @@
     </p>
     <p>
       我們也可以一直使用 <code class="inline-code-block">:</code>
-       來組成一個 List
+      來組成一個 List
     </p>
     <div class="code-block">
       <CodeCopy>
         <pre><code
-            class="language-haskell">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">'f' : 'o' : 'o' : [] -- "foo"</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">0 : 1 : 2 : [] -- [0,1,2]</div></div>`}</code></pre>
+            class="language-haskell">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token char string">'f'</span> <span class="token operator">:</span> <span class="token char string">'o'</span> <span class="token operator">:</span> <span class="token char string">'o'</span> <span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token comment">-- "foo"</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token number">0</span> <span class="token operator">:</span> <span class="token number">1</span> <span class="token operator">:</span> <span class="token number">2</span> <span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token comment">-- [0,1,2]</span></div></div>`}</code></pre>
       </CodeCopy>
     </div>
     <p>
@@ -94,7 +94,7 @@
       <code class="inline-code-block">[0,1,2]</code>
       實際上就是
       <code class="inline-code-block">0 : 1 : 2 : []</code>
-       的語法糖。
+      的語法糖。
     </p>
     <p>
       如果我們要存取特定的元素的話我們能用 <code class="inline-code-block">!!</code>
@@ -102,7 +102,7 @@
     <div class="code-block">
       <CodeCopy>
         <pre><code
-            class="language-haskell">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">[1,2,3,4,5,6] !! 0 -- 1</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">"abc" !! 0 -- 'a'</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">"abc" !! 1 -- 'b'</div></div>`}</code></pre>
+            class="language-haskell">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">]</span> <span class="token operator">!!</span> <span class="token number">0</span> <span class="token comment">-- 1</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token string">"abc"</span> <span class="token operator">!!</span> <span class="token number">0</span> <span class="token comment">-- 'a'</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token string">"abc"</span> <span class="token operator">!!</span> <span class="token number">1</span> <span class="token comment">-- 'b'</span></div></div>`}</code></pre>
       </CodeCopy>
     </div>
     <h3 id="chang2-yong4-function"><a href="#chang2-yong4-function">常用 function</a></h3>
@@ -110,30 +110,30 @@
     <div class="code-block">
       <CodeCopy>
         <pre><code
-            class="language-haskell">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">x = [1,2,3,4,5,6]</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">head x -- 1</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">tail x -- [2,3,4,5,6]</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">last x -- 6</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">init x -- [1,2,3,4,5]</div></div>`}</code></pre>
+            class="language-haskell">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token hvariable">x</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">]</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token builtin">head</span> <span class="token hvariable">x</span> <span class="token comment">-- 1</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token builtin">tail</span> <span class="token hvariable">x</span> <span class="token comment">-- [2,3,4,5,6]</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token builtin">last</span> <span class="token hvariable">x</span> <span class="token comment">-- 6</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token builtin">init</span> <span class="token hvariable">x</span> <span class="token comment">-- [1,2,3,4,5]</span></div></div>`}</code></pre>
       </CodeCopy>
     </div>
     <p>
       <code class="inline-code-block">head</code>
-       會回傳 List 中第一個元素
+      會回傳 List 中第一個元素
     </p>
     <p>
       <code class="inline-code-block">tail</code>
-       會回傳扣除第一個元素後的List
+      會回傳扣除第一個元素後的List
     </p>
     <p>
       <code class="inline-code-block">last</code>
-       會回傳 List 的最後一個元素
+      會回傳 List 的最後一個元素
     </p>
     <p>
       <code class="inline-code-block">init</code>
-       會回傳扣除最後一個元素後的List
+      會回傳扣除最後一個元素後的List
     </p>
     <p>有這些我們就能夠來寫出一個簡單小 function 來操作 List</p>
     <div class="code-block">
       <CodeCopy>
         <pre><code
-            class="language-haskell">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">listSum :: [Int] -&gt; Int</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">listSum x = if null x then 0 else head x + listSum (tail x) </div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">main :: IO ()</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">main = do</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">  let x = [1,2,3,4,5,6,7,8,9,10]</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">  putStrLn (show(listSum x))</div></div>`}</code></pre>
+            class="language-haskell">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token hvariable">listSum</span> <span class="token operator">::</span> <span class="token punctuation">[</span><span class="token constant">Int</span><span class="token punctuation">]</span> <span class="token operator">-></span> <span class="token constant">Int</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token hvariable">listSum</span> <span class="token hvariable">x</span> <span class="token operator">=</span> <span class="token keyword">if</span> <span class="token builtin">null</span> <span class="token hvariable">x</span> <span class="token keyword">then</span> <span class="token number">0</span> <span class="token keyword">else</span> <span class="token builtin">head</span> <span class="token hvariable">x</span> <span class="token operator">+</span> <span class="token hvariable">listSum</span> <span class="token punctuation">(</span><span class="token builtin">tail</span> <span class="token hvariable">x</span><span class="token punctuation">)</span> </div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token hvariable">main</span> <span class="token operator">::</span> <span class="token constant">IO</span> <span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token hvariable">main</span> <span class="token operator">=</span> <span class="token keyword">do</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">  <span class="token keyword">let</span> <span class="token hvariable">x</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">]</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">  <span class="token builtin">putStrLn</span> <span class="token punctuation">(</span><span class="token builtin">show</span><span class="token punctuation">(</span><span class="token hvariable">listSum</span> <span class="token hvariable">x</span><span class="token punctuation">)</span><span class="token punctuation">)</span></div></div>`}</code></pre>
       </CodeCopy>
     </div>
     <p>
@@ -148,7 +148,7 @@
       <code class="inline-code-block">x</code>
       的第一個元素與
       <code class="inline-code-block">listSum &lpar;tail x&rpar;</code>
-       相加。
+      相加。
     </p>
     <p>沒錯就是使用 recursive ，因為在 Haskell 中所有 variable 都是 immutable 的所以我們寫不出像 js 這樣的程式碼</p>
     <div class="code-block">
@@ -161,68 +161,68 @@
     <div class="code-block">
       <CodeCopy>
         <pre><code
-            class="language-haskell">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">length [1,2,3,4,5] -- 5 </div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">reverse [1,2,3,4,5] -- [5,4,3,2,1]</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">take 2 [1,2,3,4,5] -- [1,2]</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">maximum [1,2,3,4,5] -- 5</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">minimum [1,2,3,4,5] -- 1</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">product [1,2,3,4,5] -- 120</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">sum [1,2,3,4,5] -- 15</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">elem 4 [1,2,3,4,5] -- True</div></div>`}</code></pre>
+            class="language-haskell">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token builtin">length</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">]</span> <span class="token comment">-- 5 </span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token builtin">reverse</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">]</span> <span class="token comment">-- [5,4,3,2,1]</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token builtin">take</span> <span class="token number">2</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">]</span> <span class="token comment">-- [1,2]</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token builtin">maximum</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">]</span> <span class="token comment">-- 5</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token builtin">minimum</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">]</span> <span class="token comment">-- 1</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token builtin">product</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">]</span> <span class="token comment">-- 120</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token builtin">sum</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">]</span> <span class="token comment">-- 15</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token builtin">elem</span> <span class="token number">4</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">]</span> <span class="token comment">-- True</span></div></div>`}</code></pre>
       </CodeCopy>
     </div>
     <p>
       <code class="inline-code-block">length</code>
-       會回傳 List 長度
+      會回傳 List 長度
     </p>
     <p>
       <code class="inline-code-block">take</code>
-       會根據根據傳入的長度及List 回傳一個新的 List
+      會根據根據傳入的長度及List 回傳一個新的 List
     </p>
     <p>
       <code class="inline-code-block">reverse</code>
-       會回傳一個反轉的 List
+      會回傳一個反轉的 List
     </p>
     <p>
       <code class="inline-code-block">maximum</code>
-       回傳 List 中最大的數
+      回傳 List 中最大的數
     </p>
     <p>
       <code class="inline-code-block">minimum</code>
-       回傳 List 中最小的數
+      回傳 List 中最小的數
     </p>
     <p>
       <code class="inline-code-block">sum</code>
-       List所有元素的加總
+      List所有元素的加總
     </p>
     <p>
       <code class="inline-code-block">product</code>
-       List所有元素的乘積
+      List所有元素的乘積
     </p>
     <p>
       <code class="inline-code-block">elem</code>
-       判斷該元素是否屬於該List
+      判斷該元素是否屬於該List
     </p>
     <h2 id="shao1-wei1-jin4-jie1-yi1-xia4"><a href="#shao1-wei1-jin4-jie1-yi1-xia4">稍微進階一下</a></h2>
     <p>當然我們要建立一個 List 不一定每次都要直接寫出所有的元素</p>
     <div class="code-block">
       <CodeCopy>
         <pre><code
-            class="language-haskell">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">x = [1,2,3,4]</div></div>`}</code></pre>
+            class="language-haskell">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token hvariable">x</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">]</span></div></div>`}</code></pre>
       </CodeCopy>
     </div>
     <p>
       我們可使用 <code class="inline-code-block">..</code>
-       來幫我快速建立一個 List
+      來幫我快速建立一個 List
     </p>
     <div class="code-block">
       <CodeCopy>
         <pre><code
-            class="language-haskell">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">[1..10] -- [1,2,3,4,5,6,7,8,9,10]</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">['a'..'z']  -- "abcdefghijklmnopqrstuvwxyz"</div></div>`}</code></pre>
+            class="language-haskell">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token punctuation">[</span><span class="token number">1</span><span class="token operator">..</span><span class="token number">10</span><span class="token punctuation">]</span> <span class="token comment">-- [1,2,3,4,5,6,7,8,9,10]</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token punctuation">[</span><span class="token char string">'a'</span><span class="token operator">..</span><span class="token char string">'z'</span><span class="token punctuation">]</span>  <span class="token comment">-- "abcdefghijklmnopqrstuvwxyz"</span></div></div>`}</code></pre>
       </CodeCopy>
     </div>
     <p>
       這種方式稱為 <strong>range</strong>
-       ，而能夠使用 range 來建立 List 那個值本身必須是可以被枚舉的，像是A到Z，1到10。
+      ，而能夠使用 range 來建立 List 那個值本身必須是可以被枚舉的，像是A到Z，1到10。
     </p>
     <p>那我們也能限制 range 所產生的元素之間的距離，只要多放一個元素且標註上限就好</p>
     <div class="code-block">
       <CodeCopy>
         <pre><code
-            class="language-haskell">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">[2,4..20] -- [2,4,6,8,10,12,14,16,18,20]</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">[5,10..49] -- [5,10,15,20,25,30,35,40,45]</div></div>`}</code></pre>
+            class="language-haskell">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token operator">..</span><span class="token number">20</span><span class="token punctuation">]</span> <span class="token comment">-- [2,4,6,8,10,12,14,16,18,20]</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token operator">..</span><span class="token number">49</span><span class="token punctuation">]</span> <span class="token comment">-- [5,10,15,20,25,30,35,40,45]</span></div></div>`}</code></pre>
       </CodeCopy>
     </div>
     <p>
@@ -233,31 +233,31 @@
     <div class="code-block">
       <CodeCopy>
         <pre><code
-            class="language-haskell">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">[1..] -- 這會產生一個無限 List 如果要在 ghci 停止請使用 command+c 來停止</div></div>`}</code></pre>
+            class="language-haskell">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token punctuation">[</span><span class="token number">1</span><span class="token operator">..</span><span class="token punctuation">]</span> <span class="token comment">-- 這會產生一個無限 List 如果要在 ghci 停止請使用 command+c 來停止</span></div></div>`}</code></pre>
       </CodeCopy>
     </div>
     <p>
       所以假設我們今天想產生前 10 個 3 的倍數，我們除了直接標註上限是 <code class="inline-code-block">3*10</code>
       以外，我們也可以利用
       <code class="inline-code-block">take</code>
-       加上無限 List 來幫助我們達成這個需求
+      加上無限 List 來幫助我們達成這個需求
     </p>
     <div class="code-block">
       <CodeCopy>
         <pre><code
-            class="language-haskell">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">[3,6..3*10]</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">take 3 [3,6..] </div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">--[3,6,9,12,15,18,21,24,27,30]</div></div>`}</code></pre>
+            class="language-haskell">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token operator">..</span><span class="token number">3</span><span class="token operator">*</span><span class="token number">10</span><span class="token punctuation">]</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token builtin">take</span> <span class="token number">3</span> <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token operator">..</span><span class="token punctuation">]</span> </div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token comment">--[3,6,9,12,15,18,21,24,27,30]</span></div></div>`}</code></pre>
       </CodeCopy>
     </div>
     <p>
       除了使用 range 我們也可以用 <code class="inline-code-block">cycle</code>
       以及
       <code class="inline-code-block">repeat</code>
-       來產生無限 List
+      來產生無限 List
     </p>
     <div class="code-block">
       <CodeCopy>
         <pre><code
-            class="language-haskell">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">take 5 (cycle "abc") -- "abcab"</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">take 5 (repeat 'a') -- "aaaaa"</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">-- 上面的 repeat 的寫法可以使用 replicate 簡化</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">replicate 5 'a' -- "aaaaa"</div></div>`}</code></pre>
+            class="language-haskell">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token builtin">take</span> <span class="token number">5</span> <span class="token punctuation">(</span><span class="token builtin">cycle</span> <span class="token string">"abc"</span><span class="token punctuation">)</span> <span class="token comment">-- "abcab"</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token builtin">take</span> <span class="token number">5</span> <span class="token punctuation">(</span><span class="token builtin">repeat</span> <span class="token char string">'a'</span><span class="token punctuation">)</span> <span class="token comment">-- "aaaaa"</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token comment">-- 上面的 repeat 的寫法可以使用 replicate 簡化</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token builtin">replicate</span> <span class="token number">5</span> <span class="token char string">'a'</span> <span class="token comment">-- "aaaaa"</span></div></div>`}</code></pre>
       </CodeCopy>
     </div>
     <h2 id="list-comprehension"><a href="#list-comprehension">List Comprehension</a></h2>
@@ -274,7 +274,7 @@
     <div class="code-block">
       <CodeCopy>
         <pre><code
-            class="language-haskell">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">[ x*2 | x &lt;- [1..]]</div></div>`}</code></pre>
+            class="language-haskell">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token punctuation">[</span> <span class="token hvariable">x</span><span class="token operator">*</span><span class="token number">2</span> <span class="token operator">|</span> <span class="token hvariable">x</span> <span class="token operator">&lt;-</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token operator">..</span><span class="token punctuation">]</span><span class="token punctuation">]</span></div></div>`}</code></pre>
       </CodeCopy>
     </div>
     <p>
@@ -289,7 +289,7 @@
     <div class="code-block">
       <CodeCopy>
         <pre><code
-            class="language-haskell">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">[x*3 | x &lt;- [1..10]]</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">-- [3,6,9,12,15,18,21,24,27,30]</div></div>`}</code></pre>
+            class="language-haskell">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token punctuation">[</span><span class="token hvariable">x</span><span class="token operator">*</span><span class="token number">3</span> <span class="token operator">|</span> <span class="token hvariable">x</span> <span class="token operator">&lt;-</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token operator">..</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">]</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token comment">-- [3,6,9,12,15,18,21,24,27,30]</span></div></div>`}</code></pre>
       </CodeCopy>
     </div>
     <h3 id="xian4-zhi4-tiao2-jian4"><a href="#xian4-zhi4-tiao2-jian4">限制條件</a></h3>
@@ -297,7 +297,7 @@
     <div class="code-block">
       <CodeCopy>
         <pre><code
-            class="language-haskell">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">[x*3 | x &lt;- [1..10], x &#96;mod&#96; 2 /=0 ]</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">-- [3,9,15,21,27]</div></div>`}</code></pre>
+            class="language-haskell">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token punctuation">[</span><span class="token hvariable">x</span><span class="token operator">*</span><span class="token number">3</span> <span class="token operator">|</span> <span class="token hvariable">x</span> <span class="token operator">&lt;-</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token operator">..</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token hvariable">x</span> <span class="token operator">&#96;mod&#96;</span> <span class="token number">2</span> <span class="token operator">/=</span><span class="token number">0</span> <span class="token punctuation">]</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token comment">-- [3,9,15,21,27]</span></div></div>`}</code></pre>
       </CodeCopy>
     </div>
     <p>
@@ -305,7 +305,7 @@
       <code class="inline-code-block">x</code>
       mod
       <code class="inline-code-block">2 /= 0</code>
-       就好了
+      就好了
     </p>
     <blockquote>
       <p>
@@ -321,12 +321,12 @@
       那假設我想要把一個 List 大於 10 的數字 <code class="inline-code-block">+1</code>
       小於10的
       <code class="inline-code-block">*2</code>
-       且為 3 的倍數要丟掉呢？
+      且為 3 的倍數要丟掉呢？
     </p>
     <div class="code-block">
       <CodeCopy>
         <pre><code
-            class="language-haskell">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">foo  l = [if x&gt;10 then x+1 else x*2 | x &lt;- l , x &#96;mod&#96; 3 /= 0]</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">foo [1..20]</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">-- [2,4,8,10,14,16,20,12,14,15,17,18,20,21]</div></div>`}</code></pre>
+            class="language-haskell">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token hvariable">foo</span>  <span class="token hvariable">l</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token keyword">if</span> <span class="token hvariable">x</span><span class="token operator">></span><span class="token number">10</span> <span class="token keyword">then</span> <span class="token hvariable">x</span><span class="token operator">+</span><span class="token number">1</span> <span class="token keyword">else</span> <span class="token hvariable">x</span><span class="token operator">*</span><span class="token number">2</span> <span class="token operator">|</span> <span class="token hvariable">x</span> <span class="token operator">&lt;-</span> <span class="token hvariable">l</span> <span class="token punctuation">,</span> <span class="token hvariable">x</span> <span class="token operator">&#96;mod&#96;</span> <span class="token number">3</span> <span class="token operator">/=</span> <span class="token number">0</span><span class="token punctuation">]</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token hvariable">foo</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token operator">..</span><span class="token number">20</span><span class="token punctuation">]</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token comment">-- [2,4,8,10,14,16,20,12,14,15,17,18,20,21]</span></div></div>`}</code></pre>
       </CodeCopy>
     </div>
     <p>
@@ -340,12 +340,12 @@
       <code class="inline-code-block">y</code>
       的範圍為6到10，且
       <code class="inline-code-block">x+y</code>
-       還不能是5的倍數
+      還不能是5的倍數
     </p>
     <div class="code-block">
       <CodeCopy>
         <pre><code
-            class="language-haskell">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">[x*y | x&lt;-[1..5],y&lt;-[6..10], (x+y) &#96;mod&#96; 5 /= 0]</div></div>`}</code></pre>
+            class="language-haskell">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token punctuation">[</span><span class="token hvariable">x</span><span class="token operator">*</span><span class="token hvariable">y</span> <span class="token operator">|</span> <span class="token hvariable">x</span><span class="token operator">&lt;-</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token operator">..</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token hvariable">y</span><span class="token operator">&lt;-</span><span class="token punctuation">[</span><span class="token number">6</span><span class="token operator">..</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token hvariable">x</span><span class="token operator">+</span><span class="token hvariable">y</span><span class="token punctuation">)</span> <span class="token operator">&#96;mod&#96;</span> <span class="token number">5</span> <span class="token operator">/=</span> <span class="token number">0</span><span class="token punctuation">]</span></div></div>`}</code></pre>
       </CodeCopy>
     </div>
     <h3 id="zi4-chuan4-chu3-li3"><a href="#zi4-chuan4-chu3-li3">字串處理</a></h3>
@@ -354,14 +354,14 @@
     <div class="code-block">
       <CodeCopy>
         <pre><code
-            class="language-haskell">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">[toLower x| x &lt;- "asdqwAsdcqAsdasd" ]</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">[x| x &lt;- "asdqwAsdcqAsdasd" , x &#96;elem&#96; ['a'..'z']]</div></div>`}</code></pre>
+            class="language-haskell">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token punctuation">[</span><span class="token builtin">toLower</span> <span class="token hvariable">x</span><span class="token operator">|</span> <span class="token hvariable">x</span> <span class="token operator">&lt;-</span> <span class="token string">"asdqwAsdcqAsdasd"</span> <span class="token punctuation">]</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token punctuation">[</span><span class="token hvariable">x</span><span class="token operator">|</span> <span class="token hvariable">x</span> <span class="token operator">&lt;-</span> <span class="token string">"asdqwAsdcqAsdasd"</span> <span class="token punctuation">,</span> <span class="token hvariable">x</span> <span class="token operator">&#96;elem&#96;</span> <span class="token punctuation">[</span><span class="token char string">'a'</span><span class="token operator">..</span><span class="token char string">'z'</span><span class="token punctuation">]</span><span class="token punctuation">]</span></div></div>`}</code></pre>
       </CodeCopy>
     </div>
     <p>或者找出合法的 email</p>
     <div class="code-block">
       <CodeCopy>
         <pre><code
-            class="language-haskell">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">emailList = ["toddliao.dev@gmail.com","toddliao.dev","todd"]</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">[email | email &lt;- emailList, '@' &#96;elem&#96; email &amp;&amp; '.' &#96;elem&#96;  email ] </div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">--  ["toddliao.dev@gmail.com"]</div></div>`}</code></pre>
+            class="language-haskell">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token hvariable">emailList</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"toddliao.dev@gmail.com"</span><span class="token punctuation">,</span><span class="token string">"toddliao.dev"</span><span class="token punctuation">,</span><span class="token string">"todd"</span><span class="token punctuation">]</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token punctuation">[</span><span class="token hvariable">email</span> <span class="token operator">|</span> <span class="token hvariable">email</span> <span class="token operator">&lt;-</span> <span class="token hvariable">emailList</span><span class="token punctuation">,</span> <span class="token char string">'@'</span> <span class="token operator">&#96;elem&#96;</span> <span class="token hvariable">email</span> <span class="token operator">&amp;&amp;</span> <span class="token char string">'.'</span> <span class="token operator">&#96;elem&#96;</span>  <span class="token hvariable">email</span> <span class="token punctuation">]</span> </div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token comment">--  ["toddliao.dev@gmail.com"]</span></div></div>`}</code></pre>
       </CodeCopy>
     </div>
     <p>
@@ -370,7 +370,7 @@
       <code class="inline-code-block">.</code>
       都要存在於
       <code class="inline-code-block">email</code>
-       裡面。
+      裡面。
     </p>
     <blockquote>
       <p>就只是簡單的驗證，當然光是這些條件不足以說明屬於email的格式</p>
