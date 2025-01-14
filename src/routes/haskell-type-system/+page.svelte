@@ -20,12 +20,12 @@
       首先來看看 Haskell 裡的各種型別，可以在 <code class="inline-code-block">ghci</code>
       裡使用
       <code class="inline-code-block">:t</code>
-       來輸出 expression 的型別
+      來輸出 expression 的型別
     </p>
     <div class="code-block">
       <CodeCopy>
         <pre><code
-            class="language-haskell">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">-- in ghci</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">:t True -- True :: Bool</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">:t 'a'  -- 'a' :: Char</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">:t  "abc" -- "abc" :: String</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">:t ["2"] -- ["2"] :: [String]</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">:t  True || False --  True || False :: Bool</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">:t  5 == 3  -- 5 == 3 :: Bool</div></div>`}</code></pre>
+            class="language-haskell">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token comment">-- in ghci</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token operator">:</span><span class="token hvariable">t</span> <span class="token constant">True</span> <span class="token comment">-- True :: Bool</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token operator">:</span><span class="token hvariable">t</span> <span class="token char string">'a'</span>  <span class="token comment">-- 'a' :: Char</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token operator">:</span><span class="token hvariable">t</span>  <span class="token string">"abc"</span> <span class="token comment">-- "abc" :: String</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token operator">:</span><span class="token hvariable">t</span> <span class="token punctuation">[</span><span class="token string">"2"</span><span class="token punctuation">]</span> <span class="token comment">-- ["2"] :: [String]</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token operator">:</span><span class="token hvariable">t</span>  <span class="token constant">True</span> <span class="token operator">||</span> <span class="token constant">False</span> <span class="token comment">--  True || False :: Bool</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token operator">:</span><span class="token hvariable">t</span>  <span class="token number">5</span> <span class="token operator">==</span> <span class="token number">3</span>  <span class="token comment">-- 5 == 3 :: Bool</span></div></div>`}</code></pre>
       </CodeCopy>
     </div>
     <p>
@@ -34,7 +34,7 @@
       <code class="inline-code-block">Bool</code>
       、
       <code class="inline-code-block">Char</code>
-       等等。
+      等等。
     </p>
     <p>順便說明一下 Haskell 中其他常見的型別</p>
     <ol>
@@ -46,7 +46,7 @@
         <strong><code class="inline-code-block">Integer</code></strong>
         : 代表任意大的整數，不受範圍限制，但效率比
         <code class="inline-code-block">Int</code>
-         慢。
+        慢。
       </li>
       <li>
         <strong><code class="inline-code-block">Float</code></strong>
@@ -66,7 +66,7 @@
     <div class="code-block">
       <CodeCopy>
         <pre><code
-            class="language-haskell">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">foo l  = [x| x&lt;- l , x &#96;elem&#96; ['a'..'z']]</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">:t foo  </div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">-- foo :: [Char] -&gt; [Char]</div></div>`}</code></pre>
+            class="language-haskell">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token hvariable">foo</span> <span class="token hvariable">l</span>  <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token hvariable">x</span><span class="token operator">|</span> <span class="token hvariable">x</span><span class="token operator">&lt;-</span> <span class="token hvariable">l</span> <span class="token punctuation">,</span> <span class="token hvariable">x</span> <span class="token operator">&#96;elem&#96;</span> <span class="token punctuation">[</span><span class="token char string">'a'</span><span class="token operator">..</span><span class="token char string">'z'</span><span class="token punctuation">]</span><span class="token punctuation">]</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token operator">:</span><span class="token hvariable">t</span> <span class="token hvariable">foo</span>  </div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token comment">-- foo :: [Char] -> [Char]</span></div></div>`}</code></pre>
       </CodeCopy>
     </div>
     <p>
@@ -79,7 +79,7 @@
       <code class="inline-code-block">[Char]</code>
       並最後回傳
       <code class="inline-code-block">[Char]</code>
-       型別。
+      型別。
     </p>
     <p>
       至於是要從哪裡看出來哪個是參數型別哪個是回傳型別呢？基本上在 Haskell 的型別簽名中，多個 <strong>
@@ -89,12 +89,12 @@
       <strong><code class="inline-code-block">-&gt;</code></strong>
       符號之後的型別是該函數的回傳型別。因此，最後一個
       <strong><code class="inline-code-block">-&gt;</code></strong>
-       符號右邊的型別表示函數的結果型別。
+      符號右邊的型別表示函數的結果型別。
     </p>
     <div class="code-block">
       <CodeCopy>
         <pre><code
-            class="language-haskell">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">add' x y z = x+y+z</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">:t add'</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">-- add' :: Num a =&gt; a -&gt; a -&gt; a -&gt; a</div></div>`}</code></pre>
+            class="language-haskell">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token hvariable">add'</span> <span class="token hvariable">x</span> <span class="token hvariable">y</span> <span class="token hvariable">z</span> <span class="token operator">=</span> <span class="token hvariable">x</span><span class="token operator">+</span><span class="token hvariable">y</span><span class="token operator">+</span><span class="token hvariable">z</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token operator">:</span><span class="token hvariable">t</span> <span class="token hvariable">add'</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token comment">-- add' :: Num a => a -> a -> a -> a</span></div></div>`}</code></pre>
       </CodeCopy>
     </div>
     <p>
@@ -102,7 +102,7 @@
       <code class="inline-code-block">add’ :: Num a ⇒ a → a → a → a</code>
       ，會發現這裡一樣有四個
       <code class="inline-code-block">a</code>
-       ，也就代表這個 function 有三個參數。
+      ，也就代表這個 function 有三個參數。
     </p>
     <blockquote>
       <p>
@@ -122,18 +122,18 @@
       或許有人會感到好奇 <code class="inline-code-block">Num a ⇒ a → a → a → a</code>
       的
       <code class="inline-code-block">a</code>
-       是什麼意思，這個就是所謂的 type variables。
+      是什麼意思，這個就是所謂的 type variables。
     </p>
     <p>
       在沒有約束的情況下 <code class="inline-code-block">a</code>
       可以是任意型別，像是
       <code class="inline-code-block">head</code>
-       這個 function，它就只是拿出 List 中的第一個元素，理論上他不需要管這個 List 是什麼型別。
+      這個 function，它就只是拿出 List 中的第一個元素，理論上他不需要管這個 List 是什麼型別。
     </p>
     <div class="code-block">
       <CodeCopy>
         <pre><code
-            class="language-haskell">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">:t head</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">-- head :: GHC.Stack.Types.HasCallStack =&gt; [a] -&gt; a</div></div>`}</code></pre>
+            class="language-haskell">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token operator">:</span><span class="token hvariable">t</span> <span class="token builtin">head</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token comment">-- head :: GHC.Stack.Types.HasCallStack => [a] -> a</span></div></div>`}</code></pre>
       </CodeCopy>
     </div>
     <blockquote>
@@ -145,11 +145,11 @@
       <code class="inline-code-block">add’ :: Num a ⇒ a → a → a → a</code>
       一樣是
       <code class="inline-code-block">a</code>
-       前面沒有任何看起來像是型別的東西。
+      前面沒有任何看起來像是型別的東西。
     </p>
     <p>
       這時候就是代表這個 <code class="inline-code-block">a</code>
-       可以任意的型別。
+      可以任意的型別。
     </p>
     <h1 id="yi1-dian3-dian3-typeclass"><a href="#yi1-dian3-dian3-typeclass">一點點 Typeclass</a></h1>
     <p>
@@ -168,7 +168,7 @@
       <code class="inline-code-block">Float</code>
       等等就是屬於
       <code class="inline-code-block">Num</code>
-       。
+      。
     </p>
     <p>
       那 typeclass 又是什麼呢？我自己認為它比較像是 type 的 interface，它提供了一個定義一群類別所需具備的行為跟特性。
@@ -188,12 +188,12 @@
           <code class="inline-code-block">Eq</code>
           主要就是提供了判斷是否相等的介面，所以如果一個型別可以被比較那它勢必屬於
           <code class="inline-code-block">Eq</code>
-           typeclass
+          typeclass
         </p>
         <div class="code-block">
           <CodeCopy>
             <pre><code
-                class="language-haskell">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">:t (==)</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">-- (==) :: Eq a =&gt; a -&gt; a -&gt; Bool</div></div>`}</code></pre>
+                class="language-haskell">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token operator">:</span><span class="token hvariable">t</span> <span class="token punctuation">(</span><span class="token operator">==</span><span class="token punctuation">)</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token comment">-- (==) :: Eq a => a -> a -> Bool</span></div></div>`}</code></pre>
           </CodeCopy>
         </div>
         <blockquote>
@@ -201,7 +201,7 @@
             <code class="inline-code-block">&lpar;==&rpar;</code>
             是因為通常這種運算子都是 infix ，所以為了可以使用 :t 這邊需要使用
             <code class="inline-code-block">&lpar;&rpar;</code>
-             包住他
+            包住他
           </p>
         </blockquote>
         <p>
@@ -214,24 +214,24 @@
           <code class="inline-code-block">Eq</code>
           可以在 ghci 使用
           <code class="inline-code-block">:i Eq</code>
-           查詢
+          查詢
         </p>
         <div class="code-block">
           <CodeCopy>
             <pre><code
-                class="language-haskell">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">:i Eq</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">instance Eq Bool -- Defined in ‘GHC.Classes’</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">instance Eq Char -- Defined in ‘GHC.Classes’</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">instance Eq Double -- Defined in ‘GHC.Classes’</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">instance Eq Float -- Defined in ‘GHC.Classes’</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">instance Eq Int -- Defined in ‘GHC.Classes’</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">instance Eq Ordering -- Defined in ‘GHC.Classes’</div></div>`}</code></pre>
+                class="language-haskell">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token operator">:</span><span class="token hvariable">i</span> <span class="token constant">Eq</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token keyword">instance</span> <span class="token constant">Eq</span> <span class="token constant">Bool</span> <span class="token comment">-- Defined in ‘GHC.Classes’</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token keyword">instance</span> <span class="token constant">Eq</span> <span class="token constant">Char</span> <span class="token comment">-- Defined in ‘GHC.Classes’</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token keyword">instance</span> <span class="token constant">Eq</span> <span class="token constant">Double</span> <span class="token comment">-- Defined in ‘GHC.Classes’</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token keyword">instance</span> <span class="token constant">Eq</span> <span class="token constant">Float</span> <span class="token comment">-- Defined in ‘GHC.Classes’</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token keyword">instance</span> <span class="token constant">Eq</span> <span class="token constant">Int</span> <span class="token comment">-- Defined in ‘GHC.Classes’</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token keyword">instance</span> <span class="token constant">Eq</span> <span class="token constant">Ordering</span> <span class="token comment">-- Defined in ‘GHC.Classes’</span></div></div>`}</code></pre>
           </CodeCopy>
         </div>
       </li>
       <li>
         <p>
           <code class="inline-code-block">Ord</code>
-           提供了比較大小的介面
+          提供了比較大小的介面
         </p>
         <div class="code-block">
           <CodeCopy>
             <pre><code
-                class="language-haskell">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">:t (&gt;)</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">-- (&gt;) :: Ord a =&gt; a -&gt; a -&gt; Bool</div></div>`}</code></pre>
+                class="language-haskell">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token operator">:</span><span class="token hvariable">t</span> <span class="token punctuation">(</span><span class="token operator">></span><span class="token punctuation">)</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token comment">-- (>) :: Ord a => a -> a -> Bool</span></div></div>`}</code></pre>
           </CodeCopy>
         </div>
         <p>
@@ -247,24 +247,24 @@
       <li>
         <p>
           <code class="inline-code-block">Show</code>
-           就是可變為字串表示的 type class，基本上應該是除了函數以外都是屬於這個type class。
+          就是可變為字串表示的 type class，基本上應該是除了函數以外都是屬於這個type class。
         </p>
         <div class="code-block">
           <CodeCopy>
             <pre><code
-                class="language-haskell">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">:t show</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">-- show :: Show a =&gt; a -&gt; String</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">:t show 1.2</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">-- show 1.2 :: String</div></div>`}</code></pre>
+                class="language-haskell">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token operator">:</span><span class="token hvariable">t</span> <span class="token builtin">show</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token comment">-- show :: Show a => a -> String</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token operator">:</span><span class="token hvariable">t</span> <span class="token builtin">show</span> <span class="token number">1.2</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token comment">-- show 1.2 :: String</span></div></div>`}</code></pre>
           </CodeCopy>
         </div>
       </li>
       <li>
         <p>
           <code class="inline-code-block">Num</code>
-           也就是數字的type class，
+          也就是數字的type class，
         </p>
         <div class="code-block">
           <CodeCopy>
             <pre><code
-                class="language-haskell">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">:t 1</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">-- 1 :: Num a =&gt; a</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">:t (*)</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">-- (*) :: Num a =&gt; a -&gt; a -&gt; a</div></div>`}</code></pre>
+                class="language-haskell">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token operator">:</span><span class="token hvariable">t</span> <span class="token number">1</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token comment">-- 1 :: Num a => a</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token operator">:</span><span class="token hvariable">t</span> <span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token comment">-- (*) :: Num a => a -> a -> a</span></div></div>`}</code></pre>
           </CodeCopy>
         </div>
         <p>
@@ -273,18 +273,18 @@
           <code class="inline-code-block">a</code>
           的型別一定得是屬於
           <code class="inline-code-block">Num</code>
-           才行。
+          才行。
         </p>
       </li>
     </ol>
     <p>
       那如果今天我想要讓兩個同時屬於 <code class="inline-code-block">Num</code>
-       typeclass 但又不是同一個型別的參數相乘呢？
+      typeclass 但又不是同一個型別的參數相乘呢？
     </p>
     <div class="code-block">
       <CodeCopy>
         <pre><code
-            class="language-haskell">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">(5 :: Int) * (6 :: Integer)</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">&lt;interactive&gt;:99:15: error:</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">    • Couldn't match expected type ‘Int’ with actual type ‘Integer’</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">    • In the second argument of ‘(*)’, namely ‘(6 :: Integer)’</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">      In the expression: (5 :: Int) * (6 :: Integer)</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">      In an equation for ‘it’: it = (5 :: Int) * (6 :: Integer)</div></div>`}</code></pre>
+            class="language-haskell">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token punctuation">(</span><span class="token number">5</span> <span class="token operator">::</span> <span class="token constant">Int</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token punctuation">(</span><span class="token number">6</span> <span class="token operator">::</span> <span class="token constant">Integer</span><span class="token punctuation">)</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token operator">&lt;</span><span class="token hvariable">interactive</span><span class="token operator">>:</span><span class="token number">99</span><span class="token operator">:</span><span class="token number">15</span><span class="token operator">:</span> <span class="token builtin">error</span><span class="token operator">:</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">    • <span class="token constant">Couldn'</span><span class="token hvariable">t</span> <span class="token hvariable">match</span> <span class="token hvariable">expected</span> <span class="token keyword">type</span> ‘<span class="token constant">Int</span>’ <span class="token hvariable">with</span> <span class="token hvariable">actual</span> <span class="token keyword">type</span> ‘<span class="token constant">Integer</span>’</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">    • <span class="token constant">In</span> <span class="token hvariable">the</span> <span class="token hvariable">second</span> <span class="token hvariable">argument</span> <span class="token keyword">of</span> ‘<span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span>’<span class="token punctuation">,</span> <span class="token hvariable">namely</span> ‘<span class="token punctuation">(</span><span class="token number">6</span> <span class="token operator">::</span> <span class="token constant">Integer</span><span class="token punctuation">)</span>’</div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">      <span class="token constant">In</span> <span class="token hvariable">the</span> <span class="token hvariable">expression</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token number">5</span> <span class="token operator">::</span> <span class="token constant">Int</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token punctuation">(</span><span class="token number">6</span> <span class="token operator">::</span> <span class="token constant">Integer</span><span class="token punctuation">)</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">      <span class="token constant">In</span> <span class="token hvariable">an</span> <span class="token hvariable">equation</span> <span class="token hvariable">for</span> ‘<span class="token hvariable">it</span>’<span class="token operator">:</span> <span class="token hvariable">it</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">5</span> <span class="token operator">::</span> <span class="token constant">Int</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token punctuation">(</span><span class="token number">6</span> <span class="token operator">::</span> <span class="token constant">Integer</span><span class="token punctuation">)</span></div></div>`}</code></pre>
       </CodeCopy>
     </div>
     <p>
@@ -299,7 +299,7 @@
       <code class="inline-code-block">Num</code>
       的
       <code class="inline-code-block">instance</code>
-       ，但實際上還是不同的型別所以這邊才無法進行運算。
+      ，但實際上還是不同的型別所以這邊才無法進行運算。
     </p>
     <p>
       可以想成這件事情相當等於從 <code class="inline-code-block">Int -&gt; Interger -&gt; ????</code>
@@ -313,7 +313,7 @@
       <code class="inline-code-block">Interger</code>
       都無法符合
       <code class="inline-code-block">a -&gt; a -&gt; a</code>
-       ，由此可見 Haskell 的型別系統到底有多嚴格了。
+      ，由此可見 Haskell 的型別系統到底有多嚴格了。
     </p>
   </article>
 </Post>

@@ -76,6 +76,7 @@ export const UserConfig = {
     wasm: 'wasm',
     yaml: 'yaml',
     hs: 'haskell',
+    haskell: 'haskell',
     jsx: 'jsx',
     '': '',
   },

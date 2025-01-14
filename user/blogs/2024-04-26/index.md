@@ -6,7 +6,7 @@ published: '2024-04-26T12:00:00.000+08:00'
 updated: '2024-04-29T23:42:00.000+08:00'
 cover: ./cover.jpg
 coverStyle: 'TOP'
-coverCaption: <a href="https://www.pexels.com/photo/close-up-of-a-modern-building-facade-13078441/>Photo by Robert Kozakiewicz </a>
+coverCaption: Photo by <a href="https://www.pexels.com/photo/close-up-of-a-modern-building-facade-13078441/">Robert Kozakiewicz </a>
 series_tag: 'Haskell 從入門到放棄'
 series_title: 'Haskell 從入門到放棄'
 tags:
