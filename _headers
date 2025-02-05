@@ -1,8 +1,0 @@
-/*
-  Access-Control-Allow-Origin: https://toddliao.dev
-  X-Frame-Options: DENY
-  X-Content-Type-Options: nosniff
-  X-XSS-Protection: 1; mode=block
-  Content-Security-Policy: style-src 'self' 'unsafe-inline' https://giscus.app; script-src 'self' 'unsafe-inline' https://*.cloudflareinsights.com https://svelte-qwer.vercel.app https://toddliao.dev https://giscus.app https://www.youtube.com https://openpanel.dev
-  Referrer-Policy: strict-origin-when-cross-origin
-  Permissions-Policy: usb=()
