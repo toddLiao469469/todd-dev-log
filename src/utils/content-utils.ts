@@ -76,10 +76,23 @@ export async function getCategoryList(): Promise<Category[]> {
       ? count[post.data.category] + 1
       : 1
   })
+  const customOrder = ["回顧", "雜談", "開發筆記"];
 
   const lst = Object.keys(count).sort((a, b) => {
-    return a.toLowerCase().localeCompare(b.toLowerCase())
-  })
+    const indexA = customOrder.indexOf(a);
+    const indexB = customOrder.indexOf(b);
+  
+    
+    if (indexA !== -1 && indexB !== -1) {
+      return indexA - indexB;
+    }
+    if (indexA !== -1) return -1; 
+    if (indexB !== -1) return 1; 
+  
+    
+    return a.toLowerCase().localeCompare(b.toLowerCase());
+  });
+  
 
   const ret: Category[] = []
   for (const c of lst) {
