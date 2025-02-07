@@ -1,7 +1,7 @@
-/:slug /posts/:slug 301
-
 /about /about 200
 /archive /archive 200
 /sitemap-index.xml /sitemap-index.xml 200
 /rss.xml /rss.xml 200
 / / 200
+
+/:slug /posts/:slug 301
