@@ -10,6 +10,7 @@ import { siteConfig } from '@/config';
 /* TTF, OTF and WOFF, this import may not compatible with all static pages services (?) */
 import Roboto300 from "node_modules/@fontsource/roboto/files/roboto-latin-300-normal.woff";
 import Roboto700 from "node_modules/@fontsource/roboto/files/roboto-latin-700-normal.woff";
+import NotoSansTCMedium from "../../../public/NotoSansTC-Medium.ttf"
 
 
 
@@ -20,13 +21,13 @@ const ogOptions: SatoriOptions = {
 	fonts: [
 		{
 			name: "Roboto",
-			data: Buffer.from(Roboto300),
+			data: Buffer.from(NotoSansTCMedium),
 			weight: 400,
 			style: "normal",
 		},
 		{
 			name: "Roboto",
-			data: Buffer.from(Roboto700),
+			data: Buffer.from(NotoSansTCMedium),
 			weight: 700,
 			style: "normal",
 		},
@@ -36,16 +37,35 @@ const ogOptions: SatoriOptions = {
 const markup = (title: string, published: Date, description?: string, category?: string, tags?: string[]) =>
   /* Satori uses tailwind! Create or view a desing using https://og-playground.vercel.app/ */
 	html`
-    <div tw="flex flex-col w-full h-full justify-center bg-amber-800">
-      <div tw="bg-gray-50 flex w-full">
-        <div tw="flex flex-col md:flex-row w-full py-12 px-8 items-center">
-          <h2 tw="flex flex-col font-bold tracking-tight text-gray-900 text-left">
-            <span tw="text-3xl">${title}</span>
-            <span tw="text-amber-600 font-light text-xl">${description}</span>
-          </h2>
+    <div tw="flex flex-col w-full h-full bg-zinc-900">
+    <div tw="flex w-full h-full p-8">
+      <div tw="flex flex-col w-full">
+        {/* Header with category/tag */}
+        <div tw="flex items-center mb-4">
+          <div tw="h-6 w-6 rounded-full bg-emerald-600 mr-3" />
+          <span tw="text-emerald-500 font-medium">Todd's Dev Logs</span>
+        </div>
+        
+        {/* Main content */}
+        <div tw="flex flex-col flex-1 justify-center">
+          <h1 tw="text-5xl font-bold text-zinc-100 mb-3 tracking-tight">
+            ${title}
+          </h1>
+          <p tw="text-2xl text-zinc-400 font-normal">
+            ${description}
+          </p>
+        </div>
+
+        {/* Footer metadata */}
+        <div tw="flex items-center text-zinc-500 text-sm">
+          <span tw="flex items-center">
+            <span tw="mr-2">•</span>
+            ${published}
+          </span>
         </div>
       </div>
     </div>
+  </div>
   `;
 
 type Props = InferGetStaticPropsType<typeof getStaticPaths>;
