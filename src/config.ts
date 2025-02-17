@@ -24,6 +24,12 @@ export const siteConfig: SiteConfig = {
       url: ''                // (Optional) URL link to the original artwork or artist's page
     }
   },
+  siteOGImage: {
+    enable: false,
+    src: '/demo-opengraph.png', // This image should be in the public folder, as its not processed by Astro
+  },
+  postOGImageDynamic: true, // Enable dynamic Open Graph Image generation for markdown posts
+                            // Read the docs, as this generates images between 90/300kb in size per post!
   toc: {
     enable: true,           // Display the table of contents on the right side of the post
     depth: 2                // Maximum heading depth to show in the table, from 1 to 3
