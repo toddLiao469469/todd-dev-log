@@ -10,6 +10,7 @@ import { siteConfig } from '@/config';
 /* TTF, OTF and WOFF, this import may not compatible with all static pages services (?) */
 import Roboto300 from "node_modules/@fontsource/roboto/files/roboto-latin-300-normal.woff";
 import Roboto700 from "node_modules/@fontsource/roboto/files/roboto-latin-700-normal.woff";
+import NotoSansTCMedium from "../../../public/NotoSansTC-Medium.ttf"
 
 
 
@@ -20,13 +21,13 @@ const ogOptions: SatoriOptions = {
 	fonts: [
 		{
 			name: "Roboto",
-			data: Buffer.from(Roboto300),
+			data: Buffer.from(NotoSansTCMedium),
 			weight: 400,
 			style: "normal",
 		},
 		{
 			name: "Roboto",
-			data: Buffer.from(Roboto700),
+			data: Buffer.from(NotoSansTCMedium),
 			weight: 700,
 			style: "normal",
 		},
