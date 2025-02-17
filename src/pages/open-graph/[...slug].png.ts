@@ -37,16 +37,15 @@ const ogOptions: SatoriOptions = {
 const markup = (title: string, published: Date, description?: string, category?: string, tags?: string[]) =>
   /* Satori uses tailwind! Create or view a desing using https://og-playground.vercel.app/ */
 	html`
-    <div tw="flex flex-col w-full h-full bg-zinc-900">
+  <div tw="flex flex-col w-full h-full bg-zinc-900">
     <div tw="flex w-full h-full p-8">
       <div tw="flex flex-col w-full">
-        {/* Header with category/tag */}
+
         <div tw="flex items-center mb-4">
-          <div tw="h-6 w-6 rounded-full bg-emerald-600 mr-3" />
+          <div tw="flex h-6 w-6 rounded-full bg-emerald-600 mr-3" />
           <span tw="text-emerald-500 font-medium">Todd's Dev Logs</span>
         </div>
         
-        {/* Main content */}
         <div tw="flex flex-col flex-1 justify-center">
           <h1 tw="text-5xl font-bold text-zinc-100 mb-3 tracking-tight">
             ${title}
@@ -56,11 +55,10 @@ const markup = (title: string, published: Date, description?: string, category?:
           </p>
         </div>
 
-        {/* Footer metadata */}
         <div tw="flex items-center text-zinc-500 text-sm">
           <span tw="flex items-center">
             <span tw="mr-2">•</span>
-            ${published}
+            <span>${published.toDateString()}</span>
           </span>
         </div>
       </div>
