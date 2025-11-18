@@ -5,3 +5,4 @@
 / / 200
 
 /:slug /posts/:slug 301
+/:slug/ /posts/:slug 301
