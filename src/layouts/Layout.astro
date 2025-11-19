@@ -73,11 +73,21 @@ const bannerOffset =
   bannerOffsetByPosition[siteConfig.banner.position || 'center']
 
 
-	let ogImageSrc;
+let ogImageSrc: string | false = false;
+
 // if siteOGImage is enabled, use the siteOGImage as the og:image
-ogImageSrc = siteConfig.siteOGImage.enable ? (Astro.site ? `${Astro.site.origin}${siteConfig.siteOGImage.src}` : siteConfig.siteOGImage.src) : false;
+if (siteConfig.siteOGImage.enable) {
+  ogImageSrc = Astro.site 
+    ? `${Astro.site.origin}${siteConfig.siteOGImage.src}` 
+    : siteConfig.siteOGImage.src;
+}
+
 // if postOGImageDynamic is enabled, use the generated one as the og:image
-if (siteConfig.postOGImageDynamic && slug) ogImageSrc = Astro.site ? `${Astro.site.origin}/open-graph/${slug}.png` : false;
+if (siteConfig.postOGImageDynamic && slug) {
+  // Remove trailing slash from site origin if present
+  const siteOrigin = Astro.site ? Astro.site.origin : Astro.url.origin;
+  ogImageSrc = `${siteOrigin}/open-graph/${slug}.png`;
+}
 ---
 
 <!DOCTYPE html>
