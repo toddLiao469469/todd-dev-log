@@ -2,7 +2,6 @@
 title: "2025 回顧"
 
 published: 2025-12-30T12:00:00.000+08:00
-updated: 2025-12-30T12:00:00.000+08:00
 image: ./cover.jpg
 coverStyle: "TOP"
 category: "回顧"
