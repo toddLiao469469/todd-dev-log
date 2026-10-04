@@ -4,7 +4,7 @@
 
 - 名字是來自於我很喜歡的影集馬男波傑克（Bojack Horseman）中的 Todd
 - INFP-T，雖然我認為將人劃分成 16 種人感覺太武斷了，但或許這是別人有辦法快速認識我的好方法
-- 喜歡攝影，目前主力機器是 Fujifilm 的 XT-30 II ，第一台數位相機是 D7000 ，第一台底片相機是 FM3A，擁有的機身中最喜歡 Bronica S2，預計未來會回到 N 家的懷抱
+- 喜歡攝影，目前主力機器是 OM SYSTEM 的 OM-3 偶而用 Fujifilm 的 XT-30 II ，第一台數位相機是 D7000 ，第一台底片相機是 FM3A，擁有的機身中最喜歡 Bronica S2。
 - 聽的音樂相當雜食，前十喜歡的樂團、歌手、樂手或者音樂人大概是：Radiohead、魚韻、滅火器、ヨルシカ、wowaka、ZTMY、RADWIMPS、DECO\*27、角野隼斗、Orangestar
 - 熱愛日本文化，目前正在自學日文中
 - 喜歡看棒球，雖然是北喵但蠻常去看其他球隊的主場賽事
@@ -13,7 +13,7 @@
 - 也喜歡喝茶，比較愛綠茶，烏龍也還可以但紅茶不太行，最近為了好睡下午之後只會喝麥茶
 - 目前的職業是網頁全端工程師，雖說是目前但無意外的話以後也應該會繼續往全端發展
 - 喜歡 FP 遠大於 OOP
-- 工作上用的最習慣的是 React 、 TypeScript 和 Node.js 但最近變得愈來愈常寫 Svelte 及 Golang
+- 工作上最常用的是 React 、 TypeScript 和 Golang ，但最近變得愈來愈常寫 Svelte
 - 目前喜歡 Svelte 多過於 React
 - 最喜歡的程式語言是 Haskell
 - 最討厭的程式語言是 JavaScript，但它是世界上最好的語言
