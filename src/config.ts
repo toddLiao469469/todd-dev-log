@@ -59,7 +59,7 @@ export const navBarConfig: NavBarConfig = {
 export const profileConfig: ProfileConfig = {
   avatar: 'assets/images/avatar.jpeg',  // Relative to the /src directory. Relative to the /public directory if it starts with '/'
   name: 'Todd Liao',
-  bio: `目前在 Ionex 擔任軟體工程師最近在研究 Haskell 和 Svelte`,
+  bio: `最近在研究 Haskell 和 Svelte`,
   links: [
     {
       name: 'Twitter',
